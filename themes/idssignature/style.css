@@ -41,11 +41,16 @@ header {
   background-position: center center;
   background-size: cover;
 }
-#myContainer .slide#tab1 {
-  background: url('./assets/images/slide1_bg.jpeg');
-  background-position: center center;
-  background-size: cover;
+
+@keyframes shadow_animations {
+  100% {
+    -webkit-filter:brightness(50%);
+    -moz-filter:brightness(50%);
+    filter: url(#brightness); /* required for FF */
+    filter:brightness(50%);
+  }
 }
+
 .container {
   width: 1370px;
   padding-left: 15px;

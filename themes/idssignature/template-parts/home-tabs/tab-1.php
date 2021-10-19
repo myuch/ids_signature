@@ -4,3 +4,14 @@
     <h1>Scroll Horizontally1</h1>
   </div>
 </div>
+
+<style media="screen">
+#myContainer .slide#tab1 {
+  background: url('./assets/images/slide1_bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  animation-name: shadow_animations;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+</style>
