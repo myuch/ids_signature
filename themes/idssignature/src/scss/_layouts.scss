@@ -1,0 +1,71 @@
+body {
+    color: #222221;
+    background: #fff;
+    line-height: 1;
+    font-family: "Roboto", sans-serif;
+    min-width: 320px;
+
+    &.body-hidden {
+        overflow: hidden;
+    }
+
+}
+
+/* ================== General =================== */
+.main {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    position: relative;
+    position: relative;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.bgi{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+    
+    .container {
+        max-width: 964px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .container {
+        max-width: 718px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .container {
+        max-width: 579px;
+        padding: 0 20px;
+    }
+
+}
