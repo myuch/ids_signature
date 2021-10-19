@@ -42,13 +42,13 @@ header {
   background-size: cover;
 }
 
-@keyframes shadow_animations {
-  100% {
-    -webkit-filter:brightness(50%);
-    -moz-filter:brightness(50%);
-    filter: url(#brightness); /* required for FF */
-    filter:brightness(50%);
-  }
+#myContainer .slide#tab1 {
+  background: url('./assets/images/slide1_bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  animation-name: shadow_animations;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
 }
 
 .container {
