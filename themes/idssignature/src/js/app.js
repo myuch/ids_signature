@@ -1,34 +1,13 @@
 jQuery(document).ready(function ($) {
 
+    $('#hamburger').on('click', function(){
+        $('.modalMenu').fadeIn();
+    });
 
+    $('.modalMenu-close').on('click', function(){
+        $('.modalMenu').fadeOut();
+    });
 
 });
+  
 
-// TEMPLATE PARTS
-
-// A
-// B
-// C
-// D
-// E
-// F
-// G
-// H
-// I
-// J
-// K
-// L
-// M
-// N
-// O
-// P
-// Q
-// R
-// S
-// T
-// U
-// V
-// W
-// X
-// Y
-// Z
