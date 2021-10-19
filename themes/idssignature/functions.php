@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 if ( ! function_exists( 'idssignature_setup' ) ) :
@@ -123,7 +123,7 @@ function idssignature_scripts() {
 
 
 	wp_enqueue_style( 'fullpage-style', 'https://unpkg.com/fullpage.js/dist/fullpage.min.css', array(), _S_VERSION );
-	wp_enqueue_style( 'fullpage-style-ex', 'https://alvarotrigo.com/fullPage/examples/examples.css', array(), _S_VERSION );
+	wp_enqueue_style( 'fullpage-style-ex', 'https://alvarotrigo.com/fullPage/examples/1examples.css', array(), _S_VERSION );
 
 	wp_enqueue_style( 'idssignature-style', get_template_directory_uri() . '/dist/css/main.min.css', array(), _S_VERSION );
 
@@ -134,6 +134,7 @@ function idssignature_scripts() {
 	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '3.4.1', true );
 
 	wp_enqueue_script( 'idssignature-fullpage', get_template_directory_uri() . '/assets/js/fullpage.scrollHorizontally.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'idssignature-fullpage-scroll', get_template_directory_uri() . '/assets/js/scrolloverflow.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idssignature-fullpage-extensions', 'https://unpkg.com/fullpage.js/dist/fullpage.extensions.min.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'idssignature-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
@@ -172,5 +173,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-

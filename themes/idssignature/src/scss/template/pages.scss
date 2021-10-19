@@ -1,10 +1,74 @@
+:root {
+  --font-scaler: 1;
+}
+
 header {
-  opacity: 0;
+
+}
+body.fp-viewing-ids-0 {
+  .slides_nav img {
+    filter: invert(1);
+  }
+  .slides_nav .container .lines .line_item .title {
+    color: white;
+  }
+  .slides_nav .container .lines .line_item {
+    border-color: white;
+  }
+}
+.slides_nav {
+  position: fixed;
+  bottom:0px;
+  left: 0px;
+  width: 100%;
+  height: 75px;
+  background: transparent;
+  opacity: 1;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .lines {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: calc(100% - 50px);
+      .line_item {
+        width: calc(16.6% - 10px);
+        margin: 0 5px 5px;
+        border-bottom: 2px solid black;
+        transition: border-height .1s, border-color .3s;
+        .title {
+          margin-bottom: 5px;
+          color: black;
+          font-family: "Montserrat - Hairline";
+          font-size: calc(18px * var(--font-scaler));
+          font-weight: bold;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 1.6;
+          text-align: center;
+          width: 100%;
+          transition: all .3s;
+        }
+        &.active {
+          border-width: 4px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
 }
 #myContainer {
   background: url('/wp-content/themes/idssignature/assets/images/slide2_bg.jpeg');
   background-position: center center;
   background-size: cover;
+  .container {
+    margin-top: 100px;
+    // max-height: calc(100vh - 225px);
+    margin-bottom: 75px;
+    overflow: auto;
+  }
   & .slide {
 
   }
@@ -64,17 +128,18 @@ header {
     h1 {
       color: #ffffff;
       font-family: "Montserrat - Hairline";
-      font-size: 60px;
+      font-size: calc(60px * var(--font-scaler));
       font-weight: bold;
       font-style: normal;
       letter-spacing: normal;
-      line-height: 60px;
+      line-height: 1em;
       text-align: left;
       font-style: normal;
       letter-spacing: normal;
       line-height: normal;
-      margin: 0 0 170px;
-      max-width: 675px;
+      margin: 0;
+      margin-bottom: calc(170px * var(--font-scaler));
+      max-width: calc(675px * var(--font-scaler));//675px;
       position: relative;
       &:before {
         content: '';
@@ -89,11 +154,11 @@ header {
     a {
       color: #ffffff;
       font-family: "Montserrat - Hairline";
-      font-size: 20px;
+      font-size: calc(20px * var(--font-scaler));//20px;
       font-weight: bold;
       font-style: normal;
       letter-spacing: normal;
-      line-height: 60px;
+      line-height: 3em;
       text-align: left;
       text-transform: uppercase;
       /* Text style for "SCROLL TO" */
@@ -101,7 +166,7 @@ header {
       letter-spacing: normal;
       line-height: normal;
       display: block;
-      margin-bottom: 99px;
+      margin-bottom: calc(99px * var(--font-scaler));
       margin-left: 31px;
       position: relative;
       cursor: default;
@@ -115,18 +180,18 @@ header {
         left: -31px;
         top: 50%;
         transform: translateY(-50%);
-        width: 10px;
-        height: 51px;
+        width: calc(10px * var(--font-scaler));
+        height: calc(51px * var(--font-scaler));
       }
     }
     p {
       color: #ffffff;
       font-family: "Montserrat - Hairline";
-      font-size: 20px;
+      font-size: calc(20px * var(--font-scaler));
       font-weight: bold;
       font-style: normal;
       letter-spacing: normal;
-      line-height: 24px;
+      line-height: 1.2em;
       text-align: left;
       /* Text style for "Brought to" */
       font-style: normal;
@@ -140,44 +205,187 @@ header {
       align-items: flex-start;
       justify-content: space-between;
       .left_section {
-        max-width: 651px;
+        max-width: calc(651px * var(--font-scaler));
         h2 {
           color: #000;
           font-family: "Montserrat - Hairline";
-          font-size: 60px;
+          font-size: calc(60px * var(--font-scaler));
           font-weight: bold;
           font-style: normal;
           letter-spacing: normal;
-          line-height: 60px;
+          line-height: 1em;
           text-align: left;
-          margin: 0 0 82px;
+          margin: 0 0;
+          margin-bottom: calc(82px * var(--font-scaler));
         }
         p {
           font-family: "Montserrat - Hairline";
-          font-size: 24px;
+          font-size: calc(24px * var(--font-scaler));
           font-weight: bold;
           font-style: normal;
           letter-spacing: normal;
-          line-height: 30px;
+          line-height: 1.3em;
           text-align: left;
           b {
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
           }
           span {
-            max-width: 555px;
+            max-width: calc(555px * var(--font-scaler));
             display: block;
           }
         }
       }
       .right_section {
-        max-width: 390px;
+        max-width: calc(390px * var(--font-scaler));
         margin: 0 50px;
+        margin-right: calc(50px * var(--font-scaler));
         img {
           width: 100%;
         }
       }
     }
+  }
+  #tab3 {
+    position: relative;
+    .slider_bg {
+      position: absolute;
+      z-index: 1;
+      left: calc(103px * var(--font-scaler));
+      top: 0px;
+      width: auto;
+      // height: 100vh;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .container {
+      overflow: hidden;
+      h2 {
+        color: #000000;
+        font-family: "Montserrat - Hairline";
+        font-size: calc(60px * var(--font-scaler));
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 1em;
+        text-align: left;
+        position: relative;
+        margin-bottom: calc(50px * var(--font-scaler));
+        width: fit-content;
+        &:after {
+          content: '';
+          position: absolute;
+          width: calc(100vw - 81px);
+          right: -100vw;
+          top: calc(34px * var(--font-scaler));
+          height: 2px;
+          background: black;
+        }
+      }
+      p {
+        color: #000;
+        font-size: calc(30px * var(--font-scaler));
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 1.2em;
+        text-align: left;
+        max-width: calc(625px * var(--font-scaler));
+      }
+      .move_items {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .move_item {
+          width: calc(33% - (75px * var(--font-scaler));
+          margin-top: calc(65px * var(--font-scaler));
+          .move_item_title {
+            display: flex;
+            align-items: center;
+            margin-bottom: calc(25px * var(--font-scaler));
+            .number {
+              color: #000;
+              // font-size: calc(30 / 1920 * 100vw);
+              font-size: calc(30px * var(--font-scaler));
+              font-weight: bold;
+              font-style: normal;
+              letter-spacing: normal;
+              line-height: 0.9em;
+              text-align: center;
+              height: calc(1em + .8em);
+              width:  calc(1em + .8em);
+              padding: .35em .4em .45em .4em;
+              border: 2px solid black;
+              border-radius: 0.9em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: calc(29px * var(--font-scaler));
+            }
+            .title {
+              color: #000000;
+              font-family: "Montserrat - Hairline";
+              // font-size: calc(30 / 1920 * 100vw);
+              font-size: calc(30px * var(--font-scaler));
+              font-weight: bold;
+              font-style: normal;
+              letter-spacing: normal;
+              line-height: 1em;
+              text-align: left;
+            }
+          }
+          .move_item_content {
+            color: #000000;
+            font-size: calc(20px * var(--font-scaler));
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 1.5em;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1910px) {
+  #myContainer #tab3 .container .move_items .move_item {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1600px) {
+  :root {
+    --font-scaler : .9;
+  }
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1210px) {
+  #myContainer #tab1 .slide_bg.active {
+    border-radius: 0px !important;
+    width: 100% !important;
+  }
+}
+@media (max-width: 998px) {
+  :root {
+    --font-scaler : .7;
+  }
+  .container {
+    max-width: 700px;
+  }
+  #myContainer #tab3 .container .move_items .move_item {
+    width: calc(50% - (75px * var(--font-scaler)))
+  }
+  .slides_nav .container .lines .line_item .title {
+    display: none !important;
   }
 }
 

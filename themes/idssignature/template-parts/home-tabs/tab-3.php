@@ -1,6 +1,90 @@
 <!-- template-parts/home-tabs/tab-3.php -->
 <div id="tab3" class="slide">
-    <di class="intro">
-        <p>Slide 3</p>
-    </di>
+  <div class="slider_bg">
+    <img src="/wp-content/themes/idssignature/assets/images/white_line.svg" alt="">
+  </div>
+    <div class="container">
+      <h2>Our Signature Moves</h2>
+      <p>As part of your design team, IDS Signature specializes in inventive solutions that draw a crowd.</p>
+      <div class="move_items">
+        <div class="move_item">
+          <div class="move_item_title">
+            <div class="number">
+              1
+            </div>
+            <div class="title">
+              Original
+            </div>
+          </div>
+          <div class="move_item_content">
+            Every IDS design is one-of-kind. Never duplicated. Never outdone!
+          </div>
+        </div>
+        <div class="move_item">
+          <div class="move_item_title">
+            <div class="number">
+              2
+            </div>
+            <div class="title">
+              Professional
+            </div>
+          </div>
+          <div class="move_item_content">
+            A sophisticated design sensibility backed by high-quality fabrication and installation
+          </div>
+        </div>
+        <div class="move_item">
+          <div class="move_item_title">
+            <div class="number">
+              3
+            </div>
+            <div class="title">
+              Unforgettable
+            </div>
+          </div>
+          <div class="move_item_content">
+            Turn heads. Create buzz. Get people talking. Tweeting. Sharing.<br>Recommending!
+          </div>
+        </div>
+        <div class="move_item">
+          <div class="move_item_title">
+            <div class="number">
+              4
+            </div>
+            <div class="title">
+              Unexpected
+            </div>
+          </div>
+          <div class="move_item_content">
+            To differentiate yourself, you have to be different. When they zig, you zag.
+          </div>
+        </div>
+        <div class="move_item">
+          <div class="move_item_title">
+            <div class="number">
+              5
+            </div>
+            <div class="title">
+              Collaborative
+            </div>
+          </div>
+          <div class="move_item_content">
+            We put our minds together with you as a client to deliver on your unique vision.
+          </div>
+        </div>
+        <div class="move_item">
+          <div class="move_item_title">
+            <div class="number">
+              6
+            </div>
+            <div class="title">
+              Effective
+            </div>
+          </div>
+          <div class="move_item_content">
+            Turn “I can’t believe my eyes” into rapid and measurable ROI.
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
