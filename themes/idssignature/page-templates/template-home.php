@@ -15,9 +15,6 @@ get_header();
 			?>
     </div>
 </div>
-
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css" />
-<link rel="stylesheet" type="text/css" href="https://alvarotrigo.com/fullPage/examples/examples.css" />
 <?php
 get_footer();
 ?>

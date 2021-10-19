@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'Montserrat - Hairline';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local('Montserrat Hairline'), local('Montserrat-Hairline'),
+        url(http://allfont.es/cache/fonts/montserrat-hairline_2c5c1d56419aab19913d7c7f93fee7f1.woff) format('woff'),
+        url(http://allfont.es/cache/fonts/montserrat-hairline_2c5c1d56419aab19913d7c7f93fee7f1.ttf) format('truetype');
+}
 body {
     color: #222221;
     background: #fff;
     line-height: 1;
-    font-family: "Roboto", sans-serif;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat - Hairline';
     min-width: 320px;
 
     &.body-hidden {
@@ -45,7 +53,7 @@ section{
 
 /* ================== MEDIA =================== */
 @media (max-width: 1199px) {
-    
+
     .container {
         max-width: 964px;
     }

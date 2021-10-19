@@ -120,6 +120,11 @@ add_action( 'after_setup_theme', 'idssignature_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function idssignature_scripts() {
+
+
+	wp_enqueue_style( 'fullpage-style', 'https://unpkg.com/fullpage.js/dist/fullpage.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'fullpage-style-ex', 'https://alvarotrigo.com/fullPage/examples/examples.css', array(), _S_VERSION );
+
 	wp_enqueue_style( 'idssignature-style', get_template_directory_uri() . '/dist/css/main.min.css', array(), _S_VERSION );
 
 	// deregister default jQuery included with Wordpress
