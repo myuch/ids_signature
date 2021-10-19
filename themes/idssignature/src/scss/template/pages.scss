@@ -1,0 +1,14 @@
+#myContainer {
+  & .slide {
+    background: url('/wp-content/themes/idssignature/assets/images/slide2_bg.jpeg');
+    background-position: center center;
+    background-size: cover;
+  }
+  #tab1 {
+    &.slide {
+      background: url('/wp-content/themes/idssignature/assets/images/slide1_bg.jpeg');
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}
