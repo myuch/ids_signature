@@ -41,20 +41,8 @@ header {
   background-position: center center;
   background-size: cover;
 }
-
 #myContainer .slide#tab1 {
-  background: url('./assets/images/slide1_bg.jpg');
+  background: url('./assets/images/slide1_bg.jpeg');
   background-position: center center;
   background-size: cover;
-  animation-name: shadow_animations;
-  animation-duration: .6s;
-  animation-fill-mode: forwards;
-}
-
-.container {
-  width: 1370px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
