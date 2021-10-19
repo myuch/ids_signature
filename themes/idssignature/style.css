@@ -46,3 +46,10 @@ header {
   background-position: center center;
   background-size: cover;
 }
+.container {
+  width: 1370px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
