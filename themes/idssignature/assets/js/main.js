@@ -17,6 +17,10 @@
         loopHorizontal: false,
         scrollHorizontallyKey: 'INSERT YOUR EXTENSION KEY HERE', //see https://goo.gl/xkUmHS
     });
+
+
+
+
   });
 
   $(window).on('load', function(e){

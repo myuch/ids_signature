@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -12,48 +13,111 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<!-- <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'idssignature' ); ?></a> -->
+<body>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$idssignature_description = get_bloginfo( 'description', 'display' );
-			if ( $idssignature_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $idssignature_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<!-- Header -->
+	<header class="header">
+		<div class="header_wrap">
+			<img class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png">
+			<div class="header_right">
+				<a href="#" class="contactUs">
+					CONTACT US
+				</a>
+				<svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="35" height="22" viewBox="0 0 35 22">
+					<g>
+						<g>
+							<path fill="#fff" d="M1 0h33a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 10h33a1 1 0 1 1 0 2H1a1 1 0 0 1 0-2zm0 10h33a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z" />
+						</g>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</header>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'idssignature' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<!-- Menu -->
+	<div class="modalMenu">
+
+		<svg class="modalMenu-close" xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26">
+			<g>
+				<g>
+					<path d="M2.533.6L13.5 11.568 24.467.601a1 1 0 1 1 1.414 1.413L14.914 12.981l10.954 10.955a1 1 0 1 1-1.414 1.413L13.5 14.395 2.546 25.349a1 1 0 1 1-1.414-1.413L12.086 12.98 1.12 2.014A1 1 0 1 1 2.533.601z" />
+				</g>
+			</g>
+		</svg>
+
+		<div class="modalMenu_wrap">
+
+			<div class="modalMenu_menu">
+				<a href="#">Welcome</a>
+				<a href="#">About IDS Signature</a>
+				<a href="#">Signature Moves</a>
+				<a href="#">Where We Imagine</a>
+				<a href="#">What We’ve imagined</a>
+				<a href="#">Book A Consultation</a>
+			</div>
+
+			<div class="modalMenu_contacts">
+				<a href="/" target="_blank">1 888-884-4102</a>
+				<a href="/" target="_blank">info@idssignature.com</a>
+			</div>
+
+			<div class="modalMenu_socials">
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Facebook.png">
+				</a>
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Instagram.png">
+				</a>
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/LinkedIn.png">
+				</a>
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Pinterest.png">
+				</a>
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Youtube.png">
+				</a>
+			</div>
+
+			<div class="modalMenu_bottom">
+
+				<div class="modalMenu_firstText">
+					<p>Brought to you by the same creative minds behind </p>
+					<span>IDSkids.</span>
+				</div>
+
+				<div class="modalMenu_secondText">
+					<p>
+						A division of SYC Group.
+						Copyright 2007 - 2020
+						Imagination Design Studios
+					</p>
+					<p>
+						(Formerly Imagination Dental solutions).
+					</p>
+				</div>
+
+				<div class="modalMenu-privacy">
+					Privacy Policy
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	
+
