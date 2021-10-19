@@ -6,12 +6,17 @@
 </div>
 
 <style media="screen">
-#myContainer .slide#tab1 {
-  background: url('./assets/images/slide1_bg.jpg');
-  background-position: center center;
-  background-size: cover;
-  animation-name: shadow_animations;
-  animation-duration: .6s;
-  animation-fill-mode: forwards;
+
+#tab1 .container {
+  height: calc(100% - 133px);
+  margin-top: 133px;
+}
+@keyframes shadow_animations {
+  100% {
+    -webkit-filter:brightness(50%);
+    -moz-filter:brightness(50%);
+    filter: url(#brightness); /* required for FF */
+    filter:brightness(50%);
+  }
 }
 </style>
