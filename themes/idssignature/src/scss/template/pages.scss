@@ -372,6 +372,10 @@ body.fp-viewing-ids-0 {
   #myContainer #tab1 .slide_bg.active {
     border-radius: 0px !important;
     width: 100% !important;
+    animation: none !important;
+  }
+  #myContainer #tab1 .slide_bg {
+    animation: none !important;
   }
 }
 @media (max-width: 998px) {
