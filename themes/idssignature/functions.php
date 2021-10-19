@@ -130,14 +130,14 @@ function idssignature_scripts() {
 	// deregister default jQuery included with Wordpress
 	wp_deregister_script( 'jquery' );
 
-	$jquery_cdn = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js';
+	$jquery_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js';
 	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '3.4.1', true );
 
 	wp_enqueue_script( 'idssignature-fullpage', get_template_directory_uri() . '/assets/js/fullpage.scrollHorizontally.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idssignature-fullpage-extensions', 'https://unpkg.com/fullpage.js/dist/fullpage.extensions.min.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'idssignature-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
-
+	wp_enqueue_script('main', get_template_directory_uri() . '/dist/js/app.min.js', array(), _S_VERSION, true);
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -172,3 +172,5 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
