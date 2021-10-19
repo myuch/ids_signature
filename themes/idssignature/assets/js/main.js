@@ -2,7 +2,7 @@
 
   $(document).ready(function(e){
     new fullpage('#myContainer', {
-        sectionsColor: ['#ff73a1', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccc'],
+        // sectionsColor: ['#ff73a1', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccc'],
         anchors: ['ids', 'secondPage', '3rdPage', '4thpage'],
         menu: '#menu',
         slidesNavigation: false,
@@ -21,6 +21,11 @@
 
 
 
+  });
+
+  $(window).on('load', function(e){
+    $('#tab1').addClass('loaded');
+    $('.slide_bg').addClass('active');
   });
 
 })(jQuery);

@@ -1,14 +1,197 @@
+header {
+  opacity: 0;
+}
 #myContainer {
+  background: url('/wp-content/themes/idssignature/assets/images/slide2_bg.jpeg');
+  background-position: center center;
+  background-size: cover;
   & .slide {
-    background: url('/wp-content/themes/idssignature/assets/images/slide2_bg.jpeg');
-    background-position: center center;
-    background-size: cover;
+
   }
   #tab1 {
-    &.slide {
-      background: url('/wp-content/themes/idssignature/assets/images/slide1_bg.jpeg');
-      background-position: center center;
-      background-size: cover;
+    .slide_bg {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
+      width: 120vw;
+      display: flex;
+      justify-content: left;
+      // transition: all .5s;
+      img {
+        width: 100vw;
+        min-width: 100vw;
+        height: 100%;
+        height: 100vh;
+        object-fit: cover;
+        margin-top: -50vh;
+      }
+      &.active {
+        animation-name: slide_circles;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+
+        padding: 100vh 0 100vh;
+        margin-top: -50vh;
+        &:after {
+          animation-name: contrast_bg;
+          animation-duration: .5s;
+          animation-delay: 0s;
+          animation-fill-mode: forwards;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: transparent;
+      }
     }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    h1 {
+      color: #ffffff;
+      font-family: "Montserrat - Hairline";
+      font-size: 60px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 60px;
+      text-align: left;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      margin: 0 0 170px;
+      max-width: 675px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -50vw;
+        top: 37px;
+        width: calc(50vw - 23px);
+        height: 1px;
+        background: white;
+      }
+    }
+    a {
+      color: #ffffff;
+      font-family: "Montserrat - Hairline";
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 60px;
+      text-align: left;
+      text-transform: uppercase;
+      /* Text style for "SCROLL TO" */
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      display: block;
+      margin-bottom: 99px;
+      margin-left: 31px;
+      position: relative;
+      cursor: default;
+      &:before {
+        content: '';
+        position: absolute;
+        background: url('/wp-content/themes/idssignature/assets/images/Arrow_Right.svg');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -31px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 51px;
+      }
+    }
+    p {
+      color: #ffffff;
+      font-family: "Montserrat - Hairline";
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 24px;
+      text-align: left;
+      /* Text style for "Brought to" */
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+    }
+  }
+  #tab2 {
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .left_section {
+        max-width: 651px;
+        h2 {
+          color: #000;
+          font-family: "Montserrat - Hairline";
+          font-size: 60px;
+          font-weight: bold;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 60px;
+          text-align: left;
+          margin: 0 0 82px;
+        }
+        p {
+          font-family: "Montserrat - Hairline";
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 30px;
+          text-align: left;
+          b {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+          }
+          span {
+            max-width: 555px;
+            display: block;
+          }
+        }
+      }
+      .right_section {
+        max-width: 390px;
+        margin: 0 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide_circles {
+  100% {
+    width: calc(90vw);
+    height: 100%;
+    //border-radius: 0 300px 300px 0px / 0 100% 100% 0px;
+    border-radius: 0 250vh 250vh 0px / 0 250vh 250vh 0px;
+    overflow: hidden;
+  }
+}
+@keyframes contrast_bg {
+  100% {
+    background: #00000094;
   }
 }

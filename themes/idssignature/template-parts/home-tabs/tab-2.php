@@ -1,6 +1,19 @@
 <!-- template-parts/home-tabs/tab-2.php -->
 <div id="tab2" class="slide">
-    <di class="intro">
-        <p>Slide 2</p>
-    </di>
+    <div class="container">
+      <div class="left_section">
+        <h2>IDS Signature is a Creative Design and Fabricatioon Studio</h2>
+        <p>
+          <b>We are builders, innovators, sculptors of imagination.</b><br><br>
+
+          <span>We work with owners, designers, architects, and
+          artists - to turn everyday locations into must-visit
+          destinations. Places that make people talk.
+          Places where customers flock.</span>
+        </p>
+      </div>
+      <div class="right_section">
+        <img src="/wp-content/themes/idssignature/assets/images/slide_2.png" alt="">
+      </div>
+    </div>
 </div>
