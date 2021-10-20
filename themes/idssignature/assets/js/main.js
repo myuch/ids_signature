@@ -2,7 +2,39 @@
 
   $(document).ready(function(e){
 
-
+    $('.collapse_btn').on('click', function(e){
+      if($(this).hasClass('active')) {
+        var newHeight = $('#tab4 .container').height() - 178;
+        $('#tab4 .left_section').animate({
+          height: newHeight
+        }, 300);
+        $('#tab4 .right_section').animate({
+          marginTop: '-128px',
+          opacity: 1
+        }, 300);
+        $('.collapse_btn').animate({
+          top: newHeight
+        }, 300);
+        $('.collapse_btn img').removeClass('active');
+        $('#tab4 .container .collapse_btn .title').html('Read More')
+        $('#tab4 .container .collapse_btn').removeClass('active');
+      } else {
+        var newHeight = $('#tab4 .container').height() - 50;
+        $('#tab4 .left_section').animate({
+          height: newHeight
+        }, 300);
+        $('#tab4 .right_section').animate({
+          marginTop: 0,
+          opacity: 0
+        }, 300);
+        $('.collapse_btn').animate({
+          top: newHeight
+        }, 300);
+        $('.collapse_btn img').addClass('active');
+        $('#tab4 .container .collapse_btn .title').html('Read Less')
+        $('#tab4 .container .collapse_btn').addClass('active');
+      }
+    });
   });
 
   $(window).on('load', function(e){

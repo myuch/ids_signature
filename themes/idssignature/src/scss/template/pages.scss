@@ -323,7 +323,7 @@ body.fp-viewing-ids-0 {
         align-items: flex-start;
         flex-wrap: wrap;
         .move_item {
-          width: calc(33% - (75px * var(--font-scaler));
+          width: calc(33% - ( 75px * var(--font-scaler) ) );
           margin-top: calc(65px * var(--font-scaler));
           .move_item_title {
             display: flex;
@@ -369,6 +369,88 @@ body.fp-viewing-ids-0 {
             line-height: 1.5em;
             text-align: left;
           }
+        }
+      }
+    }
+  }
+  #tab4 {
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      // overflow-x: visible;
+      // overflow-y: auto;
+      // overflow: visible;
+      .collapse_btn {
+        display: none;
+      }
+      .left_section {
+        max-width: calc(706px * var(--font-scaler));
+        h2 {
+          color: #000;
+          font-family: "Montserrat - Hairline";
+          font-size: calc(60px * var(--font-scaler));
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 1em;
+          text-align: left;
+          margin: 0 0;
+          margin-bottom: calc(85px * var(--font-scaler));
+          &:after {
+            content: '';
+            position: absolute;
+            width: calc(100vw - 25px);
+            left: -100vw;
+            top: calc(34px * var(--font-scaler));
+            height: 2px;
+            background: black;
+          }
+        }
+        .left_section_content {
+          max-width: calc(572px * var(--font-scaler));
+          p {
+            font-family: "Montserrat - Hairline";
+            font-size: calc(20px * var(--font-scaler));
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 1.5em;
+            text-align: left;
+            margin-bottom: 1.5em;
+          }
+          ul.list {
+            font-family: "Montserrat - Hairline";
+            margin: 0;
+            padding: 0;
+            margin-top: 2em;
+            margin-left: 21px;
+            font-size: calc(24px * var(--font-scaler));
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 1.5em;
+            li {
+              position: relative;
+              &:before {
+                content: '• ';
+                font-family: Montserrat;
+                font-weight: 500;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: normal;
+              }
+            }
+          }
+        }
+
+      }
+      .right_section {
+        max-width: calc(594px * var(--font-scaler));
+        margin: 0;
+        margin-left: calc(50px * var(--font-scaler));
+        img {
+          width: 100%;
         }
       }
     }
@@ -519,6 +601,9 @@ body.fp-viewing-ids-0 {
     object-fit: contain;
   }
 
+  #myContainer #tab3 .container {
+    height: -webkit-fill-available;height: -moz-available;height: fill-available;
+  }
   #myContainer #tab3 .slider_bg {
     display: none;
   }
@@ -589,7 +674,147 @@ body.fp-viewing-ids-0 {
       }
     }
   }
+
+  #myContainer #tab4 .container {
+    max-height: calc(100vh - 145px);
+    overflow: hidden;
+    position: relative;
+    flex-wrap: wrap;
+    height: -webkit-fill-available;height: -moz-available;height: fill-available;
+
+    .collapse_btn {
+      height: 50px;
+      position: absolute;
+      top: calc(100% - 178px);
+      width: 100%;
+      left: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .title {
+        margin-top: 5px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 1em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      img {
+        transition: all .3s;
+      }
+      img.active {
+        transform: scaleY(-1);
+      }
+    }
+    .right_section {
+      max-width: 100%;
+      width: calc(100%);
+      margin-left: 0px;
+      height: 128px;
+      position: absolute;
+      top: 100%;
+      margin-top: -128px;
+      left: 0px;
+      position: absolute;
+      // &:before {
+      //   content:'READ MORE';
+      //   position: absolute;
+      //   bottom: 100%;
+      //   left: 0px;
+      //   width: 100%;
+      //   color: #000000;
+      //   font-size: 14px;
+      //   font-weight: bold;
+      //   font-style: normal;
+      //   letter-spacing: normal;
+      //   line-height: 60px;
+      //   text-align: center;
+      // }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+    .left_section {
+      max-width: 100%;
+      height: calc(100% - 178px);
+      position: relative;
+      .left_section_wrapper {
+        height: 100%;
+        position: relative;
+        overflow-y: clip;
+      }
+      // &:after {
+      //   content: 'Read More';
+      //   position: absolute;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   top: 100%;
+      //   left: 0px;
+      //   width: 100%;
+      //   height: 50px;
+      //   color: #000000;
+      //   font-size: 14px;
+      //   font-weight: bold;
+      //   font-style: normal;
+      //   letter-spacing: normal;
+      //   text-align: center;
+      //   text-transform: uppercase;
+      //   margin-top: -50px;
+      // }
+      // &:before {
+      //   content: '';
+      //   position: absolute;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: flex-start;
+      //   background: url('/wp-content/themes/idssignature/assets/images/arrow_more.svg');
+      //   top: 100%;
+      //   left: 50%;
+      //   margin-top: 5px;
+      //   margin-top: -45px;
+      //   width: 27px;
+      //   height: 9px;
+      //   transform: translateX(-50%);// scaleY(-1);
+      // }
+      h2 {
+        margin-left: 29px;
+        margin-bottom: 34px;
+        font-size: 28px;
+        line-height: 1.2em;
+        width: calc(100% - 29px);
+        position: relative;
+        &:after {
+          width: calc(100vw - 14px);
+        }
+      }
+      .left_section_content {
+        max-width: 100%;
+        p {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 0px;
+        }
+        ul.list {
+          margin-top: 26px;
+          margin-left: 11px;
+          li {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
 }
+
 @media (max-width: 425px) {
   #myContainer #tab2 .container .left_section h2 {
     font-size: 34px;
