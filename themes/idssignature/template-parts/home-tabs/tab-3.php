@@ -6,7 +6,16 @@
     <div class="container">
       <h2>Our Signature Moves</h2>
       <p>As part of your design team, IDS Signature specializes in inventive solutions that draw a crowd.</p>
+      <div class="slick_arrows">
+        <a class="slick_arrow_prev slick_arr" href="#">
+          <img src="/wp-content/themes/idssignature/assets/images/footArrow_Left.svg" alt="">
+        </a>
+        <a class="slick_arrow_next slick_arr" href="#">
+          <img src="/wp-content/themes/idssignature/assets/images/footArrow_Right.svg" alt="">
+        </a>
+      </div>
       <div class="move_items">
+
         <div class="move_item">
           <div class="move_item_title">
             <div class="number">
