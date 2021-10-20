@@ -7,8 +7,18 @@
 }
 
 .fz-h2 {
-    font-size: 40px;
-    line-height: 1.3;
+    color: #ffffff;
+    font-family: "Montserrat - Hairline";
+    font-size: calc(60px * var(--font-scaler));
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1em;
+    text-align: left;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    position: relative;
 }
 
 .fz-h3 {

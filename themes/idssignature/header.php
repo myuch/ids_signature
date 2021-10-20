@@ -21,8 +21,7 @@
 
 	<?php wp_head(); ?>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -37,13 +36,22 @@
 				<a href="#" class="contactUs">
 					CONTACT US
 				</a>
-				<svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="35" height="22" viewBox="0 0 35 22">
-					<g>
+				<div class="hamburger">
+					<svg id="hamburger" xmlns="http://www.w3.org/2000/svg" width="35" height="22" viewBox="0 0 35 22">
 						<g>
-							<path fill="#fff" d="M1 0h33a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 10h33a1 1 0 1 1 0 2H1a1 1 0 0 1 0-2zm0 10h33a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z" />
+							<g>
+								<path fill="#fff" d="M1 0h33a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2zm0 10h33a1 1 0 1 1 0 2H1a1 1 0 0 1 0-2zm0 10h33a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2z" />
+							</g>
 						</g>
-					</g>
-				</svg>
+					</svg>
+					<svg id="hamburger-close" xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26">
+						<g>
+							<g>
+								<path d="M2.533.6L13.5 11.568 24.467.601a1 1 0 1 1 1.414 1.413L14.914 12.981l10.954 10.955a1 1 0 1 1-1.414 1.413L13.5 14.395 2.546 25.349a1 1 0 1 1-1.414-1.413L12.086 12.98 1.12 2.014A1 1 0 1 1 2.533.601z" />
+							</g>
+						</g>
+					</svg>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -62,12 +70,12 @@
 		<div class="modalMenu_wrap">
 
 			<div class="modalMenu_menu">
-				<a href="#">Welcome</a>
-				<a href="#">About IDS Signature</a>
-				<a href="#">Signature Moves</a>
-				<a href="#">Where We Imagine</a>
-				<a href="#">What We’ve imagined</a>
-				<a href="#">Book A Consultation</a>
+				<span onclick="fullpage_api.moveTo('ids', 0);">Welcome</span>
+				<span onclick="fullpage_api.moveTo('ids', 1);">About IDS Signature</span>
+				<span onclick="fullpage_api.moveTo('ids', 2);">Signature Moves</span>
+				<span onclick="fullpage_api.moveTo('ids', 3);">Where We Imagine</span>
+				<span onclick="fullpage_api.moveTo('ids', 4);">What We’ve imagined</span>
+				<span onclick="fullpage_api.moveTo('ids', 5);">Book A Consultation</span>
 			</div>
 
 			<div class="modalMenu_contacts">
