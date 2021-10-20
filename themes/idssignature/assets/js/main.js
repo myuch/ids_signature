@@ -97,7 +97,13 @@
         prevArrow: $('.slick_arrow_prev'),
         nextArrow: $('.slick_arrow_next')
       });
+      var newHeight = $('#tab4 .container').height() - 178;
+      $('#tab4 .left_section').animate({
+        height: newHeight
+      }, 0);
+
     }
+
 
   });
 

@@ -544,6 +544,9 @@ body.fp-viewing-ids-0 {
   }
 }
 @media (max-width: 600px) {
+  #myContainer #tab1 .container {
+    // height: 100%;
+  }
   #myContainer #tab1 h1 {
     font-size: 40px;
     line-height: 1.2em;
@@ -567,12 +570,13 @@ body.fp-viewing-ids-0 {
   #myContainer #tab1 p {
     font-size: 18px;
     line-height: 24px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
   }
 
 
   #myContainer #tab2 .container {
     flex-wrap: wrap;
+    height: 100%;
   }
   #myContainer #tab2 .container .left_section {
     max-width: 100%;
@@ -592,7 +596,7 @@ body.fp-viewing-ids-0 {
     margin-bottom: 23px;
   }
   #myContainer #tab2 .container .right_section {
-    height: 141px;
+    height: 120px;
     margin: 0 auto;
   }
   #myContainer #tab2 .container .right_section img {
@@ -603,6 +607,7 @@ body.fp-viewing-ids-0 {
 
   #myContainer #tab3 .container {
     height: -webkit-fill-available;height: -moz-available;height: fill-available;
+    height: 100%;
   }
   #myContainer #tab3 .slider_bg {
     display: none;
@@ -622,6 +627,7 @@ body.fp-viewing-ids-0 {
   #myContainer #tab3 .container .move_items {
     width: 300px;
     margin: 0 auto;
+    max-height: 300px;
   }
   #myContainer #tab3 .container .move_items .move_item {
     width: 300px;
@@ -745,6 +751,7 @@ body.fp-viewing-ids-0 {
       max-width: 100%;
       height: calc(100% - 178px);
       position: relative;
+      overflow: hidden;
       .left_section_wrapper {
         height: 100%;
         position: relative;
@@ -787,9 +794,9 @@ body.fp-viewing-ids-0 {
       h2 {
         margin-left: 29px;
         margin-bottom: 34px;
-        font-size: 28px;
+        font-size: 40px;
         line-height: 1.2em;
-        width: calc(100% - 29px);
+        width: 240px;
         position: relative;
         &:after {
           width: calc(100vw - 14px);
