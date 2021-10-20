@@ -80,8 +80,8 @@
 			</div>
 
 			<div class="modalMenu_contacts">
-				<a href="/" target="_blank">1 888-884-4102</a>
-				<a href="/" target="_blank">info@idssignature.com</a>
+				<a href="tel:+18888844102">1 888-884-4102</a>
+				<a href="mailto:info@idssignature.com">info@idssignature.com</a>
 			</div>
 
 			<div class="modalMenu_socials">
