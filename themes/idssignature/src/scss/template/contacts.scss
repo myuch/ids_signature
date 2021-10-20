@@ -2,6 +2,7 @@
     background: #000 !important;
 }
 
+
 .contacts{
     position: relative;
 
@@ -9,6 +10,7 @@
         font-size: 60px;
         color: #fff;
         margin-bottom: 55px;
+        text-align: center;
     }
 
     &_wrap{
@@ -32,16 +34,23 @@
 
         a{
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 5px;
+            transition: 0.2s ease;
+
+            &:hover{
+                color: #3ba1e4;
+            }
         }
 
         span{
             color: #fff;
             max-width: 187px;
-            font-size: 18px;
-            line-height: 24px;
+            font-size: 16px;
             display: block;
             line-height: 1.33;
+            text-align: center;
         }
 
     }
@@ -65,31 +74,140 @@
 
         &-subtitle{
             color: #fff;
-            font-weight: 700;
             font-size: 18px;
             display: block;
             text-align: center;
+            margin-bottom: 50px;
         }
 
     }
 
 }
 
-form{
+.contacts form{
+
+    fieldset{
+        max-width: 100%;
+        margin-bottom: 15px;
+
+        >div{
+            position: relative;
+        }
+    }
+
+    .hs-error-msgs{
+        label{
+            color: red;
+            font-size: 10px;
+            margin-top: 2px;
+        }
+    }
+
+    .hs-form-field{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    label{
+        order: 2;
+        margin-top: 6px;
+
+        span{
+            color: #fff;
+            opacity: 0.5;
+            font-size: 15px;
+        }
+
+    }
 
     input{
         position: relative;
         background: transparent;
         border: none;
-        border-bottom: 2px solid #fff;
+        border-bottom: 1px solid #fff;
         color: #fff;
-        font-size: 24px;
+        font-size: 18px;
         width: 100%;
-        background: #ccc;
+        height: 36px;
 
         &::placeholder{
             color: #fff;
         }
+
+    }
+
+    select{
+        width: 100% !important;
+        height: 36px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: #000;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 400;
+        box-shadow: none;
+
+        &::placeholder{
+            color: #fff;
+        }
+
+        &:focus,
+        &:focus-visible,
+        &:active{
+            border: none;
+            border-bottom: 2px solid #fff;
+            box-shadow: none;
+        }
+    }
+
+    textarea{
+        width: 100% !important;
+        min-height: 120px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        font-size: 18px;
+        padding: 10px;
+        color: #fff;
+    }
+
+    .hs-button{
+        width: 172px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+        background: #fff;
+        border: 2px solid #fff ;
+        margin: 40px auto 0;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover{
+            background: transparent;
+            color: #fff;
+        }
+
+    }
+
+
+
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+
+    .contacts{
+
+        &_item{
+            margin: 0 30px;
+        }
+
     }
 
 }

@@ -1,17 +1,17 @@
-@font-face {
-    font-family: 'Montserrat - Hairline';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src: local('Montserrat Hairline'), local('Montserrat-Hairline'),
-        url('/wp-content/themes/idssignature/assets/fonts/montserrat-hairline.woff') format('woff'),
-        url('/wp-content/themes/idssignature/assets/fontsmontserrat-hairline.ttf') format('truetype');
-}
+// @font-face {
+//     font-family: 'Montserrat - Hairline';
+//     font-style: normal;
+//     font-display: swap;
+//     font-weight: 400;
+//     src: local('Montserrat Hairline'), local('Montserrat-Hairline'),
+//         url('/wp-content/themes/idssignature/assets/fonts/montserrat-hairline.woff') format('woff'),
+//         url('/wp-content/themes/idssignature/assets/fontsmontserrat-hairline.ttf') format('truetype');
+// }
 body {
     color: #222221;
     background: #fff;
     line-height: 1;
-    font-family: 'Montserrat - Hairline';
+    font-family: 'Montserrat', sans-serif;
     min-width: 320px;
 
     &.body-hidden {
