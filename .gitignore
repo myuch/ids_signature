@@ -1,14 +1,8 @@
-
-
-
-
 # PhpStorm files.
 /.idea/
-
 # Except
 !.gitignore
 !.github
-
 # Themes
 !/themes/
 /themes/*
