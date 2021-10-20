@@ -70,12 +70,12 @@
 		<div class="modalMenu_wrap">
 
 			<div class="modalMenu_menu">
-				<span onclick="fullpage_api.moveTo('ids', 0);">Welcome</span>
-				<span onclick="fullpage_api.moveTo('ids', 1);">About IDS Signature</span>
-				<span onclick="fullpage_api.moveTo('ids', 2);">Signature Moves</span>
-				<span onclick="fullpage_api.moveTo('ids', 3);">Where We Imagine</span>
-				<span onclick="fullpage_api.moveTo('ids', 4);">What We’ve imagined</span>
-				<span onclick="fullpage_api.moveTo('ids', 5);">Book A Consultation</span>
+				<span class="active" onclick="fullpage_api.moveTo('ids', 0);" data-index="0">Welcome</span>
+				<span onclick="fullpage_api.moveTo('ids', 1);" data-index="1">About IDS Signature</span>
+				<span onclick="fullpage_api.moveTo('ids', 2);" data-index="2">Signature Moves</span>
+				<span onclick="fullpage_api.moveTo('ids', 3);" data-index="3">Where We Imagine</span>
+				<span onclick="fullpage_api.moveTo('ids', 4);" data-index="4">What We’ve imagined</span>
+				<span onclick="fullpage_api.moveTo('ids', 5);" data-index="5">Book A Consultation</span>
 			</div>
 
 			<div class="modalMenu_contacts">
