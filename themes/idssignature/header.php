@@ -31,6 +31,7 @@
 	<!-- Header -->
 	<header class="header">
 		<div class="header_wrap">
+			<img class="logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/logo-light.png" >
 			<img class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png">
 			<div class="header_right">
 				<a href="#" class="contactUs">
@@ -84,19 +85,19 @@
 			</div>
 
 			<div class="modalMenu_socials">
-				<a href="/">
+				<a href="https://www.facebook.com/imaginationdesignstudios" target="_blank">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Facebook.png">
 				</a>
-				<a href="/">
+				<a href="https://www.instagram.com/idskids/" target="_blank">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Instagram.png">
 				</a>
-				<a href="/">
+				<a href="https://www.linkedin.com/company/imagination-design-studios/" target="_blank">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/images/LinkedIn.png">
 				</a>
-				<a href="/">
+				<a href="https://www.pinterest.com/idspins/_created/" target="_blank">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Pinterest.png">
 				</a>
-				<a href="/">
+				<a href="https://www.youtube.com/user/ImaginationDental" target="_blank">
 					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Youtube.png">
 				</a>
 			</div>

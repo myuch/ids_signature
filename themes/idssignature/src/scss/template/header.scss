@@ -18,6 +18,50 @@
         align-items: center;
     }
 
+    .logo{
+        display: none;
+    }
+
+    &.active{
+        .logo{
+            display: block;
+        }
+        .logo-light{
+            display: none;
+        }
+
+        .hamburger{
+            path{
+                fill: #000;
+            }
+        }
+
+        .contactUs{
+            border: 2px solid #000;
+            color: #000;
+
+            @media (any-hover : hover){
+                &:hover{
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &.lastSection{
+        .logo{
+            display: block;
+        }
+        .logo-light{
+            display: none;
+        }
+
+        .contactUs{
+            display: none;
+        }
+    }
+
 }
 
 .hamburger{
