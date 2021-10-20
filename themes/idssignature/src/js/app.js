@@ -9,13 +9,11 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    if($(window).width() <= 991){
-        $('.modalMenu_menu span').on('click', function(){
-            $('.modalMenu').hide();
-            $('#hamburger').show();
-            $('#hamburger-close').hide();
-        });
-    };
+    $('.modalMenu_menu span').on('click', function(){
+        $('.modalMenu').hide();
+        $('#hamburger').show();
+        $('#hamburger-close').hide();
+    });
 
     $('#hamburger-close').on('click', function(){
         $(this).hide();

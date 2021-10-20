@@ -13,17 +13,16 @@
         background: #000;
         top: -50%;
         right: 0;
-        width: 90%;
+        width: 85%;
         height: 200%;
         overflow: hidden;
-        border-radius: 250vh 0 0 250vh / 250vh 0 0 250vh;
+        border-radius: 140vh 0 0 140vh / 240vh 0 0 240vh;
     }
 }
 
 .contacts{
     position: relative;
     z-index: 3;
-    padding-top: 50px;
 
     .fz-h2{
         font-size: 60px;
@@ -57,6 +56,8 @@
             display: block;
             margin-bottom: 5px;
             transition: 0.2s ease;
+            text-align: center;
+            line-height: 1.2;
 
             &:hover{
                 color: #3ba1e4;
@@ -80,6 +81,18 @@
         width: 100%;
         max-width: 960px;
         margin: 80px auto 0;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 70px;
+            background: #fff;
+            top: -35px;
+            left: 50%;
+            margin-left: -1px;
+        }
 
         &-title{
             color: #fff;
@@ -150,6 +163,8 @@
         font-size: 18px;
         width: 100%;
         height: 36px;
+        border-radius: 0;
+        -webkit-appearance: none;
 
         &::placeholder{
             color: #fff;
@@ -168,6 +183,10 @@
         color: #fff;
         font-weight: 400;
         box-shadow: none;
+        border-radius: 0;
+        -webkit-appearance: none;
+        padding-left: 0;
+        outline: none;
 
         &::placeholder{
             color: #fff;
@@ -179,6 +198,7 @@
             border: none;
             border-bottom: 2px solid #fff;
             box-shadow: none;
+            outline: none;
         }
     }
 
@@ -191,6 +211,10 @@
         font-size: 18px;
         padding: 10px;
         color: #fff;
+        border-radius: 0;
+        -webkit-appearance: none;
+        border-radius: 0;
+        -webkit-appearance: none;
     }
 
     .hs-button{
@@ -215,11 +239,25 @@
 
     }
 
+}
 
+
+/* ================== MEDIA =================== */
+@media (max-width: 1619px) {
+
+    .contacts .fz-h2{
+        max-width: 730px;
+        margin: 0 auto 55px;
+    }
+
+    #tab6{
+        &::after{
+            width: 88%;
+        }
+    }
 
 }
 
-/* ================== MEDIA =================== */
 @media (max-width: 1199px) {
 
     #tab6{
@@ -274,6 +312,10 @@
 }
 
 @media (max-width: 767px) {
+
+    .contacts_form{
+        min-height: 1185px;
+    }
 
     .contacts form{
 

@@ -76,7 +76,9 @@
                         <path class="st0" d="M17.27,6.63c-3.06,0-5.55,2.49-5.55,5.55s2.49,5.55,5.55,5.55s5.55-2.49,5.55-5.55S20.33,6.63,17.27,6.63z
                             M17.27,16.8c-2.55,0-4.63-2.08-4.63-4.63s2.08-4.63,4.63-4.63s4.63,2.08,4.63,4.63S19.82,16.8,17.27,16.8z"/>
                     </svg>
-                    <span>16204 29th Street SE Calgary, AB Canada T2C 1W3</span>
+                    <a target="_blank" href="https://www.google.com.ua/maps/place/16204+29+St+SE,+Calgary,+AB,+%D0%9A%D0%B0%D0%BD%D0%B0%D0%B4%D0%B0/@50.9794663,-114.0149638,11z/data=!4m5!3m4!1s0x537177403a4250d1:0x2e51f8afc7fee42c!8m2!3d50.9487439!4d-113.9970723">
+                        16204 29th Street SE </br> Calgary, AB </br> Canada T2C 1W3
+                    </a>
                 </div>
             </div>
 
