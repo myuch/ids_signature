@@ -1,41 +1,44 @@
   <div class="slides_nav">
     <div class="container">
-      <a onclick="fullpage_api.moveSlideLeft();" href="#">
+      <a class="footer_arrow" onclick="fullpage_api.moveSlideLeft();" href="#">
         <img src="/wp-content/themes/idssignature/assets/images/footArrow_Left.svg" alt="">
       </a>
       <div class="lines">
-        <div class="line_item active" data-index="0">
+        <div class="lines_title_mobile">
+          Welcome
+        </div>
+        <div class="line_item active" data-index="0" onclick="fullpage_api.moveTo('ids', 0);">
           <div class="title">
             Welcome
           </div>
         </div>
-        <div class="line_item" data-index="1">
+        <div class="line_item" data-index="1" onclick="fullpage_api.moveTo('ids', 1);">
           <div class="title">
             About IDS Signature
           </div>
         </div>
-        <div class="line_item" data-index="2">
+        <div class="line_item" data-index="2" onclick="fullpage_api.moveTo('ids', 2);">
           <div class="title">
             Signature Moves
           </div>
         </div>
-        <div class="line_item" data-index="3">
+        <div class="line_item" data-index="3" onclick="fullpage_api.moveTo('ids', 3);">
           <div class="title">
             Where We Imagine
           </div>
         </div>
-        <div class="line_item" data-index="4">
+        <div class="line_item" data-index="4" onclick="fullpage_api.moveTo('ids', 4);">
           <div class="title">
             What We've Imagined
           </div>
         </div>
-        <div class="line_item" data-index="5">
+        <div class="line_item" data-index="5" onclick="fullpage_api.moveTo('ids', 5);">
           <div class="title">
             Book A Consultation
           </div>
         </div>
       </div>
-      <a onclick="fullpage_api.moveSlideRight();" href="#">
+      <a class="footer_arrow" onclick="fullpage_api.moveSlideRight();" href="#">
         <img src="/wp-content/themes/idssignature/assets/images/footArrow_Right.svg" alt="">
       </a>
     </div>

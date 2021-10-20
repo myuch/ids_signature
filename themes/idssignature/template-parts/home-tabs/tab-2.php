@@ -2,7 +2,7 @@
 <div id="tab2" class="slide">
     <div class="container">
       <div class="left_section">
-        <h2>IDS Signature is a Creative Design and Fabricatioon Studio</h2>
+        <h2>IDS Signature is a Creative Design & Fabricatioon Studio</h2>
         <p>
           <b>We are builders, innovators, sculptors of imagination.</b><br><br>
 
