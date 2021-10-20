@@ -1,5 +1,5 @@
 <!-- template-parts/home-tabs/tab-6.php -->
-<div id="tab6" class="slide fp-auto-height" >
+<div id="tab6" class="slide" >
     <div class="container">
 
         <div class="contacts">
