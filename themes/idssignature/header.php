@@ -9,7 +9,9 @@
  *
  * @package IDSsignature
  */
-
+// if(!$_GET['lengin']) {
+// 	exit();
+// }
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -34,7 +36,7 @@
 			<img class="logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/logo-light.png" >
 			<img class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png">
 			<div class="header_right">
-				<a href="#" class="contactUs">
+				<a onclick="fullpage_api.moveTo('ids', 5);" href="#" class="contactUs">
 					CONTACT US
 				</a>
 				<div class="hamburger">
@@ -128,5 +130,3 @@
 
 		</div>
 	</div>
-	
-

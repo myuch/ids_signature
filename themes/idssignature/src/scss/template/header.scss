@@ -205,7 +205,7 @@
         margin-bottom: 40px;
 
         p{
-            font-weight: 700; 
+            font-weight: 700;
             color: #000;
             font-weight: 300;
             font-size: 18px;
@@ -217,7 +217,7 @@
         span{
             color: #3ba1e4;
             font-size: 19px;
-            font-weight: 700; 
+            font-weight: 700;
             text-align: center;
             display: block;
         }
@@ -271,7 +271,7 @@
 
     .modalMenu-close{
         right: 20px;
-        top: 20px;   
+        top: 20px;
     }
 
 }
@@ -328,4 +328,10 @@
 
     }
 
+}
+
+@media (max-width: 600px) {
+  .modalMenu {
+    height: 100%;
+  }
 }

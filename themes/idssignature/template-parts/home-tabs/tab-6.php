@@ -5,7 +5,7 @@
         <div class="contacts">
 
             <h2 class="title fz-h2">Book an Imagination Consultation</h2>
-            
+
             <div class="contacts_wrap">
                 <div class="contacts_item">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -85,7 +85,7 @@
             <div class="contacts_form">
                 <span class="contacts_form-title">Let’s Talk</span>
                 <span class="contacts_form-subtitle">
-                    IDS Signature projects start with a converation 
+                    IDS Signature projects start with a converation
                     and end with immersive experience
                 </span>
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
@@ -95,7 +95,12 @@
                     hbspt.forms.create({
                     region: "na1",
                     portalId: "7692378",
-                    formId: "8c6d1fae-c9ec-4f51-aeb2-3eccfde5a0c5"
+                    formId: "8c6d1fae-c9ec-4f51-aeb2-3eccfde5a0c5",
+                      onFormReady($form, ctx){
+                        if (typeof fullpage_api !== 'undefined') {
+                            fullpage_api.reBuild();
+                        }
+                      }
                     });
                 </script>
             </div>
