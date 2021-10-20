@@ -27,11 +27,16 @@
         afterSlideLoad: function( section, origin, destination, direction){
           if (destination.index == 5) {
             $('.slides_nav').hide();
+            $('.modalMenu_menu span.active').removeClass('active');
+            $('.modalMenu_menu span[data-index="' + destination.index + '"]').addClass('active');
           } else {
             $('.slides_nav').show();
             $('.slides_nav .lines .line_item.active').removeClass('active');
             $('.slides_nav .lines .line_item[data-index="' + destination.index + '"]').addClass('active');
             $('.slides_nav .lines_title_mobile').html($('.slides_nav .lines .line_item.active .title').html());
+
+            $('.modalMenu_menu span.active').removeClass('active');
+            $('.modalMenu_menu span[data-index="' + destination.index + '"]').addClass('active');
           }
 
       	}
