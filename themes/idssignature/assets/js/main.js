@@ -45,7 +45,10 @@
       $('.move_items').slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $('.slick_arrow_prev'),
+        nextArrow: $('.slick_arrow_next')
       });
     }
 
