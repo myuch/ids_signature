@@ -276,7 +276,6 @@ body.fp-viewing-ids-0 {
       left: calc(103px * var(--font-scaler));
       top: 0px;
       width: auto;
-      // height: 100vh;
       height: 100%;
       img {
         width: 100%;
@@ -517,6 +516,7 @@ body.fp-viewing-ids-0 {
   #myContainer #tab2 .container .right_section img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 
   #myContainer #tab3 .slider_bg {
