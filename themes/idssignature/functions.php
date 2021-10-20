@@ -133,6 +133,8 @@ function idssignature_scripts() {
 	$jquery_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js';
 	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '3.4.1', true );
 
+	wp_enqueue_script( 'idssignature-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), _S_VERSION, true );
+
 	wp_enqueue_script( 'idssignature-fullpage', get_template_directory_uri() . '/assets/js/fullpage.scrollHorizontally.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idssignature-fullpage-scroll', get_template_directory_uri() . '/assets/js/scrolloverflow.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idssignature-fullpage-extensions', 'https://unpkg.com/fullpage.js/dist/fullpage.extensions.min.js', array(), _S_VERSION, true );
