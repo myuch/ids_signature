@@ -39,6 +39,16 @@
             $('.modalMenu_menu span[data-index="' + destination.index + '"]').addClass('active');
           }
 
+          if (destination.index == 0) {
+            $('.header').removeClass('active');
+          }else if(destination.index == 5){
+            $('.header').addClass('lastSection');
+            $('.header').removeClass('active');
+          }else{
+            $('.header').addClass('active');
+            $('.header').removeClass('lastSection');
+          }
+
       	}
     });
 
