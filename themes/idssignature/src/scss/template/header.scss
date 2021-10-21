@@ -189,13 +189,13 @@
             margin: 0 6px;
             transition: 0.2s ease;
 
-            img{
+            svg{
                 width: 40px;
-                height: auto;
+                height: 40px;
             }
 
             &:hover{
-                transform: scale(1.05);
+                transform: scale(1.1);
             }
         }
 
@@ -214,12 +214,19 @@
             margin-bottom: 10px;
         }
 
-        span{
+        a{
             color: #3ba1e4;
             font-size: 19px;
             font-weight: 700;
             text-align: center;
             display: block;
+            width: fit-content;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+
+            &:hover{
+                text-decoration: underline;
+            }
         }
 
     }
