@@ -47,7 +47,7 @@
 
     &_slider {
         width: 100%;
-        max-width: 420px;
+        max-width: 530px;
         margin-top: 20px;
         margin-bottom: 10px;
         position: relative;
@@ -145,7 +145,6 @@
     display: flex;
     margin-bottom: 20px;
     // max-width: 300px;
-    display: none !important;
 
     &-item {
         width: 100px !important;
@@ -191,7 +190,7 @@ svg#hamburger-close-white {
     .galleryModal {
 
         &_slider {
-
+          max-width: 420px;
             &_item {
                 height: 400px !important;
             }

@@ -45,7 +45,11 @@
     $('.project_item').on('click', function(){
       window.slick_gallery_unslick();
       $('#galleryModal .galleryModal_slider_wrap').html($(this).find('.slider_imgs').html());
+
+			//$('#galleryModal .galleryModal_slider_wrap').html(html);
+			$('#galleryModal .slider-nav-thumbnails').html($(this).find('.slider_imgs').html());
       $('#galleryModal .galleryModal-title').html($(this).attr('data-term-name'));
+			$('#galleryModal .slider-nav-thumbnails .galleryModal_slider_item').removeClass('galleryModal_slider_item').addClass('slider-nav-thumbnails-item');
       $('#galleryModal .galleryModal-subtitle').html($(this).attr('data-title'));
       $('#galleryModal .galleryModal-desc').html($(this).attr('data-description'));
       $('#galleryModal').show();
@@ -102,7 +106,6 @@
 
 		});
 
-		//$('div[style^="z-index:99"]').hide();
 		$('#tab1').addClass('loaded');
 		$('.slide_bg').addClass('active');
 
@@ -116,13 +119,7 @@
 				prevArrow: $('.slick_arrow_prev'),
 				nextArrow: $('.slick_arrow_next')
 			});
-			// $('.modalMenu').animate({
-			//   height: 500
-			// }, 0);
 			var newHeight = $('#tab4 .container').height() - 178 - 145;
-			// $('#tab4 .left_section').animate({
-			//   height: newHeight
-			// }, 0);
 
 		}
 
