@@ -35,6 +35,22 @@
 				$('#tab4 .container .collapse_btn').addClass('active');
 			}
 		});
+
+		$('select[name="tab5_select"]').on('change', function() {
+      $('.project_term_item').hide();
+      $('.project_term_item[data-term="' + this.value + '"]').show();
+      fullpage_api.reBuild();
+
+    });
+    $('.project_item').on('click', function(){
+      window.slick_gallery_unslick();
+      $('#galleryModal .galleryModal_slider_wrap').html($(this).find('.slider_imgs').html());
+      $('#galleryModal .galleryModal-title').html($(this).attr('data-term-name'));
+      $('#galleryModal .galleryModal-subtitle').html($(this).attr('data-title'));
+      $('#galleryModal .galleryModal-desc').html($(this).attr('data-description'));
+      $('#galleryModal').show();
+      window.slick_gallery_init();
+    });
 	});
 
 	$(window).on('load', function (e) {
