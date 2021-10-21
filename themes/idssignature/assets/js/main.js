@@ -70,7 +70,7 @@
 			scrollHorizontally: true,
 			continuousHorizontal: false,
 			loopHorizontal: false,
-			scrollHorizontallyKey: 'I628280F8-F3B74673-8F399A08-E98D29B3', //see https://goo.gl/xkUmHS
+			scrollHorizontallyKey: 'aWRzc2lnbmF0dXJlLmNvbV9oMWxjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVwZkk=', //see https://goo.gl/xkUmHS
 
 			afterSlideLoad: function (section, origin, destination, direction) {
 				//$('div[style^="z-index:99"]').hide();
