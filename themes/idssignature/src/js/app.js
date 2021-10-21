@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('.modalMenu_menu span').on('click', function () {
-        $('.modalMenu').hide();
+        $('.modalMenu').fadeOut();
         $('#hamburger').show();
         $('#hamburger-close').hide();
     });
@@ -25,6 +25,15 @@ jQuery(document).ready(function ($) {
         $('.modalMenu').fadeOut();
     });
 
+    if ($(window).width() > 992) {
+        $(document).click(function (event) {
+            if (!$(event.target).closest(".modalMenu, #hamburger").length) {
+                $("body").find(".modalMenu").fadeOut();
+            }
+        });
+    }
+
+
     var slideCount = $('.galleryModal_slider_item').length;
 
     $('.galleryModal_slider_wrap').slick({
@@ -36,7 +45,7 @@ jQuery(document).ready(function ($) {
         prevArrow: $('#galleryModal_arrowPrev'),
         nextArrow: $('#galleryModal_arrowNext'),
     });
-   
+
     $('.slider-nav-thumbnails').slick({
         slidesToShow: slideCount,
         slidesToScroll: 1,
@@ -46,25 +55,25 @@ jQuery(document).ready(function ($) {
         centerMode: true,
         centerPadding: '0px',
     });
-   
-    // Remove active class from all thumbnail slides
-    $('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
-   
-    // Set active class to first thumbnail slides
+
+    // // Remove active class from all thumbnail slides
+    // $('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
+
+    // // Set active class to first thumbnail slides
     $('.slider-nav-thumbnails .slick-slide').eq(0).addClass('slick-active');
-   
+
     // On before slide change match active thumbnail to current slide
     $('.galleryModal_slider_wrap').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         var mySlideNumber = nextSlide;
         $('.slider-nav-thumbnails-item').removeClass('slick-active');
         $('.slider-nav-thumbnails-item').eq(mySlideNumber).addClass('slick-active');
-   });
+    });
 
-   $('.slider-nav-thumbnails-item').on('click', function(){
+    $('.slider-nav-thumbnails-item').on('click', function () {
         $('.slider-nav-thumbnails-item').removeClass('slick-active');
         $(this).addClass('slick-active');
-   });
-    
+    });
+
 
 
 });

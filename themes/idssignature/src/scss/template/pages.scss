@@ -267,6 +267,10 @@ body.fp-viewing-ids-0 {
         img {
           width: 100%;
         }
+
+        .tab2_imgSecond{
+          display: none;
+        }
       }
     }
   }
@@ -478,6 +482,9 @@ body.fp-viewing-ids-0 {
   #myContainer #tab3 .container .move_items .move_item {
     width: calc(33% - 20px);
   }
+  #myContainer #tab2 .container .right_section{
+    margin-right: 160px;
+  }
 }
 @media (max-width: 1240px) {
   #myContainer #tab1 .slide_bg.active {
@@ -509,6 +516,9 @@ body.fp-viewing-ids-0 {
   #myContainer .container {
     margin-top: 60px;
     margin-bottom: 50px;
+  }
+  #myContainer #tab2 .container .right_section{
+    margin-right: 0px;
   }
 }
 @media (max-width: 991px) {
@@ -825,6 +835,15 @@ body.fp-viewing-ids-0 {
           }
         }
       }
+    }
+  }
+
+  #myContainer #tab2 .container .right_section {
+    .tab2_imgFirst{
+      display: none;
+    }
+    .tab2_imgSecond{
+      display: block;
     }
   }
 }

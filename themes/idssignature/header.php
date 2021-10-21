@@ -174,7 +174,7 @@
 
 				<div class="modalMenu_firstText">
 					<p>Brought to you by the same creative minds behind </p>
-					<a href="https://idskids.com/" target="_blank">IDSkids.</a>
+					<a href="https://idskids.com/" target="_blank">IDS kids.</a>
 				</div>
 
 				<div class="modalMenu_secondText">
