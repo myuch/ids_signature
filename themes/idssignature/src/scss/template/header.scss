@@ -306,7 +306,7 @@
         .logo-light{
             display: none;
         }
-      
+
     }
 
     .contactUs{
@@ -345,6 +345,13 @@
 }
 
 @media (max-width: 600px) {
+  .contactUs {
+    margin-right: 14px;
+  }
+  .header .logo,
+  .header .logo-light {
+    width: 130px;
+  }
   .modalMenu {
     height: 100%;
   }
