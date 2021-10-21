@@ -145,6 +145,7 @@
     display: flex;
     margin-bottom: 20px;
     // max-width: 300px;
+    display: none !important;
 
     &-item {
         width: 100px !important;
@@ -176,6 +177,13 @@
 
 }
 
+svg#hamburger-close-white {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    fill: white;
+    cursor: pointer;
+}
 
 /* ================== MEDIA =================== */
 @media (max-width: 1619px) {

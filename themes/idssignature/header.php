@@ -199,7 +199,14 @@
 
 
 	<!-- Gallery Modal -->
-	<div id="galleryModal" style="display: block;" class="galleryModal">
+	<div id="galleryModal" class="galleryModal" style="display:none;">
+		<svg id="hamburger-close-white" xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" style="display: inline;">
+			<g>
+				<g>
+					<path d="M2.533.6L13.5 11.568 24.467.601a1 1 0 1 1 1.414 1.413L14.914 12.981l10.954 10.955a1 1 0 1 1-1.414 1.413L13.5 14.395 2.546 25.349a1 1 0 1 1-1.414-1.413L12.086 12.98 1.12 2.014A1 1 0 1 1 2.533.601z"></path>
+				</g>
+			</g>
+		</svg>
 		<div class="galleryModal_wrap">
 			<span class="galleryModal-title">
 				Signage & Outdoor Landmarks
