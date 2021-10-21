@@ -300,6 +300,13 @@
         background: #fff;
         box-shadow: 0 1px 4px #162526;
         height: auto;
+        .logo{
+            display: block;
+        }
+        .logo-light{
+            display: none;
+        }
+      
     }
 
     .contactUs{
