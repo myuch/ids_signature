@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('.modalMenu_menu span').on('click', function () {
-        $('.modalMenu').hide();
+        $('.modalMenu').fadeOut();
         $('#hamburger').show();
         $('#hamburger-close').hide();
     });
@@ -24,6 +24,15 @@ jQuery(document).ready(function ($) {
     $('.modalMenu-close').on('click', function () {
         $('.modalMenu').fadeOut();
     });
+
+
+    if ($(window).width() > 992) {
+        $(document).click(function (event) {
+            if (!$(event.target).closest(".modalMenu, #hamburger").length) {
+                $("body").find(".modalMenu").fadeOut();
+            }
+        });
+    }
 
     $('#hamburger-close-white').on('click', function () {
       $('#galleryModal').hide();
@@ -61,6 +70,7 @@ function slick_gallery_init(){
 
   // Set active class to first thumbnail slides
   $('.slider-nav-thumbnails .slick-slide').eq(0).addClass('slick-active');
+
 
   // On before slide change match active thumbnail to current slide
   $('.galleryModal_slider_wrap').on('beforeChange', function (event, slick, currentSlide, nextSlide) {

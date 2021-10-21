@@ -13,7 +13,8 @@
         </p>
       </div>
       <div class="right_section">
-        <img src="/wp-content/themes/idssignature/assets/images/slide_2.png" alt="">
+        <img class="tab2_imgFirst" src="/wp-content/themes/idssignature/assets/images/slide_2.png" alt="">
+        <img class="tab2_imgSecond" src="/wp-content/themes/idssignature/assets/images/_M-Flattened-Asset.png" alt="">
       </div>
     </div>
 </div>

@@ -85,8 +85,8 @@
             <div class="contacts_form">
                 <span class="contacts_form-title">Let’s Talk</span>
                 <span class="contacts_form-subtitle">
-                    IDS Signature projects start with a converation
-                    and end with immersive experience
+                    IDS Signature projects start with a conversation 
+                    and end with an immersive experience.
                 </span>
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
                 <![endif]-->
