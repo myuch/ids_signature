@@ -72,7 +72,6 @@
 					$('.modalMenu_menu span[data-index="' + destination.index + '"]').addClass('active');
 				}
 			},
-
 			onSlideLeave: function(section, origin, destination, direction){
 				if (destination.index == 0) {
 					$('.header').removeClass('active');
