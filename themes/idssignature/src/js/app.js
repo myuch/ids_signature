@@ -1,30 +1,31 @@
 jQuery(document).ready(function ($) {
 
-    $('#hamburger').on('click', function(){
+    $('#hamburger').on('click', function () {
         $('.modalMenu').fadeIn();
 
-        if($(window).width() <= 991){
+        if ($(window).width() <= 991) {
             $('#hamburger').hide();
             $('#hamburger-close').show();
         }
     });
 
-    $('.modalMenu_menu span').on('click', function(){
+    $('.modalMenu_menu span').on('click', function () {
         $('.modalMenu').hide();
         $('#hamburger').show();
         $('#hamburger-close').hide();
     });
 
-    $('#hamburger-close').on('click', function(){
+    $('#hamburger-close').on('click', function () {
         $(this).hide();
         $('#hamburger').show();
         $('.modalMenu').fadeOut();
     });
 
-    $('.modalMenu-close').on('click', function(){
+    $('.modalMenu-close').on('click', function () {
         $('.modalMenu').fadeOut();
     });
 
+    var slideCount = $('.galleryModal_slider_item').length;
 
     $('.galleryModal_slider_wrap').slick({
         infinite: true,
