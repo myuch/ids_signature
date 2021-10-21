@@ -521,8 +521,8 @@ body.fp-viewing-ids-0 {
               background: black;
               font-family: "Montserrat - Hairline";
               color: #ffffff;
-              font-size: calc(30px * var(--font-scaler));
               font-size: calc(20px * var(--font-scaler));
+              //font-size: 20px;
               font-weight: 200;
               font-style: normal;
               letter-spacing: normal;
@@ -556,8 +556,29 @@ body.fp-viewing-ids-0 {
                 margin: 0px 5px;
                 width: calc( (100% - 60px) / 6);
                 cursor: pointer;
+                position: relative;
+                transition: opacity .3s;
+                &:hover {
+                  opacity: .7;
+                }
                 img {
                   width: 100%;
+                }
+                .project_title {
+                  position: absolute;
+                  bottom: 0px;
+                  left: 0px;
+                  width: 100%;
+                  height: 3.2em;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  background: #00000099;
+                  font-size: 16px;
+                  line-height: 1.2em;
+                  color: white;
+                  padding: 0px 5px;
                 }
               }
             }
@@ -951,12 +972,17 @@ body.fp-viewing-ids-0 {
     }
   }
   #myContainer #tab5 .container .left_section {
+    .left_section_content .select_wrapper select {
+      font-size: 16px;
+    }
     .left_section_content .projects_list {
       overflow: visible;
       .project_term_item {
         justify-content: flex-start;
         width: calc(100% + 20px);
         overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
         .project_item {
           min-width: 222px;
           &:last-child {
@@ -966,6 +992,7 @@ body.fp-viewing-ids-0 {
       }
     }
   }
+
 }
 @media (max-width: 425px) {
   #myContainer #tab2 .container .left_section h2 {

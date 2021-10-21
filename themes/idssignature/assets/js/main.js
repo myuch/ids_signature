@@ -62,7 +62,7 @@
 			slidesNavigation: false,
 			controlArrows: false,
 			scrollOverflow: true,
-			normalScrollElements: '.modalMenu',
+			normalScrollElements: '.modalMenu, select, .projects_list',
 			//In addition to the extension license you'll
 			//need to acquire a fullPage.js license from https://goo.gl/5x9a22
 			licenseKey: '390281F7-78A54E36-A4D1D692-7A439190',
