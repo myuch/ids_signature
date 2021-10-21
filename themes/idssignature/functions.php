@@ -104,6 +104,71 @@ if ( ! function_exists( 'idssignature_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'idssignature_setup' );
 
+/** Register Post Type Projects **/
+add_action('init', 'init_projects_pt');
+function init_projects_pt(){
+	register_post_type('project', array(
+		'labels'             => array(
+			'name'               => 'Projects',
+			'singular_name'      => 'Project',
+			'add_new'            => 'Add new',
+			'add_new_item'       => 'Add new Project',
+			'edit_item'          => 'Edit Project',
+			'new_item'           => 'New Project',
+			'view_item'          => 'View Project',
+			'search_items'       => 'Search Projects',
+			'not_found'          => 'Not found',
+			'not_found_in_trash' => 'Not found in trash',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Projects'
+
+		  ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'					 => 'dashicons-chart-line',
+		'supports'           => array('title')
+	) );
+}
+add_action( 'init', 'create_taxonomy_type' );
+function create_taxonomy_type(){
+
+	register_taxonomy( 'type', [ 'project' ], [
+		'label'                 => '',
+		'labels'                => [
+			'name'              => 'Types',
+			'singular_name'     => 'Type',
+			'search_items'      => 'Search Types',
+			'all_items'         => 'All Types',
+			'view_item '        => 'View Type',
+			'parent_item'       => 'Parent Type',
+			'parent_item_colon' => 'Parent Type:',
+			'edit_item'         => 'Edit Type',
+			'update_item'       => 'Update Type',
+			'add_new_item'      => 'Add New Type',
+			'new_item_name'     => 'New Type Name',
+			'menu_name'         => 'Type',
+		],
+		'description'           => '',
+		'public'                => true,
+		'hierarchical'          => true,
+
+		'rewrite'               => true,
+		'capabilities'          => array(),
+		'meta_box_cb'           => null,
+		'show_admin_column'     => true,
+		'show_in_rest'          => true,
+		'rest_base'             => null,
+	] );
+}
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
