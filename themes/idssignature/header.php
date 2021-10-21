@@ -100,7 +100,16 @@
 					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Pinterest.png">
 				</a>
 				<a href="https://www.youtube.com/user/ImaginationDental" target="_blank">
-					<img src="<?php echo get_template_directory_uri() ?>/assets/images/Youtube.png">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+						<g>
+							<path d="M25,49.61C11.43,49.61,0.39,38.57,0.39,25C0.39,11.43,11.43,0.39,25,0.39S49.61,11.43,49.61,25
+								C49.61,38.57,38.57,49.61,25,49.61z M25,2.15C12.4,2.15,2.15,12.4,2.15,25C2.15,37.6,12.4,47.85,25,47.85
+								c12.6,0,22.85-10.25,22.85-22.85C47.85,12.4,37.6,2.15,25,2.15z"/>
+							<path d="M33.47,15.81H16.53c-2.27,0-4.12,1.75-4.12,3.89v8.92c0,2.14,1.86,3.89,4.12,3.89h16.95c2.27,0,4.12-1.75,4.12-3.89V19.7
+								C37.6,17.56,35.74,15.81,33.47,15.81 M21.08,28.32v-8.89l9.47,4.45L21.08,28.32z"/>
+						</g>
+					</svg>
 				</a>
 			</div>
 
@@ -127,6 +136,60 @@
 				</div>
 
 			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Gallery Modal -->
+	<div id="galleryModal" style="display: block;" class="galleryModal">
+		<div class="galleryModal_wrap">
+			<span class="galleryModal-title">
+				Signage & Outdoor Landmarks
+			</span>
+			<span class="galleryModal-subtitle">
+				Case Study Name
+			</span>
+
+			<div class="galleryModal_slider">
+				<div class="galleryModal_slider_wrap">
+					<div class="galleryModal_slider_item">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-2.jpg">
+					</div>
+					<div class="galleryModal_slider_item">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-3.jpg">
+					</div>
+					<div class="galleryModal_slider_item">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-4.jpg">
+					</div>
+					<div class="galleryModal_slider_item">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-1.jpg">
+					</div>
+				</div>
+				<span id="galleryModal_arrowPrev" class="galleryModal_arrow"></span>
+				<span id="galleryModal_arrowNext" class="galleryModal_arrow"></span>
+			</div>
+
+			<!-- THUMBNAILS -->
+			<div class="slider-nav-thumbnails">
+				<div class="slider-nav-thumbnails-item">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-2.jpg">
+				</div>
+				<div class="slider-nav-thumbnails-item">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-3.jpg">
+				</div>
+				<div class="slider-nav-thumbnails-item">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-4.jpg">
+				</div>
+				<div class="slider-nav-thumbnails-item">
+					<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-1.jpg">
+				</div>
+			</div>
+
+			<p class="galleryModal-desc">
+				Don’t settle for ‘just like all the rest’. Be distinct. Distinguish your space.
+				Weave an integrated theme throughout.
+			</p>
 
 		</div>
 	</div>
