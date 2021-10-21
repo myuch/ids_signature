@@ -35,10 +35,14 @@
         $('#tab4 .container .collapse_btn').addClass('active');
       }
     });
+    $('select[name="tab5_select"]').on('change', function() {
+      $('.project_term_item').hide();
+      $('.project_term_item[data-term="' + this.value + '"]').show();
+      fullpage_api.reBuild();
+    });
   });
 
   $(window).on('load', function(e){
-    //$('div[style^="z-index:99"]').hide();
     new fullpage('#myContainer', {
         // sectionsColor: ['#ff73a1', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccc'],
         anchors: ['ids', 'secondPage', '3rdPage', '4thpage'],
@@ -46,7 +50,7 @@
         slidesNavigation: false,
         controlArrows: false,
         scrollOverflow: true,
-        normalScrollElements: '.modalMenu',
+        normalScrollElements: '.modalMenu, select, .projects_list',
         //In addition to the extension license you'll
         //need to acquire a fullPage.js license from https://goo.gl/5x9a22
         licenseKey: '390281F7-78A54E36-A4D1D692-7A439190',
@@ -54,10 +58,9 @@
         scrollHorizontally: true,
         continuousHorizontal: false,
         loopHorizontal: false,
-        scrollHorizontallyKey: 'I628280F8-F3B74673-8F399A08-E98D29B3', //see https://goo.gl/xkUmHS
+        scrollHorizontallyKey: 'aWRzc2lnbmF0dXJlLmNvbV9oMWxjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVwZkk=', //see https://goo.gl/xkUmHS
 
         afterSlideLoad: function( section, origin, destination, direction){
-          //$('div[style^="z-index:99"]').hide();
           if (destination.index == 5) {
             $('.slides_nav').hide();
             $('.modalMenu_menu span.active').removeClass('active');
@@ -81,11 +84,9 @@
             $('.header').addClass('active');
             $('.header').removeClass('lastSection');
           }
-
       	}
     });
 
-      //$('div[style^="z-index:99"]').hide();
     $('#tab1').addClass('loaded');
     $('.slide_bg').addClass('active');
 
