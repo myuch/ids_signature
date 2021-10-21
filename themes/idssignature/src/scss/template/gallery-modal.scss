@@ -258,3 +258,14 @@ svg#hamburger-close-white {
     }
 
 }
+
+@media (max-width: 420px) {
+
+    .galleryModal_arrow {
+      margin-left: -40px;
+    }
+    .galleryModal_arrow#galleryModal_arrowNext {
+      margin-right: -40px;
+    }
+
+}

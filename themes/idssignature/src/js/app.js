@@ -54,7 +54,7 @@ function slick_gallery_init(){
       prevArrow: $('#galleryModal_arrowPrev'),
       nextArrow: $('#galleryModal_arrowNext'),
   });
-  console.log(slideCount);
+  
   $('.slider-nav-thumbnails').slick({
       slidesToShow: slideCount,
       slidesToScroll: 1,
