@@ -21,9 +21,31 @@
               </select>
             </div>
 
-            <p>
-              Don’t settle for ‘just like all the rest’. Be distinct. Distinguish your space. Weave an integrated theme throughout.
+            <p descr-data-id="4">
+              Don’t settle for ‘just like the all rest’. Be distinct. Be distinguishable. Weave an integrated theme throughout.
             </p>
+            <p class="active" descr-data-id="2">
+              Add an extra element of character and personality to your space. Custom designed and one-of-a-kind.
+            </p>
+            <p descr-data-id="3">
+              Bring unmatched form to your function. Transform awkward pillars and bulkheads into interesting design features.
+            </p>
+            <p descr-data-id="5">
+              Take it to the street! Turn heads and attract attention… to get visitors, clients, and customers through the front door.
+            </p>
+            <!--
+            Thematic Space Design
+            Don’t settle for ‘just like the all rest’. Be distinct. Be distinguishable. Weave an integrated theme throughout.
+
+            Sculptures, Characters, & Icons
+            Add an extra element of character and personality to your space. Custom designed and one-of-a-kind.
+
+            Spatial & Structural Elements
+            Bring unmatched form to your function. Transform awkward pillars and bulkheads into interesting design features.
+
+            Signage & Outdoor Landmarks
+            Take it to the street! Turn heads and attract attention… to get visitors, clients, and customers through the front door.
+            -->
             <?php
             $posts_array = array();
             foreach ($terms as $term) {

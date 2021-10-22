@@ -620,6 +620,10 @@ body.fp-viewing-ids-0 {
             text-align: left;
             margin-bottom: calc(45px * var(--font-scaler));
             max-width: calc(550px * var(--font-scaler));
+						display: none;
+						&.active {
+							display: block;
+						}
           }
           .projects_list {
             .project_term_item {

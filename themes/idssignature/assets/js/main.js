@@ -39,6 +39,8 @@
 		$('select[name="tab5_select"]').on('change', function() {
       $('.project_term_item').hide();
       $('.project_term_item[data-term="' + this.value + '"]').show();
+			$('#tab5 .left_section_content p.active').removeClass('active');
+			$('#tab5 .left_section_content p[descr-data-id="' + this.value + '"]').addClass('active');
       fullpage_api.reBuild();
 
     });
