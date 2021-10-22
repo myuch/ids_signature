@@ -78,11 +78,17 @@
     justify-content: center;
     width: 35px;
     height: 26px;
-    opacity: 0.8;
-    transition: 0.2s ease;
+
+
+    svg{
+        opacity: 0.8;
+        transition: 0.2s ease;
+    }
 
     &:hover{
-        opacity: 1;
+       svg{
+            opacity: 1;
+       }
     }
 
 }
@@ -211,7 +217,7 @@
 
         p{
             color: #000;
-            font-size: 22px;
+            font-size: 20px;
             display: block;
             margin-bottom: 10px;
         }
@@ -289,24 +295,6 @@
 @media (max-width: 1199px) {
 
     .header{
-        padding: 0 30px;
-        top: 30px;
-    }
-
-    .modalMenu{
-
-        &-close{
-            top: 39px;
-            right: 34px;
-        }
-
-    }
-
-}
-
-@media (max-width: 991px) {
-
-    .header{
         padding: 15px;
         top: 0px;
         background: #fff;
@@ -318,16 +306,15 @@
         .logo-light{
             display: none;
         }
-
     }
 
-    .contactUs{
-        border: 2px solid #000;
-        color: #000;
-        width: 148px;
-        height: 34px;
-        margin-right: 28px;
-        font-size: 16px;
+    .modalMenu{
+
+        &-close{
+            top: 39px;
+            right: 34px;
+        }
+
     }
 
     #hamburger{
@@ -336,6 +323,14 @@
         }
     }
 
+    .contactUs{
+        border: 2px solid #000 !important;
+        color: #000 !important;
+        width: 148px;
+        height: 34px;
+        margin-right: 28px;
+        font-size: 16px;
+    }
     .modalMenu{
         max-width: none;
         z-index: 99;

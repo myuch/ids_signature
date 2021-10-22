@@ -313,6 +313,7 @@
     }
 
     .contacts{
+        padding-top: 60px;
 
         &_item{
             margin: 0 30px;
@@ -325,7 +326,7 @@
 @media (max-width: 991px) {
 
     .contacts{
-        padding-top: 60px;
+       
 
         .fz-h2{
             font-size: 40px;
