@@ -1,85 +1,95 @@
 :root {
-  --font-scaler: 1;
+	--font-scaler: 1;
 }
 
-header {
+header {}
 
-}
 body.fp-viewing-ids-0 {
-  .slides_nav img {
-    filter: invert(1);
-  }
-  .slides_nav .container .lines .line_item .title,
-  .slides_nav .container .lines .lines_title_mobile {
-    color: white;
-  }
-  .slides_nav .container .lines .line_item {
-    border-color: white;
-  }
+	.slides_nav img {
+		filter: invert(1);
+	}
+
+	.slides_nav .container .lines .line_item .title,
+	.slides_nav .container .lines .lines_title_mobile {
+		color: white;
+	}
+
+	.slides_nav .container .lines .line_item {
+		border-color: white;
+	}
 }
+
 .slides_nav {
-  position: fixed;
-  bottom:0px;
-  left: 0px;
-  width: 100%;
-  height: 75px;
-  background: transparent;
-  opacity: 1;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .lines {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      width: calc(100% - 50px);
-      .line_item {
-        width: calc(16.6% - 10px);
-        margin: 0 5px 5px;
-        border-bottom: 2px solid black;
-        transition: border-height .1s, border-color .3s;
-        cursor: pointer;
-        .title {
-          margin-bottom: 5px;
-          color: black;
-          font-family: "Montserrat - Hairline";
-          font-size: calc(18px * var(--font-scaler));
-          font-weight: 400;
-          font-style: normal;
-          letter-spacing: normal;
-          line-height: 1.6;
-          text-align: center;
-          width: 100%;
-          transition: all .3s;
-        }
-        &.active {
-          border-width: 4px;
-          margin-bottom: 3px;
-        }
-      }
-      .lines_title_mobile {
-        display: none;
-        position: absolute;
-        left: 50%;
-        top: -20px;
-        transform: translateX(-50%);
-        color: #000;
-        font-family: "Montserrat - Hairline";
-        font-size: 18px;
-        font-weight: bold;
-        font-style: normal;
-        letter-spacing: normal;
-        line-height: 30.05px;
-        text-align: center;
-        width: 100%;
-      }
-    }
-  }
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 75px;
+	background: transparent;
+	opacity: 1;
+	display: none !important;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.lines {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			width: calc(100% - 50px);
+
+			.line_item {
+				width: calc(16.6% - 10px);
+				margin: 0 5px 5px;
+				border-bottom: 2px solid black;
+				transition: border-height .1s, border-color .3s;
+				cursor: pointer;
+
+				.title {
+					margin-bottom: 5px;
+					color: black;
+					// //font-family: "Montserrat - Hairline";
+					font-size: calc(18px * var(--font-scaler));
+					font-weight: 400;
+					font-style: normal;
+					letter-spacing: normal;
+					line-height: 1.6;
+					text-align: center;
+					width: 100%;
+					transition: all .3s;
+				}
+
+				&.active {
+					border-width: 4px;
+					margin-bottom: 3px;
+				}
+			}
+
+			.lines_title_mobile {
+				display: none;
+				position: absolute;
+				left: 50%;
+				top: -20px;
+				transform: translateX(-50%);
+				color: #000;
+				//font-family: "Montserrat - Hairline";
+				font-size: 18px;
+				font-weight: bold;
+				font-style: normal;
+				letter-spacing: normal;
+				line-height: 30.05px;
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
 
 }
+
 #myContainer {
-  background: url('/wp-content/themes/idssignature/assets/images/slide2_bg.jpeg?v=1');
+  background: url('/wp-content/themes/idssignature/assets/images/general-bg.jpg');
   background-position: center center;
   background-size: cover;
   .container {
@@ -236,13 +246,13 @@ body.fp-viewing-ids-0 {
     .container {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
-      overflow: hidden;
+      //justify-content: space-between;
+      overflow: visible;
       .left_section {
         max-width: calc(651px * var(--font-scaler));
         h2 {
           color: #000;
-          font-family: "Montserrat - Hairline";
+          //font-family: "Montserrat - Hairline";
           font-size: calc(60px * var(--font-scaler));
           font-weight: 400;
           font-style: normal;
@@ -253,38 +263,90 @@ body.fp-viewing-ids-0 {
           margin-bottom: calc(82px * var(--font-scaler));
         }
         p {
-          font-family: "Montserrat - Hairline";
-          font-size: calc(24px * var(--font-scaler));
-          font-weight: 400;
-          font-style: normal;
-          letter-spacing: normal;
-          line-height: 1.3em;
-          text-align: left;
-          b {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-          }
-          span {
-            max-width: calc(555px * var(--font-scaler));
-            display: block;
-          }
-        }
+					//font-family: "Montserrat - Hairline";
+					font-size: calc(24px * var(--font-scaler));
+					font-weight: 400;
+					font-style: normal;
+					letter-spacing: normal;
+					line-height: 1.3em;
+					text-align: left;
+
+					span {
+						max-width: calc(645px * var(--font-scaler));
+						display: block;
+						margin-bottom: 25px;
+
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
       }
       .right_section {
-        max-width: calc(390px * var(--font-scaler));
-        margin: 0;
-        margin-left: calc(50px * var(--font-scaler));
-        margin-right: calc(50px * var(--font-scaler));
-        img {
-          width: 100%;
-        }
+				max-width: calc(390px * var(--font-scaler));
+				margin: 0;
+				margin-left: calc(50px * var(--font-scaler));
+				margin-right: calc(50px * var(--font-scaler));
 
-        .tab2_imgSecond{
-          display: none;
-        }
-      }
-    }
-  }
+				img {
+					width: 100%;
+				}
+
+				.tab2_img {
+					position: relative;
+					width: 315px;
+					height: 420px;
+
+					&_first {
+						position: relative;
+						width: 100%;
+						height: 100%;
+						z-index: 2;
+
+						img {
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+
+					}
+
+					&_block {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						border: 2px solid #000000;
+						z-index: 1;
+						left: 34%;
+						top: 21%;
+					}
+
+					&_second {
+						position: absolute;
+						width: 80%;
+						height: 80%;
+						z-index: 3;
+						left: 67%;
+						top: 61%;
+
+						img {
+							position: absolute;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+				}
+
+			}
+		}
+	}
   #tab3 {
     position: relative;
     .slick_arrows {
@@ -618,106 +680,146 @@ body.fp-viewing-ids-0 {
 
 
 @media (max-width: 1910px) {
-  #myContainer #tab3 .container .move_items .move_item {
-    margin-top: 30px;
-  }
+	#myContainer #tab3 .container .move_items .move_item {
+		margin-top: 30px;
+	}
 }
+
 @media (max-width: 1600px) {
-  :root {
-    --font-scaler : .8;
-  }
-  .container {
-    max-width: 1200px;
-  }
-  #myContainer #tab3 .container .move_items .move_item {
-    width: calc(33% - 20px);
-  }
-  #myContainer #tab2 .container .right_section{
-    margin-right: 160px;
-  }
+	:root {
+		--font-scaler: .8;
+	}
+
+	.container {
+		max-width: 1200px;
+	}
+
+	#myContainer #tab3 .container .move_items .move_item {
+		width: calc(33% - 20px);
+	}
+
+	#myContainer #tab2 .container .right_section {
+		margin-right: 160px;
+	}
+
+	#myContainer #tab2 .container .right_section .tab2_img{
+		width: 250px;
+		height: 340px;
+	}
 }
+
 @media (max-width: 1240px) {
-  #myContainer #tab1 .slide_bg.active {
-    border-radius: 0px !important;
-    width: 100% !important;
-    max-width: 100vw;
-    animation: none !important;
-  }
-  #myContainer #tab1 .slide_bg {
-    animation: none !important;
-  }
-  .container {
-    max-width: 950px;
-  }
-  .slides_nav .container .lines .line_item .title {
-    font-size: 12px;
-  }
-  .slides_nav .footer_arrow {
-    width: 15px;
-    height: 30px;
-  }
-  .slides_nav .footer_arrow img {
-    width: 100%;
-    height: 100%;
-  }
-  .slides_nav {
-    height: 50px;
-  }
-  #myContainer .container {
-    margin-top: 60px;
-    margin-bottom: 50px;
-  }
-  #myContainer #tab2 .container .right_section{
-    margin-right: 0px;
-  }
+	#myContainer #tab1 .slide_bg.active {
+		border-radius: 0px !important;
+		width: 100% !important;
+		max-width: 100vw;
+		animation: none !important;
+	}
+
+	#myContainer #tab1 .slide_bg {
+		animation: none !important;
+	}
+
+	.container {
+		max-width: 950px;
+	}
+
+	.slides_nav .container .lines .line_item .title {
+		font-size: 12px;
+	}
+
+	.slides_nav .footer_arrow {
+		width: 15px;
+		height: 30px;
+	}
+
+	.slides_nav .footer_arrow img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.slides_nav {
+		height: 50px;
+	}
+
+	#myContainer .container {
+		margin-top: 60px;
+		margin-bottom: 50px;
+	}
+
+	#myContainer #tab2 .container .right_section {
+		margin-right: 0px;
+	}
 }
+
 @media (max-width: 991px) {
-  :root {
-    --font-scaler : .7;
-  }
-  .container {
-    max-width: 700px;
-  }
-  #myContainer #tab3 .container .move_items .move_item {
-    width: calc(50% - (75px * var(--font-scaler)))
-  }
-  .slides_nav .container .lines .line_item .title {
-    display: none !important;
-  }
-  .slides_nav .container .lines .lines_title_mobile {
-    display: block;
-  }
-  .slides_nav .container .lines .line_item {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .slides_nav .container .lines .line_item.active {
-    margin-bottom: 9px;
-    margin-top: 9px;
-  }
-  #myContainer .container {
-    margin-top: 75px;
-    margin-bottom: 70px;
-  }
-  #myContainer #tab5 .container .left_section {
-    .left_section_content .projects_list {
-      overflow: visible;
-      .project_term_item {
-        justify-content: flex-start;
-        width: calc(100% + 20px);
-        overflow: scroll;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        .project_item {
-          min-width: 200px;
-          &:last-child {
-            margin-right: 25px;
-          }
-        }
-      }
-    }
-  }
+	:root {
+		--font-scaler: .7;
+	}
+
+	.container {
+		max-width: 700px;
+	}
+
+	#myContainer #tab3 .container .move_items .move_item {
+		width: calc(50% - (75px * var(--font-scaler)))
+	}
+
+	.slides_nav .container .lines .line_item .title {
+		display: none !important;
+	}
+
+	.slides_nav .container .lines .lines_title_mobile {
+		display: block;
+	}
+
+	.slides_nav .container .lines .line_item {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.slides_nav .container .lines .line_item.active {
+		margin-bottom: 9px;
+		margin-top: 9px;
+	}
+
+	#myContainer .container {
+		margin-top: 75px;
+		margin-bottom: 70px;
+	}
+
+	#myContainer #tab5 .container .left_section {
+		.left_section_content .projects_list {
+			overflow: visible;
+
+			.project_term_item {
+				justify-content: flex-start;
+				width: calc(100% + 20px);
+				overflow: scroll;
+				overflow-x: scroll;
+				overflow-y: hidden;
+
+				.project_item {
+					min-width: 200px;
+
+					&:last-child {
+						margin-right: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	#myContainer #tab2 .container .left_section{
+		max-width: calc(561px * var(--font-scaler));
+	}
+
+	#myContainer #tab2 .container .right_section .tab2_img{
+		width: 170px;
+		height: 240px;
+	}
 }
+
 @media (max-width: 730px) {
   :root {
     --font-scaler: .6;
@@ -732,10 +834,12 @@ body.fp-viewing-ids-0 {
     max-width: 100%;
   }
 }
+
 @media (max-width: 600px) {
   #myContainer #tab1 .container {
     // height: 100%;
   }
+  
   #myContainer #tab1 h1 {
     font-size: 32px;
     line-height: 1.2em;
@@ -769,6 +873,10 @@ body.fp-viewing-ids-0 {
     flex-wrap: wrap;
     height: calc(100% - 145px);
   }
+  #myContainer #tab2 .container .right_section .tab2_img{
+		width: 210px;
+		height: 130px;
+	}
   #myContainer #tab2 .container .left_section {
     max-width: 100%;
   }
@@ -785,10 +893,6 @@ body.fp-viewing-ids-0 {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 23px;
-  }
-  #myContainer #tab2 .container .right_section {
-    height: 120px;
-    margin: 0 auto;
   }
   #myContainer #tab2 .container .right_section img {
     width: 100%;
@@ -1042,6 +1146,7 @@ body.fp-viewing-ids-0 {
   }
 
 }
+
 @media (max-width: 425px) {
   #myContainer #tab2 .container .left_section h2 {
     font-size: 34px;
@@ -1055,27 +1160,29 @@ body.fp-viewing-ids-0 {
 
 .slides_nav .footer_arrow,
 .slides_nav .container .lines .line_item {
-  opacity: .6;
-  transition: border-height .1s, border-color .3s, opacity .3s;
+	opacity: .6;
+	transition: border-height .1s, border-color .3s, opacity .3s;
 }
+
 .slides_nav .footer_arrow:hover,
 .slides_nav .container .lines .line_item:hover,
 .slides_nav .container .lines .line_item.active {
-  opacity: 1;
+	opacity: 1;
 }
 
 
 @keyframes slide_circles {
-  100% {
-    width: calc(90vw);
-    height: 100%;
-    //border-radius: 0 300px 300px 0px / 0 100% 100% 0px;
-    border-radius: 0 250vh 250vh 0px / 0 250vh 250vh 0px;
-    overflow: hidden;
-  }
+	100% {
+		width: calc(90vw);
+		height: 100%;
+		//border-radius: 0 300px 300px 0px / 0 100% 100% 0px;
+		border-radius: 0 250vh 250vh 0px / 0 250vh 250vh 0px;
+		overflow: hidden;
+	}
 }
+
 @keyframes contrast_bg {
-  100% {
-    background: #00000094;
-  }
+	100% {
+		background: #00000094;
+	}
 }

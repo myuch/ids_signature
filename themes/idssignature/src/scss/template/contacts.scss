@@ -287,6 +287,19 @@
 
 }
 
+@media (max-width: 1400px) {
+
+	.contacts_form{
+        max-width: 930px;
+        padding: 55px 50px;
+    }
+
+    #tab6:after{
+		border-radius: 80vh 0 0 80vh / 240vh 0 0 240vh;
+	}
+
+}
+
 @media (max-width: 1199px) {
 
     #tab6{
