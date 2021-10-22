@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
     $('#hamburger').on('click', function () {
         $('.modalMenu').fadeIn();
 
-        if ($(window).width() <= 991) {
+        if ($(window).width() <= 1199) {
             $('#hamburger').hide();
             $('#hamburger-close').show();
         }
@@ -35,58 +35,39 @@ jQuery(document).ready(function ($) {
     }
 
     $('#hamburger-close-white').on('click', function () {
-      $('#galleryModal').hide();
+        $('#galleryModal').hide();
     });
 
     slick_gallery_init();
 
 });
 
-function slick_gallery_init(){
-  var slideCount = $('#galleryModal .galleryModal_slider_item').length;
+function slick_gallery_init() {
 
-  $('.galleryModal_slider_wrap').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: true,
-      prevArrow: $('#galleryModal_arrowPrev'),
-      nextArrow: $('#galleryModal_arrowNext'),
-  });
-  
-  $('.slider-nav-thumbnails').slick({
-      slidesToShow: slideCount,
-      slidesToScroll: 1,
-      asNavFor: '.galleryModal_slider_wrap',
-      dots: false,
-      focusOnSelect: true,
-      centerMode: true,
-      centerPadding: '0px',
-  });
+    var $status = $('.galleryModal_slider_count');
+    var $slickElement = $('.galleryModal_slider_wrap');
 
-  // Remove active class from all thumbnail slides
-  $('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
+    $slickElement.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: $('#galleryModal_arrowPrev'),
+        nextArrow: $('#galleryModal_arrowNext'),
+    });
 
-  // Set active class to first thumbnail slides
-  $('.slider-nav-thumbnails .slick-slide').eq(0).addClass('slick-active');
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + ' / ' + slick.slideCount);
+    });
 
-
-  // On before slide change match active thumbnail to current slide
-  $('.galleryModal_slider_wrap').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-      var mySlideNumber = nextSlide;
-      $('.slider-nav-thumbnails-item').removeClass('slick-active');
-      $('.slider-nav-thumbnails-item').eq(mySlideNumber).addClass('slick-active');
- });
-
- $('.slider-nav-thumbnails-item').on('click', function(){
-      $('.slider-nav-thumbnails-item').removeClass('slick-active');
-      $(this).addClass('slick-active');
- });
 }
+
 function slick_gallery_unslick() {
-  $('.galleryModal_slider_wrap').slick('unslick');
-  $('.slider-nav-thumbnails').slick('unslick');
+    $('.galleryModal_slider_wrap').slick('unslick');
+    $('.slider-nav-thumbnails').slick('unslick');
 }
 window.slick_gallery_init = slick_gallery_init;
 window.slick_gallery_unslick = slick_gallery_unslick;
