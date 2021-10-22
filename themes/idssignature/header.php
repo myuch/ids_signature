@@ -24,7 +24,9 @@
 	<?php wp_head(); ?>
 
 
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-REF1X0X4LW"></script>
@@ -41,8 +43,8 @@
 	<!-- Header -->
 	<header class="header">
 		<div class="header_wrap">
-			<img class="logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/IDSsignature-logowhite.svg">
-			<img class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/IDSsignature-logoblack.svg">
+			<img class="logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo-white.svg">
+			<img class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo.svg">
 			<div class="header_right">
 				<a onclick="fullpage_api.moveTo('ids', 5);" href="#" class="contactUs">
 					CONTACT US
@@ -84,8 +86,8 @@
 				<span class="active" onclick="fullpage_api.moveTo('ids', 0);" data-index="0">Welcome</span>
 				<span onclick="fullpage_api.moveTo('ids', 1);" data-index="1">About IDS Signature</span>
 				<span onclick="fullpage_api.moveTo('ids', 2);" data-index="2">Signature Moves</span>
-				<span onclick="fullpage_api.moveTo('ids', 3);" data-index="3">Where We Imagine</span>
-				<span onclick="fullpage_api.moveTo('ids', 4);" data-index="4">What We’ve imagined</span>
+				<span onclick="fullpage_api.moveTo('ids', 3);" data-index="3">Where We’ve Imagined</span>
+				<span onclick="fullpage_api.moveTo('ids', 4);" data-index="4">Explore Our Imagination</span>
 				<span onclick="fullpage_api.moveTo('ids', 5);" data-index="5">Book A Consultation</span>
 			</div>
 
@@ -187,18 +189,15 @@
 
 				<div class="modalMenu_secondText">
 					<p>
-						A division of SYC Group.
-						Copyright 2007 - 2020
+						A division of SYC Group </br>
+						Copyright 2007 - 2021 </br>
 						Imagination Design Studios
-					</p>
-					<p>
-						(Formerly Imagination Dental solutions).
 					</p>
 				</div>
 
-				<div class="modalMenu-privacy">
+				<a href="https://idskids.com/privacy/" class="modalMenu-privacy" target="_blank">
 					Privacy Policy
-				</div>
+				</a>
 
 			</div>
 

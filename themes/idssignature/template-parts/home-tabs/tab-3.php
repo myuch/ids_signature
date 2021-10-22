@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="move_item_content">
-            A sophisticated design sensibility backed by high-quality fabrication and installation
+            A sophisticated design sensibility backed by high-quality fabrication and installation.
           </div>
         </div>
         <div class="move_item">
