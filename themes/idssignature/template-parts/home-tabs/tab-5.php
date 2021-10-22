@@ -60,6 +60,9 @@
                     ?>
                     <div class="project_item" data-images="<?= count($images) ?>"  data-term-name="<?= $terms[$i]->name ?>" data-title="<?= $post->post_title ?>" data-description="<?= get_field('description', $post->ID) ?>">
                       <img src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
+                      <div class="img_subwrapper">
+
+                      </div>
                       <div class="project_title">
                         <?= $post->post_title ?>
                       </div>

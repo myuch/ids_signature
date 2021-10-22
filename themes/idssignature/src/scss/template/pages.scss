@@ -51,7 +51,7 @@ body.fp-viewing-ids-0 {
 					margin-bottom: 5px;
 					color: black;
 					font-size: calc(18px * var(--font-scaler));
-					font-weight: 400;
+					font-weight: $font-weight1;
 					font-style: normal;
 					letter-spacing: normal;
 					line-height: 1.6;
@@ -160,13 +160,14 @@ body.fp-viewing-ids-0 {
       overflow: visible;
       height: -webkit-fill-available;height: -moz-available;height: fill-available;
       justify-content: space-between;
-      max-height: calc(100vh - 170px);
+			max-height: calc(100vh - 145px);
+			height: calc(100% - 145px);
       margin-bottom: 70px;
     }
     h1 {
       color: #ffffff;
       font-size: calc(80px * var(--font-scaler));
-      font-weight: 400;
+      font-weight: $font-weight1;
       font-style: normal;
       letter-spacing: normal;
       line-height: 1em;
@@ -177,7 +178,7 @@ body.fp-viewing-ids-0 {
       margin: 0;
       margin-bottom: calc(170px * var(--font-scaler));
       margin-top: calc(100px * var(--font-scaler));
-      max-width: calc(870px * var(--font-scaler));//675px;
+      max-width: calc(1000px * var(--font-scaler));//675px;
       position: relative;
       &:before {
         content: '';
@@ -192,7 +193,7 @@ body.fp-viewing-ids-0 {
     a {
       color: #ffffff;
       font-size: calc(20px * var(--font-scaler));//20px;
-      font-weight: 400;
+      font-weight: $font-weight1;
       font-style: normal;
       letter-spacing: normal;
       line-height: 3em;
@@ -226,7 +227,7 @@ body.fp-viewing-ids-0 {
     p {
       color: #ffffff;
       font-size: calc(20px * var(--font-scaler));
-      font-weight: 400;
+      font-weight: $font-weight1;
       font-style: normal;
       letter-spacing: normal;
       line-height: 1.2em;
@@ -248,7 +249,7 @@ body.fp-viewing-ids-0 {
         h2 {
           color: #000;
           font-size: calc(60px * var(--font-scaler));
-          font-weight: 400;
+          font-weight: $font-weight1;
           font-style: normal;
           letter-spacing: normal;
           line-height: 1em;
@@ -258,7 +259,7 @@ body.fp-viewing-ids-0 {
         }
         p {
 					font-size: calc(24px * var(--font-scaler));
-					font-weight: 400;
+					font-weight: $font-weight1;
 					font-style: normal;
 					letter-spacing: normal;
 					line-height: 1.3em;
@@ -363,7 +364,7 @@ body.fp-viewing-ids-0 {
       h2 {
         color: #000000;
         font-size: calc(60px * var(--font-scaler));
-        font-weight: 400;
+        font-weight: $font-weight1;
         font-style: normal;
         letter-spacing: normal;
         line-height: 1em;
@@ -383,13 +384,13 @@ body.fp-viewing-ids-0 {
       }
       p {
         color: #000;
-        font-size: calc(30px * var(--font-scaler));
-        font-weight: 400;
+        font-size: calc(24px * var(--font-scaler));
+        font-weight: $font-weight1;
         font-style: normal;
         letter-spacing: normal;
         line-height: 1.2em;
         text-align: left;
-        max-width: calc(625px * var(--font-scaler));
+        max-width: calc(660px * var(--font-scaler));
       }
       .move_items {
         display: flex;
@@ -407,7 +408,7 @@ body.fp-viewing-ids-0 {
               color: #000;
               // font-size: calc(30 / 1920 * 100vw);
               font-size: calc(30px * var(--font-scaler));
-              font-weight: 400;
+              font-weight: $font-weight1;
               font-style: normal;
               letter-spacing: normal;
               line-height: 0.9em;
@@ -426,7 +427,7 @@ body.fp-viewing-ids-0 {
               color: #000000;
               // font-size: calc(30 / 1920 * 100vw);
               font-size: calc(30px * var(--font-scaler));
-              font-weight: 400;
+              font-weight: $font-weight1;
               font-style: normal;
               letter-spacing: normal;
               line-height: 1em;
@@ -436,7 +437,7 @@ body.fp-viewing-ids-0 {
           .move_item_content {
             color: #000000;
             font-size: calc(20px * var(--font-scaler));
-            font-weight: 400;
+            font-weight: $font-weight1;
             font-style: normal;
             letter-spacing: normal;
             line-height: 1.5em;
@@ -465,7 +466,7 @@ body.fp-viewing-ids-0 {
         h2 {
           color: #000;
           font-size: calc(60px * var(--font-scaler));
-          font-weight: 400;
+          font-weight: $font-weight1;
           font-style: normal;
           letter-spacing: normal;
           line-height: 1em;
@@ -486,7 +487,7 @@ body.fp-viewing-ids-0 {
           max-width: calc(572px * var(--font-scaler));
           p {
             font-size: calc(20px * var(--font-scaler));
-            font-weight: 400;
+            font-weight: $font-weight1;
             font-style: normal;
             letter-spacing: normal;
             line-height: 1.5em;
@@ -499,7 +500,7 @@ body.fp-viewing-ids-0 {
             margin-top: 2em;
             margin-left: 0px;
             font-size: calc(24px * var(--font-scaler));
-            font-weight: bold;
+            font-weight: $font-weight1;
             font-style: normal;
             letter-spacing: normal;
             line-height: 1.5em;
@@ -550,7 +551,7 @@ body.fp-viewing-ids-0 {
         h2 {
           color: #000;
           font-size: calc(60px * var(--font-scaler));
-          font-weight: 400;
+          font-weight: $font-weight1;
           font-style: normal;
           letter-spacing: normal;
           line-height: 1em;
@@ -612,7 +613,7 @@ body.fp-viewing-ids-0 {
 
           p {
             font-size: calc(24px * var(--font-scaler));
-            font-weight: 400;
+            font-weight: $font-weight1;
             font-style: normal;
             letter-spacing: normal;
             line-height: 1.5em;
@@ -623,7 +624,7 @@ body.fp-viewing-ids-0 {
           .projects_list {
             .project_term_item {
               display: flex;
-              justify-content: center;
+              justify-content: flex-start;
               align-items: center;
               .project_item {
                 margin: 0px 5px;
@@ -631,14 +632,15 @@ body.fp-viewing-ids-0 {
                 cursor: pointer;
                 position: relative;
                 transition: opacity .3s;
+								height: calc( ((100% - 60px) / 6) + 40px);
                 &:hover {
                   opacity: .7;
                 }
                 img {
                   width: 100%;
+									display: block;
                 }
                 .project_title {
-                  position: absolute;
                   bottom: 0px;
                   left: 0px;
                   width: 100%;
@@ -824,7 +826,7 @@ body.fp-viewing-ids-0 {
   #myContainer #tab1 .container {
     // height: 100%;
   }
-  
+
   #myContainer #tab1 h1 {
     font-size: 32px;
     line-height: 1.2em;
@@ -984,7 +986,7 @@ body.fp-viewing-ids-0 {
         margin-top: 5px;
         color: #000000;
         font-size: 14px;
-        font-weight: bold;
+        font-weight: $font-weight1;
         font-style: normal;
         letter-spacing: normal;
         line-height: 1em;
@@ -1109,7 +1111,6 @@ body.fp-viewing-ids-0 {
       }
     }
   }
-
   #myContainer #tab5 .container .left_section {
     .left_section_content .select_wrapper select {
       font-size: 16px;

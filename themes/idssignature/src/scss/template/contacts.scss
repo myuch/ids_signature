@@ -29,6 +29,7 @@
         color: #fff;
         margin-bottom: 55px;
         text-align: center;
+        font-weight: $font-weight1;
     }
 
     &_wrap{
@@ -96,7 +97,7 @@
 
         &-title{
             color: #fff;
-            font-weight: 700;
+            font-weight: $font-weight1;
             font-size: 30px;
             display: block;
             text-align: center;
@@ -181,7 +182,7 @@
         background: #000;
         font-size: 18px;
         color: #fff;
-        font-weight: 400;
+        font-weight: $font-weight1;
         box-shadow: none;
         border-radius: 0;
         -webkit-appearance: none;
@@ -225,7 +226,7 @@
         justify-content: center;
         font-size: 18px;
         color: #000;
-        font-weight: 700;
+        font-weight: $font-weight1;
         background: #fff;
         border: 2px solid #fff ;
         margin: 40px auto 0;
