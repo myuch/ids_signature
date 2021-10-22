@@ -50,7 +50,6 @@ body.fp-viewing-ids-0 {
 				.title {
 					margin-bottom: 5px;
 					color: black;
-					// //font-family: "Montserrat - Hairline";
 					font-size: calc(18px * var(--font-scaler));
 					font-weight: 400;
 					font-style: normal;
@@ -74,7 +73,6 @@ body.fp-viewing-ids-0 {
 				top: -20px;
 				transform: translateX(-50%);
 				color: #000;
-				//font-family: "Montserrat - Hairline";
 				font-size: 18px;
 				font-weight: bold;
 				font-style: normal;
@@ -167,7 +165,6 @@ body.fp-viewing-ids-0 {
     }
     h1 {
       color: #ffffff;
-      font-family: "Montserrat - Hairline";
       font-size: calc(80px * var(--font-scaler));
       font-weight: 400;
       font-style: normal;
@@ -194,7 +191,6 @@ body.fp-viewing-ids-0 {
     }
     a {
       color: #ffffff;
-      font-family: "Montserrat - Hairline";
       font-size: calc(20px * var(--font-scaler));//20px;
       font-weight: 400;
       font-style: normal;
@@ -229,7 +225,6 @@ body.fp-viewing-ids-0 {
     }
     p {
       color: #ffffff;
-      font-family: "Montserrat - Hairline";
       font-size: calc(20px * var(--font-scaler));
       font-weight: 400;
       font-style: normal;
@@ -252,7 +247,6 @@ body.fp-viewing-ids-0 {
         max-width: calc(651px * var(--font-scaler));
         h2 {
           color: #000;
-          //font-family: "Montserrat - Hairline";
           font-size: calc(60px * var(--font-scaler));
           font-weight: 400;
           font-style: normal;
@@ -263,7 +257,6 @@ body.fp-viewing-ids-0 {
           margin-bottom: calc(82px * var(--font-scaler));
         }
         p {
-					//font-family: "Montserrat - Hairline";
 					font-size: calc(24px * var(--font-scaler));
 					font-weight: 400;
 					font-style: normal;
@@ -369,7 +362,6 @@ body.fp-viewing-ids-0 {
       overflow: hidden;
       h2 {
         color: #000000;
-        font-family: "Montserrat - Hairline";
         font-size: calc(60px * var(--font-scaler));
         font-weight: 400;
         font-style: normal;
@@ -432,7 +424,6 @@ body.fp-viewing-ids-0 {
             }
             .title {
               color: #000000;
-              font-family: "Montserrat - Hairline";
               // font-size: calc(30 / 1920 * 100vw);
               font-size: calc(30px * var(--font-scaler));
               font-weight: 400;
@@ -473,7 +464,6 @@ body.fp-viewing-ids-0 {
         max-width: calc(706px * var(--font-scaler));
         h2 {
           color: #000;
-          font-family: "Montserrat - Hairline";
           font-size: calc(60px * var(--font-scaler));
           font-weight: 400;
           font-style: normal;
@@ -495,7 +485,6 @@ body.fp-viewing-ids-0 {
         .left_section_content {
           max-width: calc(572px * var(--font-scaler));
           p {
-            font-family: "Montserrat - Hairline";
             font-size: calc(20px * var(--font-scaler));
             font-weight: 400;
             font-style: normal;
@@ -505,7 +494,6 @@ body.fp-viewing-ids-0 {
             margin-bottom: 1.5em;
           }
           ul.list {
-            font-family: "Montserrat - Hairline";
             margin: 0;
             padding: 0;
             margin-top: 2em;
@@ -561,7 +549,6 @@ body.fp-viewing-ids-0 {
       .left_section {
         h2 {
           color: #000;
-          font-family: "Montserrat - Hairline";
           font-size: calc(60px * var(--font-scaler));
           font-weight: 400;
           font-style: normal;
@@ -607,7 +594,6 @@ body.fp-viewing-ids-0 {
               padding-bottom: calc(12px * var(--font-scaler));
               margin-bottom: calc(23px * var(--font-scaler));
               background: black;
-              font-family: "Montserrat - Hairline";
               color: #ffffff;
               font-size: calc(20px * var(--font-scaler));
               //font-size: 20px;
@@ -625,7 +611,6 @@ body.fp-viewing-ids-0 {
           }
 
           p {
-            font-family: "Montserrat - Hairline";
             font-size: calc(24px * var(--font-scaler));
             font-weight: 400;
             font-style: normal;
@@ -1125,15 +1110,6 @@ body.fp-viewing-ids-0 {
     }
   }
 
-
-  #myContainer #tab2 .container .right_section {
-    .tab2_imgFirst{
-      display: none;
-    }
-    .tab2_imgSecond{
-      display: block;
-    }
-  }
   #myContainer #tab5 .container .left_section {
     .left_section_content .select_wrapper select {
       font-size: 16px;
