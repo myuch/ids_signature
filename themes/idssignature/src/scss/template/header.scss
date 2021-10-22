@@ -23,11 +23,13 @@
     .logo {
         display: none;
         max-width: 150px;
+        cursor: pointer;
     }
 
     .logo-light {
         display: block;
         max-width: 150px;
+        cursor: pointer;
     }
 
     &.active {
@@ -180,7 +182,7 @@
         a {
             display: block;
             color: #000;
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 10px;
             transition: 0.2s ease;
 
@@ -226,7 +228,7 @@
 
         a {
             color: #3ba1e4;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 300;
             text-align: center;
             display: block;

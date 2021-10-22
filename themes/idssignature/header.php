@@ -41,13 +41,13 @@
 	</script>
 </head>
 
-<body>
+<body style="opacity: 0;">
 
 	<!-- Header -->
 	<header class="header">
 		<div class="header_wrap">
-			<img class="logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo-white.svg">
-			<img class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo.svg">
+			<img onclick="fullpage_api.moveTo('ids', 0);" class="logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo-white.svg">
+			<img onclick="fullpage_api.moveTo('ids', 0);" class="logo" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo.svg">
 			<div class="header_right">
 				<a onclick="fullpage_api.moveTo('ids', 5);" href="#" class="contactUs">
 					CONTACT US
