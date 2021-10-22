@@ -47,7 +47,7 @@
 
     &_slider {
         width: 100%;
-        max-width: 800px;
+        max-width: 530px;
         margin-top: 20px;
         margin-bottom: 10px;
         position: relative;
@@ -145,7 +145,6 @@
     display: flex;
     margin-bottom: 20px;
     // max-width: 300px;
-    display: none !important;
 
     &-item {
         width: 100px !important;
@@ -191,7 +190,7 @@ svg#hamburger-close-white {
     .galleryModal {
 
         &_slider {
-
+          max-width: 420px;
             &_item {
                 height: 400px !important;
             }
@@ -211,7 +210,7 @@ svg#hamburger-close-white {
         }
 
         &_slider {
-            max-width: 500px;
+            max-width: 320px;
 
             &_item {
                 height: 300px !important;
@@ -241,7 +240,7 @@ svg#hamburger-close-white {
 
         &_slider {
             margin-bottom: 10px;
-
+            max-width: 260px;
             &_item {
                 height: 240px !important;
             }
@@ -256,6 +255,17 @@ svg#hamburger-close-white {
             width: 60px !important;
             height: 30px;
         }
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .galleryModal_arrow {
+      margin-left: -40px;
+    }
+    .galleryModal_arrow#galleryModal_arrowNext {
+      margin-right: -40px;
     }
 
 }

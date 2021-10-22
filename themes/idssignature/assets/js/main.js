@@ -45,7 +45,11 @@
     $('.project_item').on('click', function(){
       window.slick_gallery_unslick();
       $('#galleryModal .galleryModal_slider_wrap').html($(this).find('.slider_imgs').html());
+
+			//$('#galleryModal .galleryModal_slider_wrap').html(html);
+			$('#galleryModal .slider-nav-thumbnails').html($(this).find('.slider_imgs').html());
       $('#galleryModal .galleryModal-title').html($(this).attr('data-term-name'));
+			$('#galleryModal .slider-nav-thumbnails .galleryModal_slider_item').removeClass('galleryModal_slider_item').addClass('slider-nav-thumbnails-item');
       $('#galleryModal .galleryModal-subtitle').html($(this).attr('data-title'));
       $('#galleryModal .galleryModal-desc').html($(this).attr('data-description'));
       $('#galleryModal').show();
@@ -62,7 +66,7 @@
 			slidesNavigation: false,
 			controlArrows: false,
 			scrollOverflow: true,
-			normalScrollElements: '.modalMenu, select, .projects_list',
+			normalScrollElements: '.modalMenu, select, .projects_list',//, .move_items.slick-initialized',
 			//In addition to the extension license you'll
 			//need to acquire a fullPage.js license from https://goo.gl/5x9a22
 			licenseKey: '390281F7-78A54E36-A4D1D692-7A439190',
@@ -70,7 +74,7 @@
 			scrollHorizontally: true,
 			continuousHorizontal: false,
 			loopHorizontal: false,
-			scrollHorizontallyKey: 'I628280F8-F3B74673-8F399A08-E98D29B3', //see https://goo.gl/xkUmHS
+			scrollHorizontallyKey: 'aWRzc2lnbmF0dXJlLmNvbV9oMWxjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVwZkk=', //see https://goo.gl/xkUmHS
 
 			afterSlideLoad: function (section, origin, destination, direction) {
 				//$('div[style^="z-index:99"]').hide();
@@ -102,7 +106,6 @@
 
 		});
 
-		//$('div[style^="z-index:99"]').hide();
 		$('#tab1').addClass('loaded');
 		$('.slide_bg').addClass('active');
 
@@ -116,13 +119,7 @@
 				prevArrow: $('.slick_arrow_prev'),
 				nextArrow: $('.slick_arrow_next')
 			});
-			// $('.modalMenu').animate({
-			//   height: 500
-			// }, 0);
 			var newHeight = $('#tab4 .container').height() - 178 - 145;
-			// $('#tab4 .left_section').animate({
-			//   height: newHeight
-			// }, 0);
 
 		}
 
