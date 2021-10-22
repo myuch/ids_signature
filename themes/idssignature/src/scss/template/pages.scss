@@ -392,13 +392,13 @@ body.fp-viewing-ids-0 {
       }
       p {
         color: #000;
-        font-size: calc(30px * var(--font-scaler));
+        font-size: calc(24px * var(--font-scaler));
         font-weight: $font-weight1;
         font-style: normal;
         letter-spacing: normal;
         line-height: 1.2em;
         text-align: left;
-        max-width: calc(625px * var(--font-scaler));
+        max-width: calc(660px * var(--font-scaler));
       }
       .move_items {
         display: flex;
@@ -639,7 +639,7 @@ body.fp-viewing-ids-0 {
           .projects_list {
             .project_term_item {
               display: flex;
-              justify-content: center;
+              justify-content: flex-start;
               align-items: center;
               .project_item {
                 margin: 0px 5px;
@@ -647,14 +647,15 @@ body.fp-viewing-ids-0 {
                 cursor: pointer;
                 position: relative;
                 transition: opacity .3s;
+								height: calc( ((100% - 60px) / 6) + 40px);
                 &:hover {
                   opacity: .7;
                 }
                 img {
                   width: 100%;
+									display: block;
                 }
                 .project_title {
-                  position: absolute;
                   bottom: 0px;
                   left: 0px;
                   width: 100%;
