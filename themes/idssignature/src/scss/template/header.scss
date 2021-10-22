@@ -78,6 +78,13 @@
     justify-content: center;
     width: 35px;
     height: 26px;
+    opacity: 0.8;
+    transition: 0.2s ease;
+
+    &:hover{
+        opacity: 1;
+    }
+
 }
 
 #hamburger{
@@ -118,13 +125,13 @@
     top: 0;
     right: 0;
     z-index: 101;
-    padding: 100px 30px 70px;
+    padding: 120px 30px 70px;
     display: none;
 
     &-close{
         position: absolute;
-        right: 40px;
-        top: 40px;
+        right: 53px;
+        top: 49px;
         cursor: pointer;
     }
 
@@ -137,7 +144,7 @@
     &_menu{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 40px;
 
         span{
@@ -165,7 +172,6 @@
         a{
             display: block;
             color: #000;
-            text-align: center;
             font-size: 18px;
             margin-bottom: 10px;
             transition: 0.2s ease;
@@ -181,7 +187,6 @@
     &_socials{
         display: flex;
         align-items: center;
-        justify-content: center;
         margin-bottom: 50px;
 
         a{
@@ -205,24 +210,19 @@
         margin-bottom: 40px;
 
         p{
-            font-weight: 700;
             color: #000;
-            font-weight: 300;
-            font-size: 18px;
-            text-align: center;
+            font-size: 22px;
             display: block;
             margin-bottom: 10px;
         }
 
         a{
             color: #3ba1e4;
-            font-size: 19px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 300;
             text-align: center;
             display: block;
             width: fit-content;
-            margin: 0 auto;
-            font-family: 'Montserrat', sans-serif;
 
             &:hover{
                 text-decoration: underline;
@@ -234,19 +234,23 @@
     &_secondText{
         p{
             font-size: 16px;
-            text-align: center;
             display: block;
             margin-bottom: 10px;
-            font-weight: 300;
         }
     }
 
     &-privacy{
         display: block;
-        text-align: center;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 300;
         color: #000;
+        transition: 0.2s ease;
+        margin-top: 20px;
+        width: fit-content;
+
+        &:hover{
+            color: #3ba1e4;
+        }
     }
 
 }
@@ -260,7 +264,11 @@
     }
 
     .modalMenu{
-        padding-top: 60px;
+        padding-top: 80px;
+
+        &-close{
+            right: 43px;
+        }
 
         &_menu{
             margin-bottom: 30px;
@@ -276,11 +284,6 @@
 
     }
 
-    .modalMenu-close{
-        right: 20px;
-        top: 20px;
-    }
-
 }
 
 @media (max-width: 1199px) {
@@ -288,6 +291,15 @@
     .header{
         padding: 0 30px;
         top: 30px;
+    }
+
+    .modalMenu{
+
+        &-close{
+            top: 39px;
+            right: 34px;
+        }
+
     }
 
 }
