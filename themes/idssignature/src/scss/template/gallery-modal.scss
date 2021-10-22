@@ -6,6 +6,8 @@
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, .95);
+    overflow-y: scroll;
+    padding-bottom: 70px;
     display: none;
 
     &_wrap {
@@ -34,7 +36,7 @@
     &-title {
         color: #fefefe;
         font-size: 24px;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
     }
 
     &-subtitle {
@@ -113,6 +115,7 @@
         cursor: pointer;
         transition: 0.3s ease;
         opacity: 0.7;
+        padding: 0 8px;
 
         svg{
             width: auto;
@@ -235,6 +238,7 @@ svg#hamburger-close-white {
 @media (max-width: 767px) {
 
     .galleryModal {
+        padding: 60px 0;
 
         &-title {
             font-size: 18px;
@@ -249,9 +253,9 @@ svg#hamburger-close-white {
         }
 
         &_wrap{
-            padding: 100px 0 70px;
+            padding: 40px 0 10px;
             display: block;
-            overflow-y: scroll;
+            height: auto;
         }
 
         &_wrapper{
@@ -269,7 +273,7 @@ svg#hamburger-close-white {
         }
 
         &_content{
-            padding: 0 12px;
+            padding: 0 12px 50px;
         }
 
         &-logo-light{
