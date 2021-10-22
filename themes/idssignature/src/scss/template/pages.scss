@@ -205,7 +205,7 @@ body.fp-viewing-ids-0 {
       line-height: normal;
       display: block;
       margin-bottom: calc(30px * var(--font-scaler));
-      margin-left: 31px;
+      margin-left: 20px;
       position: relative;
       cursor: default;
       &:before {
@@ -215,7 +215,7 @@ body.fp-viewing-ids-0 {
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
-        left: -31px;
+        left: -20px;
         top: 50%;
         transform: translateY(-50%);
         // width: calc(10px * var(--font-scaler));
@@ -279,9 +279,9 @@ body.fp-viewing-ids-0 {
       .right_section {
 				max-width: calc(390px * var(--font-scaler));
 				margin: 0;
-				margin-left: calc(50px * var(--font-scaler));
+				margin-left: calc(150px * var(--font-scaler));
 				margin-right: calc(50px * var(--font-scaler));
-
+				margin-top: calc(-100px * var(--font-scaler));
 				img {
 					width: 100%;
 				}
@@ -805,6 +805,10 @@ body.fp-viewing-ids-0 {
 		max-width: calc(561px * var(--font-scaler));
 	}
 
+	#myContainer #tab2 .container .right_section {
+		margin-top: 0px;
+		margin-left: calc(50px * var(--font-scaler));
+	}
 	#myContainer #tab2 .container .right_section .tab2_img{
 		width: 170px;
 		height: 240px;
