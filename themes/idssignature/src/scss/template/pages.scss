@@ -85,7 +85,7 @@ body.fp-viewing-ids-0 {
   .container {
     margin-top: 100px;
     // max-height: calc(100vh - 225px);
-    margin-bottom: 75px;
+    margin-bottom: 0px;
     overflow: auto;
   }
   & .slide {
@@ -146,15 +146,19 @@ body.fp-viewing-ids-0 {
     }
     .container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: flex-start;
       flex-direction: column;
       overflow: visible;
+      height: -webkit-fill-available;height: -moz-available;height: fill-available;
+      justify-content: space-between;
+      max-height: calc(100vh - 170px);
+      margin-bottom: 70px;
     }
     h1 {
       color: #ffffff;
       font-family: "Montserrat - Hairline";
-      font-size: calc(60px * var(--font-scaler));
+      font-size: calc(80px * var(--font-scaler));
       font-weight: 400;
       font-style: normal;
       letter-spacing: normal;
@@ -165,15 +169,16 @@ body.fp-viewing-ids-0 {
       line-height: normal;
       margin: 0;
       margin-bottom: calc(170px * var(--font-scaler));
-      max-width: calc(675px * var(--font-scaler));//675px;
+      margin-top: calc(100px * var(--font-scaler));
+      max-width: calc(870px * var(--font-scaler));//675px;
       position: relative;
       &:before {
         content: '';
         position: absolute;
         left: -50vw;
-        top: 37px;
+        top: 0.6em;
         width: calc(50vw - 23px);
-        height: 1px;
+        height: 2px;
         background: white;
       }
     }
@@ -192,7 +197,7 @@ body.fp-viewing-ids-0 {
       letter-spacing: normal;
       line-height: normal;
       display: block;
-      margin-bottom: calc(99px * var(--font-scaler));
+      margin-bottom: calc(30px * var(--font-scaler));
       margin-left: 31px;
       position: relative;
       cursor: default;
@@ -206,8 +211,10 @@ body.fp-viewing-ids-0 {
         left: -31px;
         top: 50%;
         transform: translateY(-50%);
-        width: calc(10px * var(--font-scaler));
-        height: calc(51px * var(--font-scaler));
+        // width: calc(10px * var(--font-scaler));
+        // height: calc(51px * var(--font-scaler));
+        width: calc(6px * var(--font-scaler));
+        height: calc(26px * var(--font-scaler));
       }
     }
     p {
@@ -230,6 +237,7 @@ body.fp-viewing-ids-0 {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      overflow: hidden;
       .left_section {
         max-width: calc(651px * var(--font-scaler));
         h2 {
@@ -390,6 +398,9 @@ body.fp-viewing-ids-0 {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      overflow: hidden;
+      // max-height: calc(100vh - 145px);
+      // height: calc(100% - 145px);
       // overflow-x: visible;
       // overflow-y: auto;
       // overflow: visible;
@@ -436,7 +447,7 @@ body.fp-viewing-ids-0 {
             margin: 0;
             padding: 0;
             margin-top: 2em;
-            margin-left: 21px;
+            margin-left: 0px;
             font-size: calc(24px * var(--font-scaler));
             font-weight: bold;
             font-style: normal;
@@ -459,10 +470,24 @@ body.fp-viewing-ids-0 {
       }
       .right_section {
         max-width: calc(594px * var(--font-scaler));
+        max-height: calc(594px * var(--font-scaler));
         margin: 0;
         margin-left: calc(50px * var(--font-scaler));
+        margin-right: 35px;
+        margin-bottom: 35px;
+        position: relative;
         img {
           width: 100%;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left: 28px;
+          top: 28px;
+          width: 100%;
+          height: 100%;
+          border: 2px solid black;
+          z-index: -1;
         }
       }
     }
@@ -700,6 +725,12 @@ body.fp-viewing-ids-0 {
   .container {
     max-width: 550px;
   }
+  #myContainer #tab1 h1 {
+    font-size: 40px;
+    line-height: 1.2em;
+    margin-bottom: 110px;
+    max-width: 100%;
+  }
 }
 @media (max-width: 600px) {
   #myContainer #tab1 .container {
@@ -722,7 +753,7 @@ body.fp-viewing-ids-0 {
     margin-bottom: 75px;
   }
   #myContainer #tab1 a:before {
-    width: 8px;
+    width: 6px;
     height: 38px;
     left: -20px;
   }
@@ -842,16 +873,18 @@ body.fp-viewing-ids-0 {
   }
 
   #myContainer #tab4 .container {
-    max-height: calc(100vh - 145px);
+    max-height: calc(100vh - 75px);
+    padding-bottom: 0px;
     overflow: hidden;
     position: relative;
     flex-wrap: wrap;
     height: -webkit-fill-available;height: -moz-available;height: fill-available;
-    height: calc(100% - 145px);
+    height: calc(100% - 75px);
+    margin-bottom: 0px;
     .collapse_btn {
       height: 50px;
       position: absolute;
-      top: calc(100% - 178px);
+      top: calc(100% - 278px);
       width: 100%;
       left: 0px;
       display: flex;
@@ -880,10 +913,10 @@ body.fp-viewing-ids-0 {
       max-width: 100%;
       width: calc(100%);
       margin-left: 0px;
-      height: 128px;
+      height: 228px;
       position: absolute;
       top: 100%;
-      margin-top: -128px;
+      margin-top: -228px;
       left: 0px;
       position: absolute;
       // &:before {
@@ -900,16 +933,23 @@ body.fp-viewing-ids-0 {
       //   line-height: 60px;
       //   text-align: center;
       // }
-      img {
+      .slider_tab_4 {
         width: 100%;
         height: 100%;
+      }
+      img {
+        width: 100%;
+        height: 228px;
         object-fit: cover;
+      }
+      &:after {
+        content: none;
       }
 
     }
     .left_section {
       max-width: 100%;
-      height: calc(100% - 178px);
+      height: calc(100% - 278px);
       position: relative;
       overflow: hidden;
       .left_section_wrapper {
@@ -1006,6 +1046,9 @@ body.fp-viewing-ids-0 {
   #myContainer #tab2 .container .left_section h2 {
     font-size: 34px;
     margin-bottom: 27px;
+  }
+  #myContainer #tab1 h1 {
+    font-size: 30px;
   }
 }
 
