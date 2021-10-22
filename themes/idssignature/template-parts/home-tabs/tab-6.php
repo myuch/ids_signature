@@ -84,6 +84,7 @@
                     IDS Signature projects start with a conversation
                     and end with an immersive experience.
                 </span>
+                <!--[if lte IE 8]>
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
                 <![endif]-->
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
@@ -96,6 +97,17 @@
                         if (typeof fullpage_api !== 'undefined') {
                             fullpage_api.reBuild();
                         }
+                        $attr_class = $('.hbspt-form .actions input[type="submit"]').attr('class');
+                        $data_reactid = $('.hbspt-form .actions input[type="submit"]').attr('data-reactid');
+                        $data_value = $('.hbspt-form .actions input[type="submit"]').attr('value');
+                        $data_reactid = $('.hbspt-form .actions input[type="submit"]').hide();
+                        $('.hbspt-form .actions').append('<button type="submit" value="" class="' + $attr_class + '" data-reactid="' + $data_reactid + '">' + $data_value + '</button>');
+                      },
+                      onFormSubmit: function($form) {
+                        //alert('form_submit called');
+                      },
+                      onFormSubmitted: function($form) {
+                        //alert('form_submitted called');
                       }
                     });
                 </script>

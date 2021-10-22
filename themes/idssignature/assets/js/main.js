@@ -4,12 +4,12 @@
 
 		$('.collapse_btn').on('click', function (e) {
 			if ($(this).hasClass('active')) {
-				var newHeight = $('#tab4 .container').height() - 178;
+				var newHeight = $('#tab4 .container').height() - 278;
 				$('#tab4 .left_section').animate({
 					height: newHeight
 				}, 300);
 				$('#tab4 .right_section').animate({
-					marginTop: '-128px',
+					marginTop: '-228px',
 					opacity: 1
 				}, 300);
 				$('.collapse_btn').animate({
@@ -120,8 +120,20 @@
 				nextArrow: $('.slick_arrow_next')
 			});
 			var newHeight = $('#tab4 .container').height() - 178 - 145;
-
 		}
+		$('.slider_tab_4').slick({
+			infinite: true,
+			autoplay: true,
+			fade:true,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			speed: 500,
+			autoplaySpeed: 3000,
+		});
+		$('.slider_tab_4').on('init', function(event, slick){
+		   fullpage_api.reBuild();
+		});
 
 
 	});

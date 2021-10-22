@@ -139,7 +139,7 @@
     .hs-form-field{
         display: flex;
         flex-direction: column;
-        
+
     }
 
     label{
@@ -356,7 +356,7 @@
 @media (max-width: 767px) {
 
     .contacts_form{
-        min-height: 1185px;
+        // min-height: 1185px;
     }
 
     .contacts form{

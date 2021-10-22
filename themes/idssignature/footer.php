@@ -1,4 +1,4 @@
-  <div class="slides_nav">
+  <!-- <div class="slides_nav">
     <div class="container">
       <a class="footer_arrow" onclick="fullpage_api.moveSlideLeft();" href="#">
         <img src="/wp-content/themes/idssignature/assets/images/footArrow_Left.svg" alt="">
@@ -42,7 +42,7 @@
         <img src="/wp-content/themes/idssignature/assets/images/footArrow_Right.svg" alt="">
       </a>
     </div>
-  </div>
+  </div> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">

@@ -6,13 +6,13 @@
         <h2>Where Will Imagination Take You?</h2>
         <div class="left_section_content">
           <p>
-            Ours has taken us across North Americ, Europe, Asia, and the Middle East.
+            Ours has taken us across North America, Europe, Asia, and the Middle East.
           </p>
           <p>
-            We have worked with a discerning client list to transform the visitor experience across a varriety of venues:
+            We have worked with a discerning client list to transform the visitor experience across a variety of venues:
           </p>
           <ul class="list">
-            <li>Shoping Malls & Retail Business</li>
+            <li>Shopping Malls & Retail Businesses</li>
             <li>Hospitals, Clinics, and Campuses</li>
             <li>Dental, Orthodontic, and Specialist Offices</li>
             <li>Public Facilities & Spaces</li>
@@ -31,7 +31,16 @@
       </div>
     </div>
     <div class="right_section">
-      <img src="/wp-content/themes/idssignature/assets/images/slide4_img.jpeg" alt="">
+      <!-- <img src="/wp-content/themes/idssignature/assets/images/slide4_img.jpeg" alt=""> -->
+      <div class="slider_tab_4">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/1.jpeg" alt="">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/2.jpeg" alt="">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/3.jpeg" alt="">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/4.jpeg" alt="">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/5.jpeg" alt="">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/6.jpeg" alt="">
+        <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/7.jpeg" alt="">
+      </div>
     </div>
   </div>
 </div>
