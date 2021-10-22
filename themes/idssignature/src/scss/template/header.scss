@@ -1,4 +1,4 @@
-.header{
+.header {
     position: fixed;
     left: 0;
     top: 40px;
@@ -7,7 +7,7 @@
     width: 100%;
     height: 43px;
 
-    &_wrap{
+    &_wrap {
         width: 100%;
         height: inherit;
         display: flex;
@@ -15,41 +15,42 @@
         justify-content: space-between;
     }
 
-    &_right{
+    &_right {
         display: flex;
         align-items: center;
     }
 
-    .logo{
+    .logo {
         display: none;
         max-width: 150px;
     }
 
-    .logo-light{
+    .logo-light {
         display: block;
         max-width: 150px;
     }
 
-    &.active{
-        .logo{
+    &.active {
+        .logo {
             display: block;
         }
-        .logo-light{
+
+        .logo-light {
             display: none;
         }
 
-        .hamburger{
-            path{
+        .hamburger {
+            path {
                 fill: #000;
             }
         }
 
-        .contactUs{
+        .contactUs {
             border: 2px solid #000;
             color: #000;
 
-            @media (any-hover : hover){
-                &:hover{
+            @media (any-hover : hover) {
+                &:hover {
                     background: #000;
                     color: #fff;
                 }
@@ -57,22 +58,23 @@
         }
     }
 
-    &.lastSection{
-        .logo{
+    &.lastSection {
+        .logo {
             display: block;
         }
-        .logo-light{
+
+        .logo-light {
             display: none;
         }
 
-        .contactUs{
-           display: none;
+        .contactUs {
+            display: none;
         }
     }
 
 }
 
-.hamburger{
+.hamburger {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,28 +82,28 @@
     height: 26px;
 
 
-    svg{
-        opacity: 0.8;
+    svg {
+        fill-opacity: 0.8;
         transition: 0.2s ease;
     }
 
-    &:hover{
-       svg{
-            opacity: 1;
-       }
+    &:hover {
+        svg {
+            fill-opacity: 1;
+        }
     }
 
 }
 
-#hamburger{
+#hamburger {
     cursor: pointer;
 }
 
-#hamburger-close{
+#hamburger-close {
     display: none;
 }
 
-.contactUs{
+.contactUs {
     color: #fff;
     width: 168px;
     height: 43px;
@@ -114,15 +116,15 @@
     font-weight: $font-weight1;
     transition: 0.2s;
 
-    @media (any-hover : hover){
-        &:hover{
+    @media (any-hover : hover) {
+        &:hover {
             background: #fff;
             color: #000;
         }
     }
 }
 
-.modalMenu{
+.modalMenu {
     position: fixed;
     width: 100%;
     max-width: 368px;
@@ -134,26 +136,26 @@
     padding: 120px 30px 70px;
     display: none;
 
-    &-close{
+    &-close {
         position: absolute;
         right: 53px;
         top: 49px;
         cursor: pointer;
     }
 
-    &_wrap{
+    &_wrap {
         height: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    &_menu{
+    &_menu {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 40px;
 
-        span{
+        span {
             color: #000;
             font-size: 20px;
             margin-bottom: 15px;
@@ -161,28 +163,28 @@
             transition: 0.2s;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 color: #3ba1e4;
             }
 
-            &.active{
+            &.active {
                 color: #3ba1e4;
             }
         }
 
     }
 
-    &_contacts{
+    &_contacts {
         margin-bottom: 40px;
 
-        a{
+        a {
             display: block;
             color: #000;
             font-size: 18px;
             margin-bottom: 10px;
             transition: 0.2s ease;
 
-            &:hover{
+            &:hover {
                 color: #3ba1e4;
             }
 
@@ -190,39 +192,39 @@
 
     }
 
-    &_socials{
+    &_socials {
         display: flex;
         align-items: center;
         margin-bottom: 50px;
 
-        a{
+        a {
             display: block;
             margin: 0 6px;
             transition: 0.2s ease;
 
-            svg{
+            svg {
                 width: 40px;
                 height: 40px;
             }
 
-            &:hover{
+            &:hover {
                 transform: scale(1.1);
             }
         }
 
     }
 
-    &_firstText{
+    &_firstText {
         margin-bottom: 40px;
 
-        p{
+        p {
             color: #000;
             font-size: 20px;
             display: block;
             margin-bottom: 10px;
         }
 
-        a{
+        a {
             color: #3ba1e4;
             font-size: 22px;
             font-weight: 300;
@@ -230,22 +232,22 @@
             display: block;
             width: fit-content;
 
-            &:hover{
+            &:hover {
                 text-decoration: underline;
             }
         }
 
     }
 
-    &_secondText{
-        p{
+    &_secondText {
+        p {
             font-size: 16px;
             display: block;
             margin-bottom: 10px;
         }
     }
 
-    &-privacy{
+    &-privacy {
         display: block;
         font-size: 16px;
         font-weight: 300;
@@ -254,7 +256,7 @@
         margin-top: 20px;
         width: fit-content;
 
-        &:hover{
+        &:hover {
             color: #3ba1e4;
         }
     }
@@ -265,18 +267,18 @@
 /* ================== MEDIA =================== */
 @media (max-width: 1619px) {
 
-    .header{
+    .header {
         padding: 0 40px;
     }
 
-    .modalMenu{
+    .modalMenu {
         padding-top: 80px;
 
-        &-close{
+        &-close {
             right: 43px;
         }
 
-        &_menu{
+        &_menu {
             margin-bottom: 30px;
         }
 
@@ -284,7 +286,7 @@
             margin-bottom: 30px;
         }
 
-        &_socials{
+        &_socials {
             margin-bottom: 30px;
         }
 
@@ -294,36 +296,38 @@
 
 @media (max-width: 1199px) {
 
-    .header{
+    .header {
         padding: 15px;
         top: 0px;
         background: #fff;
         box-shadow: 0 1px 4px #162526;
         height: auto;
-        .logo{
+
+        .logo {
             display: block;
         }
-        .logo-light{
+
+        .logo-light {
             display: none;
         }
     }
 
-    .modalMenu{
+    .modalMenu {
 
-        &-close{
+        &-close {
             top: 39px;
             right: 34px;
         }
 
     }
 
-    #hamburger{
-        path{
+    #hamburger {
+        path {
             fill: #000;
         }
     }
 
-    .contactUs{
+    .contactUs {
         border: 2px solid #000 !important;
         color: #000 !important;
         width: 148px;
@@ -331,18 +335,19 @@
         margin-right: 28px;
         font-size: 16px;
     }
-    .modalMenu{
+
+    .modalMenu {
         max-width: none;
         z-index: 99;
         padding-top: 130px;
         overflow-y: scroll;
         padding-bottom: 70px;
 
-        &-close{
+        &-close {
             display: none;
         }
 
-        &_wrap{
+        &_wrap {
             justify-content: flex-start;
             height: auto;
         }
@@ -352,14 +357,16 @@
 }
 
 @media (max-width: 600px) {
-  .contactUs {
-    margin-right: 14px;
-  }
-  .header .logo,
-  .header .logo-light {
-    width: 130px;
-  }
-  .modalMenu {
-    height: 100%;
-  }
+    .contactUs {
+        margin-right: 14px;
+    }
+
+    .header .logo,
+    .header .logo-light {
+        width: 130px;
+    }
+
+    .modalMenu {
+        height: 100%;
+    }
 }
