@@ -31,6 +31,9 @@
       </div>
     </div>
     <div class="right_section">
+      <div class="right_section_bottom_line">
+
+      </div>
       <!-- <img src="/wp-content/themes/idssignature/assets/images/slide4_img.jpeg" alt=""> -->
       <div class="slider_tab_4">
         <img src="/wp-content/themes/idssignature/assets/images/tab4_slider/1.jpeg" alt="">

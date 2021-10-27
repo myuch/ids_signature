@@ -281,7 +281,7 @@ body.fp-viewing-ids-0 {
 				margin: 0;
 				margin-left: calc(150px * var(--font-scaler));
 				margin-right: calc(50px * var(--font-scaler));
-				margin-top: calc(-100px * var(--font-scaler));
+				// margin-top: calc(-100px * var(--font-scaler));
 				img {
 					width: 100%;
 				}
@@ -343,6 +343,7 @@ body.fp-viewing-ids-0 {
 	}
   #tab3 {
     position: relative;
+		overflow: hidden;
     .slick_arrows {
       display: none;
     }
@@ -360,7 +361,22 @@ body.fp-viewing-ids-0 {
       }
     }
     .container {
-      overflow: hidden;
+			display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      overflow: visible;
+			flex-wrap: wrap;
+			flex-direction: column;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: calc(34px * var(--font-scaler));
+				left: 100%;
+				width: 100%;
+				height: 2px;
+				background: black;
+			}
       h2 {
         color: #000000;
         font-size: calc(60px * var(--font-scaler));
@@ -448,11 +464,23 @@ body.fp-viewing-ids-0 {
     }
   }
   #tab4 {
+		overflow: hidden;
     .container {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      overflow: hidden;
+      overflow: visible;
+			position: relative;
+			&:after {
+				content: '';
+				content: none;
+				position: absolute;
+				width: calc(100vw + 20px);
+				left: -100vw;
+				top: calc(34px * var(--font-scaler));
+				height: 2px;
+				background: black;
+			}
       // max-height: calc(100vh - 145px);
       // height: calc(100% - 145px);
       // overflow-x: visible;
@@ -537,13 +565,35 @@ body.fp-viewing-ids-0 {
           top: 28px;
           width: 100%;
           height: 100%;
-          border: 2px solid black;
+          border-bottom: 2px solid black;
+				  border-right: 2px solid black;
           z-index: -1;
         }
+				&:before {
+          content: '';
+          position: absolute;
+          right: -28px;
+          top: 28px;
+          width: 28px;
+          height: 100%;
+          border-top: 2px solid black;
+          z-index: -1;
+        }
+				.right_section_bottom_line {
+				  position: absolute;
+				  bottom: -28px;
+				  left: 28px;
+				  width: 2px;
+				  height: 28px;
+				  background: black;
+				}
       }
     }
   }
   #tab5 {
+		background: url('/wp-content/themes/idssignature/assets/images/white_bg.svg');
+		background-position: left center;
+	  background-size: cover;
     overflow: hidden;
     .container {
       overflow: visible;
@@ -667,13 +717,21 @@ body.fp-viewing-ids-0 {
       }
     }
   }
+
+	// #tab2 .container,
+	// #tab3 .container,
+	// #tab4 .container,
+	// #tab5 .container {
+	// 	height: 650px;
+	// }
+
 }
 
 
 @media (max-width: 1910px) {
-	#myContainer #tab3 .container .move_items .move_item {
-		margin-top: 30px;
-	}
+	// #myContainer #tab3 .container .move_items .move_item {
+	// 	margin-top: 30px;
+	// }
 }
 
 @media (max-width: 1600px) {
@@ -744,6 +802,14 @@ body.fp-viewing-ids-0 {
 	}
 }
 
+@media (max-width: 1100px) {
+	#myContainer {
+		#tab5 {
+			background: white;
+		}
+	}
+}
+
 @media (max-width: 991px) {
 	:root {
 		--font-scaler: .7;
@@ -777,7 +843,7 @@ body.fp-viewing-ids-0 {
 
 	#myContainer .container {
 		margin-top: 75px;
-		margin-bottom: 70px;
+		margin-bottom: 0px;
 	}
 
 	#myContainer #tab5 .container .left_section {
@@ -899,6 +965,7 @@ body.fp-viewing-ids-0 {
   #myContainer #tab3 .container {
     height: -webkit-fill-available;height: -moz-available;height: fill-available;
     height: calc(100% - 145px);
+		justify-content: flex-start;
   }
   #myContainer #tab3 .slider_bg {
     display: none;
@@ -949,6 +1016,7 @@ body.fp-viewing-ids-0 {
     display: block;
     position: relative;
     z-index: 2;
+		width: 100%;
     .slick_arr {
       position: absolute;
       img {
@@ -960,19 +1028,20 @@ body.fp-viewing-ids-0 {
         transform: translateX(-107px);
         width: 38px;
         height: 38px;
-        top: 39px;
+        top: 45px;
       }
       &.slick_arrow_next {
         left: 50%;
         transform: translateX(69px);
         width: 38px;
         height: 38px;
-        top: 39px;
+        top: 45px;
       }
     }
   }
 
   #myContainer #tab4 .container {
+
     max-height: calc(100vh - 75px);
     padding-bottom: 0px;
     overflow: hidden;
@@ -981,6 +1050,10 @@ body.fp-viewing-ids-0 {
     height: -webkit-fill-available;height: -moz-available;height: fill-available;
     height: calc(100% - 75px);
     margin-bottom: 0px;
+
+		&:after {
+			content: '';
+		}
     .collapse_btn {
       height: 50px;
       position: absolute;

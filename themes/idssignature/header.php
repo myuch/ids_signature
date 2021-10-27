@@ -95,8 +95,8 @@
 			</div>
 
 			<div class="modalMenu_contacts">
-				<a href="tel:+18888844102">1 888-884-4102</a>
-				<a href="mailto:info@idssignature.com">info@idssignature.com</a>
+				<a href="tel:+18888844102">1-888-884-4102</a>
+				<a href="mailto:info@helloIDS.com">info@helloIDS.com</a>
 			</div>
 
 			<div class="modalMenu_socials">
@@ -182,7 +182,7 @@
 
 				<div class="modalMenu_firstText">
 					<p>Brought to you by the same creative minds behind </p>
-					<a href="https://idskids.com/" target="_blank">IDS kids.</a>
+					<a href="https://idskids.com/" target="_blank">IDS Kids.</a>
 				</div>
 
 				<div class="modalMenu_secondText">

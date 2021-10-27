@@ -68,6 +68,7 @@
 			slidesNavigation: false,
 			controlArrows: false,
 			scrollOverflow: true,
+			scrollingSpeed: 700,
 			normalScrollElements: '.modalMenu, select, .projects_list, .galleryModal',//, .move_items.slick-initialized',
 			//In addition to the extension license you'll
 			//need to acquire a fullPage.js license from https://goo.gl/5x9a22
@@ -141,12 +142,24 @@
 			slidesToScroll: 1,
 			arrows: false,
 			dots: false,
-			speed: 500,
+			speed: 3000,
 			autoplaySpeed: 3000,
 		});
 		$('.slider_tab_4').on('init', function(event, slick){
 		   fullpage_api.reBuild();
 		});
+
+		height = 0;
+		for (var i = 2; i <= 5; i++) {
+			console.log($('#tab' + i + ' .container').height());
+			if (height <= $('#tab' + i + ' .container').height()) {
+				height = $('#tab' + i + ' .container').height();
+			}
+		}
+		for (var i = 2; i <= 5; i++) {
+			$('#tab' + i + ' .container').css('height', height);
+		}
+
 
 		$('body').css('opacity', 1);
 

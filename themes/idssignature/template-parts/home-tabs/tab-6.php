@@ -34,7 +34,7 @@
                         </g>
                     </svg>
                     <a href="tel:+18888844102">1-888-884-4102</a>
-                    <span>8:00am to 4:30pm</span>
+                    <span>8:00am to 4:30pm MST</span>
                 </div>
                 <div class="contacts_item">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
@@ -73,7 +73,7 @@
                         </g>
                     </svg>
                     <span>
-                        16204 29th Street SE </br> Calgary, AB </br> Canada T2C 1W3
+                        #1 6204 29th Street SE </br> Calgary, AB </br> Canada T2C 1W3
                     </span>
                 </div>
             </div>
