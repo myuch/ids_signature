@@ -3,7 +3,7 @@
     <div class="container">
       <div class="left_section">
         <div class="left_section_wrapper">
-          <h2>Explore Our Imagination</h2>
+          <h2 class="anim_it">Explore Our Imagination</h2>
           <div class="left_section_content">
             <?php
             $terms = get_terms( array(
@@ -11,7 +11,7 @@
               'hide_empty' => false,
             ) );
             ?>
-            <div class="select_wrapper">
+            <div class="select_wrapper anim_it">
               <select class="" name="tab5_select">
 
                 <?php foreach ($terms as $term): ?>
@@ -21,16 +21,16 @@
               </select>
             </div>
 
-            <p descr-data-id="4">
+            <p descr-data-id="4" class="anim_it">
               Don’t settle for ‘just like the all rest’. Be distinct. Be distinguishable. Weave an integrated theme throughout.
             </p>
-            <p class="active" descr-data-id="2">
+            <p class="active anim_it" descr-data-id="2">
               Add an extra element of character and personality to your space. Custom designed and one-of-a-kind.
             </p>
-            <p descr-data-id="3">
+            <p descr-data-id="3" class="anim_it">
               Bring unmatched form to your function. Transform awkward pillars and bulkheads into interesting design features.
             </p>
-            <p descr-data-id="5">
+            <p descr-data-id="5" class="anim_it">
               Take it to the street! Turn heads and attract attention… to get visitors, clients, and customers through the front door.
             </p>
             <!--
@@ -80,7 +80,7 @@
                   <?php foreach ($post_arr_item as $post):
                     $images = get_field('images', $post->ID);
                     ?>
-                    <div class="project_item" data-images="<?= count($images) ?>"  data-term-name="<?= $terms[$i]->name ?>" data-title="<?= $post->post_title ?>" data-description="<?= get_field('description', $post->ID) ?>">
+                    <div class="project_item anim_it" data-images="<?= count($images) ?>"  data-term-name="<?= $terms[$i]->name ?>" data-title="<?= $post->post_title ?>" data-description="<?= get_field('description', $post->ID) ?>">
                       <img src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
                       <div class="img_subwrapper">
 

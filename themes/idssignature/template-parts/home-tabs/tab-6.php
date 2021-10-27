@@ -4,10 +4,10 @@
 
         <div class="contacts">
 
-            <h2 class="title fz-h2">Book an Imagination Consultation</h2>
+            <h2 class="title fz-h2 anim_it">Book an Imagination Consultation</h2>
 
             <div class="contacts_wrap">
-                <div class="contacts_item">
+                <div class="contacts_item anim_it">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -36,7 +36,7 @@
                     <a href="tel:+18888844102">1-888-884-4102</a>
                     <span>8:00am to 4:30pm MST</span>
                 </div>
-                <div class="contacts_item">
+                <div class="contacts_item anim_it">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -57,7 +57,7 @@
                     </svg>
                     <a href="mailto:info@idssignature.com">info@idssignature.com</a>
                 </div>
-                <div class="contacts_item">
+                <div class="contacts_item anim_it">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="contacts_form">
+            <div class="contacts_form anim_it">
                 <span class="contacts_form-title">Let’s Talk</span>
                 <span class="contacts_form-subtitle">
                     IDS Signature projects start with a conversation

@@ -104,6 +104,16 @@
 					$('.header').addClass('active');
 					$('.header').removeClass('lastSection');
 				}
+
+				tab_last = origin.index+1;
+				tab = destination.index+1;
+				$('#tab' + tab_last + ' .anim_it').removeClass('animate__animated').removeClass('animate__fadeInUp');
+				$('#tab' + tab_last + ' .anim_it_head').removeClass('animate__animated').removeClass('animate__fadeInLeft');
+				//$('#tab' + origin.index + ' .anim_it').removeClass('animate__animated animate__fadeInUp');
+				if (!$('#tab' + tab + ' .anim_it').hasClass('animate__animated')) {
+					$('#tab' + tab + ' .anim_it').addClass('animate__animated').addClass('animate__fadeInUp');
+					$('#tab' + tab + ' .anim_it_head').addClass('animate__animated').addClass('animate__fadeInLeft');
+				}
 			},
 			onSlideLeave: function(section, origin, destination, direction){
 				if (destination.index == 0) {
@@ -116,7 +126,20 @@
 					$('.header').addClass('active');
 					$('.header').removeClass('lastSection');
 				}
+
+				tab = destination.index+1;
+				$('#tab' + tab + ' .anim_it').removeClass('animate__animated').removeClass('animate__fadeInUp');
+				$('#tab' + tab + ' .anim_it').addClass('animate__animated').addClass('animate__fadeInUp');
+				$('#tab' + tab + ' .anim_it_head').removeClass('animate__animated').removeClass('animate__fadeInLeft');
+				$('#tab' + tab + ' .anim_it_head').addClass('animate__animated').addClass('animate__fadeInLeft');
+				delay = 0;
+				for (var i = 1; i < $('#tab' + tab + ' .anim_it').length; i++) {
+					delay = delay + 0.3;
+					$('#tab' + tab + ' .anim_it').eq(i).css('animation-delay', delay + 's');
+				}
+
 			},
+
 
 		});
 
@@ -160,7 +183,12 @@
 			$('#tab' + i + ' .container').css('height', height);
 		}
 
-
+		// AOS.init();
+		// var $isAnimatedSecond = $('#tab1 .anim_it');
+    // $isAnimatedSecond.addClass('animate__animated animate__fadeInUp');
+    // $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+    // $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
+    // $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
 		$('body').css('opacity', 1);
 
 	});

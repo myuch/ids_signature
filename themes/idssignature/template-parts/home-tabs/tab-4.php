@@ -3,15 +3,15 @@
   <div class="container">
     <div class="left_section">
       <div class="left_section_wrapper">
-        <h2>Where Will Imagination Take You?</h2>
+        <h2 class="">Where Will Imagination Take You?</h2>
         <div class="left_section_content">
-          <p>
+          <p class="anim_it">
             Ours has taken us across North America, Europe, Asia, and the Middle East.
           </p>
-          <p>
+          <p class="anim_it">
             We have worked with a discerning client list to transform the visitor experience across a variety of venues:
           </p>
-          <ul class="list">
+          <ul class="list anim_it">
             <li>Shopping Malls & Retail Businesses</li>
             <li>Hospitals, Clinics, and Campuses</li>
             <li>Dental, Orthodontic, and Specialist Offices</li>
@@ -30,7 +30,7 @@
         Read More
       </div>
     </div>
-    <div class="right_section">
+    <div class="right_section anim_it">
       <div class="right_section_bottom_line">
 
       </div>
