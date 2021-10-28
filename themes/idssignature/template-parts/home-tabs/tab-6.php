@@ -4,10 +4,10 @@
 
         <div class="contacts">
 
-            <h2 class="title fz-h2 anim_it">Book an Imagination Consultation</h2>
+            <h2 class="title fz-h2 anim_it" data-animation="animate__fadeInUp" data-delay="0">Book an Imagination Consultation</h2>
 
-            <div class="contacts_wrap">
-                <div class="contacts_item anim_it">
+            <div class="contacts_wrap anim_it" data-animation="animate__fadeInUp" data-delay="0.3">
+                <div class="contacts_item noanim_it">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -36,7 +36,7 @@
                     <a href="tel:+18888844102">1-888-884-4102</a>
                     <span>8:00am to 4:30pm MST</span>
                 </div>
-                <div class="contacts_item anim_it">
+                <div class="contacts_item">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -55,9 +55,9 @@
                             c-0.3-0.2-0.5-0.5-0.8-0.7c-0.2-0.2-0.6-0.2-0.8-0.1c-0.3,0.1-0.4,0.4-0.4,0.8C6.3,12.6,6.5,12.7,6.6,12.9z" />
                         </g>
                     </svg>
-                    <a href="mailto:info@idssignature.com">info@idssignature.com</a>
+                    <a href="mailto:info@helloids.com">info@helloids.com</a>
                 </div>
-                <div class="contacts_item anim_it">
+                <div class="contacts_item noanim_it">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="contacts_form anim_it">
+            <div class="contacts_form  anim_it" data-animation="animate__fadeIn" data-delay="0.6">
                 <span class="contacts_form-title">Let’s Talk</span>
                 <span class="contacts_form-subtitle">
                     IDS Signature projects start with a conversation

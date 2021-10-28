@@ -96,7 +96,7 @@
 
 			<div class="modalMenu_contacts">
 				<a href="tel:+18888844102">1-888-884-4102</a>
-				<a href="mailto:info@helloIDS.com">info@helloIDS.com</a>
+				<a href="mailto:info@helloids.com">info@helloids.com</a>
 			</div>
 
 			<div class="modalMenu_socials">
