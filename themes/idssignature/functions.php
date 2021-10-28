@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', time() );
+	define( '_S_VERSION', '11' );
 }
 
 if ( ! function_exists( 'idssignature_setup' ) ) :

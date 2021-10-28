@@ -1,9 +1,9 @@
 <!-- template-parts/home-tabs/tab-5.php -->
-<div id="tab5" class="slide">
+<div id="tab5" class="slide fp-noscroll">
     <div class="container">
       <div class="left_section">
         <div class="left_section_wrapper">
-          <h2 class="anim_it" data-animation="animate__fadeInUp" data-delay="0">Explore Our Imagination</h2>
+          <h2 class="noanim_it" data-animation="animate__fadeInUp" data-delay="0">Explore Our Imagination</h2>
           <div class="left_section_content">
             <?php
             $terms = get_terms( array(

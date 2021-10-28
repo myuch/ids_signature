@@ -2,6 +2,7 @@
 
 
 	function show_animation_on_tab(tab){
+		console.log( 'show anim' + tab);
 		if (!$('#tab' + tab + ' .anim_it').hasClass('animate__animated')) {
 			for (var i = 0; i < $('#tab' + tab + ' .anim_it').length; i++) {
 				data_animation = $('#tab' + tab + ' .anim_it').eq(i).attr('data-animation');
@@ -10,10 +11,12 @@
 				$('#tab' + tab + ' .anim_it').eq(i).addClass('animate__animated');
 				$('#tab' + tab + ' .anim_it').eq(i).addClass(data_animation);
 			}
+			console.log( 'show anim done' + tab);
 		}
 	}
 
 	function hide_animation_on_tab(tab){
+		console.log( 'hide anim' + tab);
 		if ($('#tab' + tab + ' .anim_it').hasClass('animate__animated')) {
 			for (var i = 0; i < $('#tab' + tab + ' .anim_it').length; i++) {
 				data_animation = $('#tab' + tab + ' .anim_it').eq(i).attr('data-animation');
@@ -161,6 +164,9 @@
 				}
 
 				tab = destination.index+1;
+				if (tab == 5) {
+					fullpage_api.reBuild();
+				}
 				show_animation_on_tab(tab);
 
 			},
