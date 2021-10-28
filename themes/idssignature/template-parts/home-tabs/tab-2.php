@@ -1,9 +1,9 @@
 <!-- template-parts/home-tabs/tab-2.php -->
-<div id="tab2" class="slide">
+<div id="tab2" class="slide fp-noscroll">
 	<div class="container">
 		<div class="left_section">
-			<h2>IDS Signature is a Creative Design & Fabrication Studio</h2>
-			<p>
+			<h2 class="anim_it" data-animation="animate__fadeInUp" data-delay="0">IDS Signature is a Creative Design & Fabrication Studio</h2>
+			<p class="anim_it" data-animation="animate__fadeInUp" data-delay="0.3">
 				<span>We are builders, innovators, sculptors of imagination.</span>
 
 				<span>We work with owners, designers, architects, and
@@ -12,7 +12,7 @@
 					Places where customers flock.</span>
 			</p>
 		</div>
-		<div class="right_section">
+		<div class="right_section anim_it" data-animation="animate__fadeIn" data-delay="0.6">
 			<div class="tab2_img">
 				<div class="tab2_img_first">
 					<img class="tab2_imgFirst" src="/wp-content/themes/idssignature/assets/images/tab2_img1.png" alt="">

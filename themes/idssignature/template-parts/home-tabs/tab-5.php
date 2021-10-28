@@ -1,9 +1,9 @@
 <!-- template-parts/home-tabs/tab-5.php -->
-<div id="tab5" class="slide">
+<div id="tab5" class="slide fp-noscroll">
     <div class="container">
       <div class="left_section">
         <div class="left_section_wrapper">
-          <h2>Explore Our Imagination</h2>
+          <h2 class="noanim_it" data-animation="animate__fadeInUp" data-delay="0">Explore Our Imagination</h2>
           <div class="left_section_content">
             <?php
             $terms = get_terms( array(
@@ -11,7 +11,7 @@
               'hide_empty' => false,
             ) );
             ?>
-            <div class="select_wrapper">
+            <div class="select_wrapper anim_it" data-animation="animate__fadeInUp" data-delay="0.3">
               <select class="" name="tab5_select">
 
                 <?php foreach ($terms as $term): ?>
@@ -20,19 +20,21 @@
 
               </select>
             </div>
+            <div class="description_wrapper anim_it" data-animation="animate__fadeInUp" data-delay="0.6">
+              <p descr-data-id="4" class="noanim_it">
+                Don’t settle for ‘just like the all rest’. Be distinct. Be distinguishable. Weave an integrated theme throughout.
+              </p>
+              <p class="active" descr-data-id="2">
+                Add an extra element of character and personality to your space. Custom designed and one-of-a-kind.
+              </p>
+              <p descr-data-id="3" class="noanim_it">
+                Bring unmatched form to your function. Transform awkward pillars and bulkheads into interesting design features.
+              </p>
+              <p descr-data-id="5" class="noanim_it">
+                Take it to the street! Turn heads and attract attention… to get visitors, clients, and customers through the front door.
+              </p>
+            </div>
 
-            <p descr-data-id="4">
-              Don’t settle for ‘just like the all rest’. Be distinct. Be distinguishable. Weave an integrated theme throughout.
-            </p>
-            <p class="active" descr-data-id="2">
-              Add an extra element of character and personality to your space. Custom designed and one-of-a-kind.
-            </p>
-            <p descr-data-id="3">
-              Bring unmatched form to your function. Transform awkward pillars and bulkheads into interesting design features.
-            </p>
-            <p descr-data-id="5">
-              Take it to the street! Turn heads and attract attention… to get visitors, clients, and customers through the front door.
-            </p>
             <!--
             Thematic Space Design
             Don’t settle for ‘just like the all rest’. Be distinct. Be distinguishable. Weave an integrated theme throughout.
@@ -67,7 +69,7 @@
             <!-- <pre>
               <?php //var_dump($posts_array); ?>
             </pre> -->
-            <div class="projects_list">
+            <div class="projects_list anim_it" data-animation="animate__fadeInUp" data-delay="0.9" >
               <?php
               $i = 0;
               $style = '';

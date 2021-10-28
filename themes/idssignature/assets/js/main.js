@@ -1,5 +1,34 @@
 (function ($) {
 
+
+	function show_animation_on_tab(tab){
+		console.log( 'show anim' + tab);
+		if (!$('#tab' + tab + ' .anim_it').hasClass('animate__animated')) {
+			for (var i = 0; i < $('#tab' + tab + ' .anim_it').length; i++) {
+				data_animation = $('#tab' + tab + ' .anim_it').eq(i).attr('data-animation');
+				data_delay = $('#tab' + tab + ' .anim_it').eq(i).attr('data-delay');
+				$('#tab' + tab + ' .anim_it').eq(i).css('animation-delay', data_delay + 's');
+				$('#tab' + tab + ' .anim_it').eq(i).addClass('animate__animated');
+				$('#tab' + tab + ' .anim_it').eq(i).addClass(data_animation);
+			}
+			console.log( 'show anim done' + tab);
+		}
+	}
+
+	function hide_animation_on_tab(tab){
+		console.log( 'hide anim' + tab);
+		if ($('#tab' + tab + ' .anim_it').hasClass('animate__animated')) {
+			for (var i = 0; i < $('#tab' + tab + ' .anim_it').length; i++) {
+				data_animation = $('#tab' + tab + ' .anim_it').eq(i).attr('data-animation');
+				data_delay = $('#tab' + tab + ' .anim_it').eq(i).attr('data-delay');
+				$('#tab' + tab + ' .anim_it').eq(i).css('animation-delay', data_delay + 's');
+				$('#tab' + tab + ' .anim_it').eq(i).removeClass('animate__animated');
+				$('#tab' + tab + ' .anim_it').eq(i).removeClass(data_animation);
+			}
+		}
+	}
+
+
 	$(document).ready(function (e) {
 
 		$('.collapse_btn').on('click', function (e) {
@@ -42,7 +71,6 @@
 			$('#tab5 .left_section_content p.active').removeClass('active');
 			$('#tab5 .left_section_content p[descr-data-id="' + this.value + '"]').addClass('active');
       fullpage_api.reBuild();
-
     });
     $('.project_item').on('click', function(){
       window.slick_gallery_unslick();
@@ -61,6 +89,19 @@
 
 	$(window).on('load', function (e) {
 		//$('div[style^="z-index:99"]').hide();
+
+		height = 0;
+		for (var i = 2; i <= 5; i++) {
+			console.log($('#tab' + i + ' .container').height());
+			if (height <= $('#tab' + i + ' .container').height()) {
+				height = $('#tab' + i + ' .container').height();
+			}
+		}
+		for (var i = 2; i <= 5; i++) {
+			$('#tab' + i + ' .container').css('height', height);
+		}
+
+
 		new fullpage('#myContainer', {
 			// sectionsColor: ['#ff73a1', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccc'],
 			anchors: ['ids', 'secondPage', '3rdPage', '4thpage'],
@@ -68,6 +109,7 @@
 			slidesNavigation: false,
 			controlArrows: false,
 			scrollOverflow: true,
+			scrollingSpeed: 700,
 			normalScrollElements: '.modalMenu, select, .projects_list, .galleryModal',//, .move_items.slick-initialized',
 			//In addition to the extension license you'll
 			//need to acquire a fullPage.js license from https://goo.gl/5x9a22
@@ -103,6 +145,11 @@
 					$('.header').addClass('active');
 					$('.header').removeClass('lastSection');
 				}
+
+				tab_last = origin.index+1;
+				tab = destination.index+1;
+				hide_animation_on_tab(tab_last);
+				show_animation_on_tab(tab);
 			},
 			onSlideLeave: function(section, origin, destination, direction){
 				if (destination.index == 0) {
@@ -115,7 +162,17 @@
 					$('.header').addClass('active');
 					$('.header').removeClass('lastSection');
 				}
+
+				tab = destination.index+1;
+				if (tab == 5) {
+					fullpage_api.reBuild();
+				}
+				show_animation_on_tab(tab);
+
 			},
+			afterRender: function(){
+
+    	}
 
 		});
 
@@ -141,13 +198,19 @@
 			slidesToScroll: 1,
 			arrows: false,
 			dots: false,
-			speed: 500,
+			speed: 3000,
 			autoplaySpeed: 3000,
 		});
 		$('.slider_tab_4').on('init', function(event, slick){
 		   fullpage_api.reBuild();
 		});
-
+		show_animation_on_tab(1);
+		// $('#tab1 .anim_it').addClass('animate__animated').addClass('animate__fadeInUp');
+		// delay = 0;
+		// for (var i = 1; i < $('#tab1 .anim_it').length; i++) {
+		// 	delay = delay + 0.3;
+		// 	$('#tab1 .anim_it').eq(i).css('animation-delay', delay + 's');
+		// }
 		$('body').css('opacity', 1);
 
 	});

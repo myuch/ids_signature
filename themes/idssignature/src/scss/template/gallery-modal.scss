@@ -56,13 +56,13 @@
 
     &-desc {
         color: #fefefe;
-        font-size: 14px;    
+        font-size: 14px;
         line-height: 1.63;
     }
 
     &_slider {
         width: 100%;
-        max-width: 530px;
+        max-width: calc(100vmin - 100px);//730px;
         position: relative;
 
         &_wrap {
@@ -72,7 +72,7 @@
         }
 
         &_item {
-            height: 510px !important;
+            height: calc(100vmin - 120px) !important;//710px !important;
             position: relative;
             margin: 0 10px;
             transition: .3s ease;
@@ -185,9 +185,11 @@ svg#hamburger-close-white {
     .galleryModal {
 
         &_slider {
-          max-width: 420px;
+          max-width: 620px;
+          //max-width: calc(100vmin - 100px);//730px;
             &_item {
-                height: 400px !important;
+                height: 600px !important;
+                //height: calc(100vmin - 120px) !important;//730px;
             }
 
         }
@@ -288,5 +290,3 @@ svg#hamburger-close-white {
         top: 15px;
     }
 }
-
-
