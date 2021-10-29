@@ -304,7 +304,7 @@ function IScroll (el, options) {
 
 // INSERT POINT: OPTIONS
         disablePointer : !utils.hasPointer,
-        disableTouch : true,// utils.hasPointer || !utils.hasTouch,
+        disableTouch : utils.hasPointer || !utils.hasTouch,
         disableMouse : utils.hasPointer || utils.hasTouch,
         startX: 0,
         startY: 0,
@@ -320,7 +320,7 @@ function IScroll (el, options) {
         preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|LABEL)$/ },
 
         HWCompositing: true,
-        useTransition: false,
+        useTransition: true,
         useTransform: true,
         bindToWrapper: typeof window.onmousedown === "undefined"
     };

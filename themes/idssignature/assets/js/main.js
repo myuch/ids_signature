@@ -91,17 +91,18 @@
 		//$('div[style^="z-index:99"]').hide();
 
 		height = 0;
-		for (var i = 2; i <= 5; i++) {
+		for (var i = 2; i <= 4; i++) {
 			console.log($('#tab' + i + ' .container').height());
 			if (height <= $('#tab' + i + ' .container').height()) {
 				height = $('#tab' + i + ' .container').height();
 			}
 		}
-		for (var i = 2; i <= 5; i++) {
+		for (var i = 2; i <= 4; i++) {
 			$('#tab' + i + ' .container').css('height', height);
 		}
 
 
+		//$('#tab5 .empty_height').height($('#tab5 .projects_list').width() + $(window).height() - $('#tab5 .container').width());
 		new fullpage('#myContainer', {
 			// sectionsColor: ['#ff73a1', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#ccc'],
 			anchors: ['ids', 'secondPage', '3rdPage', '4thpage'],
@@ -110,7 +111,7 @@
 			controlArrows: false,
 			scrollOverflow: true,
 			scrollingSpeed: 700,
-			normalScrollElements: '.modalMenu, select, .projects_list, .galleryModal',//, .move_items.slick-initialized',
+			normalScrollElements: '.modalMenu, select, .projects_list2, .galleryModal, #tab5_scroll',//, .move_items.slick-initialized',
 			//In addition to the extension license you'll
 			//need to acquire a fullPage.js license from https://goo.gl/5x9a22
 			licenseKey: '390281F7-78A54E36-A4D1D692-7A439190',
@@ -205,14 +206,58 @@
 		   fullpage_api.reBuild();
 		});
 		show_animation_on_tab(1);
-		// $('#tab1 .anim_it').addClass('animate__animated').addClass('animate__fadeInUp');
-		// delay = 0;
-		// for (var i = 1; i < $('#tab1 .anim_it').length; i++) {
-		// 	delay = delay + 0.3;
-		// 	$('#tab1 .anim_it').eq(i).css('animation-delay', delay + 's');
-		// }
-		$('body').css('opacity', 1);
+		$('#tab5 .empty_height').height($('#tab5 .projects_list').width() + $(window).height());// + $(window).height() - $('#tab5 .container').width());// + $(window).height());// - $('#tab5 .container').width());
+		fullpage_api.reBuild();
+		jQuery('.project_item_info').each(function( index ) {
+			var term_item_width = jQuery(this).closest('.project_term_item').width();
+			jQuery(this).attr('data_margin_max', term_item_width - jQuery(this).width());
+			jQuery(this).attr('data_margin_min', 0);
+		});
+		var mt_tab5 = (jQuery(window).height() - jQuery('#tab5 .container').height())/2;
+		jQuery('#tab5 .container').css('marginTop',  mt_tab5);
 
+		fullpage_api.setAllowScrolling(false, 'left, right');
+		$('body').css('opacity', 1);
 	});
 
+
 })(jQuery);
+
+function scroll_fixed_tab(x,y,this_tab){
+	console.clear();
+	if (jQuery('#tab5').hasClass('active')) {
+		//console.log(this_tab.scrollerHeight);
+		if ($('#tab5 .empty_height').height() == this_tab.scrollerHeight) {
+			jQuery('#tab5 .container').css('top', y*-1);
+			pos_y = y;
+			percents_scrolled = (pos_y * -1)/($('#tab5 .empty_height').height() - $(window).height());
+			console.log(percents_scrolled);
+			percents = pos_y + (percents_scrolled * $('#tab5 .container').width());
+			jQuery('#tab5 .container .projects_list').css('-webkit-transform', 'translateX(' + percents + 'px)');
+
+
+			jQuery('.project_item_info').each(function( index ) {
+				var term_item_offset = jQuery(this).closest('.project_term_item').offset().left;
+				var term_item_width = jQuery(this).closest('.project_term_item').width();
+				var container_offset_left = jQuery('#tab5 .container .left_section').offset().left;
+					console.log('calc_margin' + index);
+					current_margin = jQuery(this).outerWidth(true) - jQuery(this).width();
+						console.log('set_margin' + index);
+						var set_margin = (term_item_offset - container_offset_left) * -1;
+						console.log(set_margin);
+						if (set_margin >= jQuery(this).attr('data_margin_max')) {
+							console.log('set is bigger');
+							set_margin = jQuery(this).attr('data_margin_max');
+						}
+						if (set_margin <= 0) {
+							set_margin = 0;
+						}
+						set_margin = Number(set_margin);
+						jQuery(this).css('marginLeft', set_margin);
+						console.log(set_margin);
+			});
+
+		}
+
+	}
+}
