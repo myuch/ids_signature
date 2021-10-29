@@ -103,6 +103,26 @@ body.fp-viewing-ids-0 {
 
   }
   #tab1 {
+		.tab1_lines {
+			height: 100%;
+			width: auto;
+	    background: transparent;
+	    position: absolute;
+	    z-index: 1;
+	    top: 0px;
+			animation: 3s linear 0s infinite running tab1_lines;
+			svg {
+				height: 100%;
+				width: auto;
+				display: block;
+			}
+		}
+		.tab1_lines.second {
+			animation: 3s linear .5s infinite running tab1_lines;
+			svg {
+
+			}
+		}
     .slide_bg {
       position: absolute;
       z-index: 1;
@@ -114,9 +134,7 @@ body.fp-viewing-ids-0 {
       width: 120vw;
       display: flex;
       justify-content: left;
-      // transition: all .5s;
-
-
+      //transition: all .5s;
       img {
         width: 100vw;
         min-width: 100vw;
@@ -126,17 +144,18 @@ body.fp-viewing-ids-0 {
         margin-top: -50vh;
       }
       &.active {
-        //animation-name: slide_circles;
-        animation-duration: 1s;
+				padding: 100vh 0 100vh;
+        margin-top: -50vh;
+        // width: 100%;
+        // width: 100vw;
+        //animation: none;
+
+        animation-name: slide_circles;
+        animation-duration: 2s;
         animation-delay: .5s;
         animation-fill-mode: forwards;
 
-        padding: 100vh 0 100vh;
-        margin-top: -50vh;
-        border-radius: 0px;
-        width: 100%;
-        max-width: 100vw;
-        animation: none;
+
         &:after {
           animation-name: contrast_bg;
           animation-duration: .5s;
@@ -1231,10 +1250,18 @@ body.fp-viewing-ids-0 {
 	opacity: 1;
 }
 
+@keyframes tab1_lines {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 100vw;
+	}
+}
 
 @keyframes slide_circles {
 	100% {
-		width: calc(90vw);
+		width: calc(100vw - 250px);
 		height: 100%;
 		//border-radius: 0 300px 300px 0px / 0 100% 100% 0px;
 		border-radius: 0 250vh 250vh 0px / 0 250vh 250vh 0px;
