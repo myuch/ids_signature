@@ -265,7 +265,19 @@
 
 }
 
-
+body.fp-viewing-ids-0 {
+  .contactUs {
+    color: #000;
+    border-color: #000;
+    &:hover {
+      color: #fff;
+      background: #000;
+    }
+  }
+  .hamburger path {
+    fill: #000;
+  }
+}
 /* ================== MEDIA =================== */
 @media (max-width: 1619px) {
 
