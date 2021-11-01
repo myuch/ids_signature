@@ -23,12 +23,16 @@
     .logo {
         display: none;
         max-width: 150px;
+        height: 34px;
+        object-fit: contain;
         cursor: pointer;
     }
 
     .logo-light {
         display: block;
         max-width: 150px;
+        height: 34px;
+        object-fit: contain;
         cursor: pointer;
     }
 
@@ -136,6 +140,7 @@
     right: 0;
     z-index: 101;
     padding: 120px 30px 70px;
+    box-shadow: rgba(0, 0, 0, 45%) -1px 0px 20px 0px;
     display: none;
 
     &-close {
@@ -221,14 +226,14 @@
 
         p {
             color: #000;
-            font-size: 20px;
+            font-size: 16px;
             display: block;
             margin-bottom: 10px;
         }
 
         a {
             color: #3ba1e4;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
             text-align: center;
             display: block;

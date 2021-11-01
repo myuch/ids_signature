@@ -125,7 +125,11 @@
     });
 
 		$('#hamburger-close-white').on('click', function () {
-        $('#galleryModal').slideUp(500);
+				$('#galleryModal').animate({
+		      opacity: 0,
+		    }, 300, "linear", function(){
+		      $('#galleryModal').hide();
+		    });
     });
 
 	});
@@ -257,6 +261,7 @@
 		jQuery('#tab5 .container').css('marginTop',  jQuery('#tab4 .container').offset().top);
 
 		fullpage_api.setAllowScrolling(false, 'left, right');
+		fullpage_api.reBuild();
 		$('body').css('opacity', 1);
 	});
 

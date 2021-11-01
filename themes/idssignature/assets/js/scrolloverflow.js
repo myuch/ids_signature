@@ -312,7 +312,7 @@ function IScroll (el, options) {
         directionLockThreshold: 5,
         momentum: true,
 
-        bounce: true,
+        bounce: false,
         bounceTime: 600,
         bounceEasing: '',
 
