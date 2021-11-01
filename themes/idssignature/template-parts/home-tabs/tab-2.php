@@ -12,8 +12,8 @@
 					Places where customers flock.</span>
 			</p>
 		</div>
-		<div class="right_section anim_it" data-animation="animate__fadeIn" data-delay="0.6">
-			<div class="tab2_img">
+		<div class="right_section">
+			<div class="tab2_img anim_it_img">
 				<div class="tab2_img_first">
 					<img class="tab2_imgFirst" src="/wp-content/themes/idssignature/assets/images/tab2_img1.png" alt="">
 				</div>

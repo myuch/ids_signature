@@ -1,7 +1,7 @@
 <!-- template-parts/home-tabs/tab-3.php -->
 <div id="tab3" class="slide fp-noscroll">
   <div class="slider_bg">
-    <img src="/wp-content/themes/idssignature/assets/images/white_line.svg" alt="">
+    <img class="anim_it_img" src="/wp-content/themes/idssignature/assets/images/white_line2.svg" alt="">
   </div>
     <div class="container">
       <h2 class="anim_it" data-animation="animate__fadeInLeft" data-delay="0">Our Signature Moves</h2>

@@ -19,6 +19,9 @@
 				$('#tab' + tab + ' .anim_it').eq(i).addClass('animate__animated');
 				$('#tab' + tab + ' .anim_it').eq(i).addClass(data_animation);
 			}
+			setTimeout(function() {
+				$('#tab' + tab + ' .anim_it_img').addClass('animated_it_img').removeClass('anim_it_img');
+			}, 600);
 			//console.log( 'show anim done' + tab);
 		}
 	}
@@ -33,6 +36,7 @@
 					$('#tab' + tab + ' .anim_it').eq(i).removeClass('animate__animated');
 					$('#tab' + tab + ' .anim_it').eq(i).removeClass(data_animation);
 				}
+				$('#tab' + tab + ' .animated_it_img').removeClass('animated_it_img').addClass('anim_it_img');
 			}
 		}
 	}
