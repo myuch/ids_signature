@@ -102,8 +102,14 @@
 			$('#projects_popup_anim').css('top', $(this).offset().top);
 			$('#projects_popup_anim').css('width', $(this).width());
 			$('#projects_popup_anim').css('height', $(this).find('.main_img').height());
+			$('#projects_popup_anim').attr('origin_left', $(this).offset().left);
+			$('#projects_popup_anim').attr('origin_top', $(this).offset().top);
+			$('#projects_popup_anim').attr('origin_width', $(this).width());
+			$('#projects_popup_anim').attr('origin_height', $(this).find('.main_img').height());
 			$('.projects_popup_anim_wrapper').show();
 			$('#projects_popup_anim').show();
+			$(this).addClass('opened');
+			$(this).find('.main_img_wrapper').css('opacity', 0);
 
 			an_margin_left = ($('.galleryModal_slider .galleryModal_slider_item').outerWidth(true) - $('.galleryModal_slider .galleryModal_slider_item').outerWidth())/2;
 
@@ -129,13 +135,39 @@
     });
 
 		$('#hamburger-close-white').on('click', function () {
-				$('#galleryModal').animate({
-		      opacity: 0,
-		    }, 300, "linear", function(){
-		      $('#galleryModal').hide();
-		    });
-    });
+			$('#projects_popup_anim img:last-child').css('opacity', 1);
+			$('#projects_popup_anim img:last-child').attr('src', $('.galleryModal_slider .galleryModal_slider_item.slick-active img').attr('src'));
+			$('.projects_popup_anim_wrapper').show();
+			$('#projects_popup_anim').show();
+			$('.galleryModal_slider').css('opacity', 0);
+			$('#projects_popup_anim img:last-child').animate({
+				opacity: 0,
+	    }, 500, "linear");
+			$('#projects_popup_anim').animate({
+				width: $('#projects_popup_anim').attr('origin_width'),
+				height: $('#projects_popup_anim').attr('origin_height'),
+				left: $('#projects_popup_anim').attr('origin_left'),
+				top: $('#projects_popup_anim').attr('origin_top'),
+	    }, 500, "linear", function(){
+	      //$('.galleryModal_slider').css('opacity', 1);
 
+				$('.project_item.opened').find('.main_img_wrapper').css('opacity', 1);
+				$('.project_item.opened').removeClass('opened');
+				$('#projects_popup_anim').hide();
+				$('.projects_popup_anim_wrapper').hide();
+
+				//show_animation_on_modal();
+	    });
+
+			$('#galleryModal').animate({
+	      opacity: 0,
+	    }, 500, "linear", function(){
+	      $('#galleryModal').hide();
+	    });
+    });
+		if ("ontouchstart" in document.documentElement) {
+			$('#tab5 .project_item').addClass('touch');
+		}
 	});
 
 	$(window).on('load', function (e) {
@@ -157,7 +189,7 @@
 			slidesNavigation: false,
 			controlArrows: false,
 			scrollOverflow: true,
-			scrollingSpeed: 700,
+			scrollingSpeed: 1200,
 			normalScrollElements: '.modalMenu, select, .projects_list2, .galleryModal, #tab5_scroll',//, .move_items.slick-initialized',
 			//In addition to the extension license you'll
 			//need to acquire a fullPage.js license from https://goo.gl/5x9a22
@@ -168,14 +200,19 @@
 			loopHorizontal: false,
 			scrollHorizontallyKey: 'aWRzc2lnbmF0dXJlLmNvbV9oMWxjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVwZkk=', //see https://goo.gl/xkUmHS
 
+
 			afterSlideLoad: function (section, origin, destination, direction) {
 				//$('div[style^="z-index:99"]').hide();
+
+				// if (destination.index == 4) {
+				// }
 				if (destination.index == 5) {
-					$('.slides_nav').hide();
+
+					//$('.slides_nav').hide();
 					$('.modalMenu_menu span.active').removeClass('active');
 					$('.modalMenu_menu span[data-index="' + destination.index + '"]').addClass('active');
 				} else {
-					$('.slides_nav').show();
+					//$('.slides_nav').show();
 					$('.slides_nav .lines .line_item.active').removeClass('active');
 					$('.slides_nav .lines .line_item[data-index="' + destination.index + '"]').addClass('active');
 					$('.slides_nav .lines_title_mobile').html($('.slides_nav .lines .line_item.active .title').html());
@@ -263,6 +300,7 @@
 		var mt_tab5 = (jQuery(window).height() - jQuery('#tab5 .container').height())/2;
 		//jQuery('#tab5 .container').css('marginTop',  mt_tab5);
 		jQuery('#tab5 .container').css('marginTop',  jQuery('#tab4 .container').offset().top);
+		jQuery('#tab6 .container').css('marginTop',  jQuery('#tab4 .container').offset().top);
 
 		fullpage_api.setAllowScrolling(false, 'left, right');
 		fullpage_api.reBuild();
@@ -271,16 +309,22 @@
 
 
 })(jQuery);
-
+	last_scroll = 0;
 function scroll_fixed_tab(x,y,this_tab){
-	//console.clear();
+	console.log('scroll_fixed_tab');
+
+	console.log(this_tab);
+
 	if (jQuery('#tab5').hasClass('active')) {
-		//console.log(this_tab.scrollerHeight);
+		if ((Date.now() - last_scroll) <= 100) {
+			//fullpage_api.setAutoScrolling(false);
+		} else {
+			//fullpage_api.setAutoScrolling(true);
+		}
 		if ($('#tab5 .empty_height').height() == this_tab.scrollerHeight) {
 			jQuery('#tab5 .container').css('top', y*-1);
 			pos_y = y;
 			percents_scrolled = (pos_y * -1)/($('#tab5 .empty_height').height() - $(window).height());
-			//console.log(percents_scrolled);
 			percents = pos_y + (percents_scrolled * $('#tab5 .container').width());
 			jQuery('#tab5 .container .projects_list').css('-webkit-transform', 'translateX(' + percents + 'px)');
 
@@ -289,24 +333,19 @@ function scroll_fixed_tab(x,y,this_tab){
 				var term_item_offset = jQuery(this).closest('.project_term_item').offset().left;
 				var term_item_width = jQuery(this).closest('.project_term_item').width();
 				var container_offset_left = jQuery('#tab5 .container .left_section').offset().left;
-					//console.log('calc_margin' + index);
-					current_margin = jQuery(this).outerWidth(true) - jQuery(this).width();
-						//console.log('set_margin' + index);
-						var set_margin = (term_item_offset - container_offset_left) * -1;
-						//console.log(set_margin);
-						if (set_margin >= jQuery(this).attr('data_margin_max')) {
-							console.log('set is bigger');
-							set_margin = jQuery(this).attr('data_margin_max');
-						}
-						if (set_margin <= 0) {
-							set_margin = 0;
-						}
-						set_margin = Number(set_margin);
-						jQuery(this).css('marginLeft', set_margin);
-						//console.log(set_margin);
+				current_margin = jQuery(this).outerWidth(true) - jQuery(this).width();
+				var set_margin = (term_item_offset - container_offset_left) * -1;
+				if (set_margin >= jQuery(this).attr('data_margin_max')) {
+					//console.log('set is bigger');
+					set_margin = jQuery(this).attr('data_margin_max');
+				}
+				if (set_margin <= 0) {
+					set_margin = 0;
+				}
+				set_margin = Number(set_margin);
+				jQuery(this).css('marginLeft', set_margin);
 			});
-
 		}
-
+		last_scroll = Date.now();
 	}
 }

@@ -4,10 +4,10 @@
 
         <div class="contacts">
 
-            <h2 class="title fz-h2 noanim_it" data-animation="animate__fadeInUp" data-delay="0">Book an Imagination Consultation</h2>
+            <h2 class="title fz-h2 anim_it" data-animation="animate__fadeInUp" data-delay="0.3">Book an Imagination Consultation</h2>
 
-            <div class="contacts_wrap noanim_it" data-animation="animate__fadeInUp" data-delay="0.3">
-                <div class="contacts_item noanim_it">
+            <div class="contacts_wrap anim_it" data-animation="animate__fadeInUp" data-delay="0.6">
+                <div class="contacts_item">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                         <style type="text/css">
                             .st0 {
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="contacts_form  noanim_it" data-animation="animate__fadeIn" data-delay="0.6">
+            <div class="contacts_form anim_it" data-animation="animate__fadeIn" data-delay="0.9">
                 <span class="contacts_form-title">Let’s Talk</span>
                 <span class="contacts_form-subtitle">
                     IDS Signature projects start with a conversation

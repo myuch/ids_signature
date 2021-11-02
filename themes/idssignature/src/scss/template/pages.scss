@@ -35,6 +35,7 @@ body.fp-viewing-ids-0 {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		position: absolute;
 	}
 }
 
@@ -69,7 +70,7 @@ body.fp-viewing-ids-0 {
 		    position: absolute;
 		    z-index: 1;
 		    top: 0px;
-				animation: 3s linear 2s infinite running tab1_lines;
+				animation: 3s linear 3s infinite running tab1_lines;
 				svg {
 					height: 100%;
 					width: auto;
@@ -147,7 +148,7 @@ body.fp-viewing-ids-0 {
     h1 {
       color: #ffffff;
       font-size: calc(80px * var(--font-scaler));
-      font-weight: $font-weight1;
+      font-weight: $font-weight-title;
       font-style: normal;
       letter-spacing: normal;
       line-height: 1em;
@@ -231,7 +232,7 @@ body.fp-viewing-ids-0 {
         h2 {
           color: #000;
           font-size: calc(60px * var(--font-scaler));
-          font-weight: $font-weight1;
+          font-weight: $font-weight-title;
           font-style: normal;
           letter-spacing: normal;
           line-height: 1em;
@@ -395,7 +396,7 @@ body.fp-viewing-ids-0 {
       h2 {
         color: #000000;
         font-size: calc(60px * var(--font-scaler));
-        font-weight: $font-weight1;
+        font-weight: $font-weight-title;
         font-style: normal;
         letter-spacing: normal;
         line-height: 1em;
@@ -509,7 +510,7 @@ body.fp-viewing-ids-0 {
         h2 {
           color: #000;
           font-size: calc(60px * var(--font-scaler));
-          font-weight: $font-weight1;
+          font-weight: $font-weight-title;
           font-style: normal;
           letter-spacing: normal;
           line-height: 1em;
@@ -628,7 +629,7 @@ body.fp-viewing-ids-0 {
         h2 {
           color: #000;
           font-size: calc(60px * var(--font-scaler));
-          font-weight: $font-weight1;
+          font-weight: $font-weight-title;
           font-style: normal;
           letter-spacing: normal;
           line-height: 1em;
@@ -763,13 +764,44 @@ body.fp-viewing-ids-0 {
 									transition: opacity .3s;
 									height: calc( ((100% - 60px) / 6) + 40px);
 									height: calc(220px + 51.2px);
-									&:hover {
-										opacity: .7;
+
+									div.main_img_wrapper {
+										position: relative;
+										overflow: hidden;
+										img.main_img {
+											width: 100%;
+											display: block;
+											-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  										filter: grayscale(100%);
+										}
+										.animation_wrapper {
+											position: absolute;
+											top: -50%;
+											left: -50%;
+											width: 200%;
+											height: 200%;
+											background: #0000006b;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+											.animation_second_wrapper {
+												width: 0px;
+												height: 0px;
+												border-radius: 50%;
+												overflow: hidden;
+												transition: width .7s, height .7s;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												.img_animation {
+													width: 220px;
+													height: 220px;
+													display: block;
+												}
+											}
+										}
 									}
-									img {
-										width: 100%;
-										display: block;
-									}
+
 									.project_title {
 										bottom: 0px;
 										left: 0px;
@@ -785,13 +817,37 @@ body.fp-viewing-ids-0 {
 										color: white;
 										padding: 0px 5px;
 									}
-								}
 
+									&:hover,
+									&.opened {
+										// opacity: .7;
+										div.main_img_wrapper {
+											.animation_wrapper {
+												.animation_second_wrapper {
+													width: 100%;
+													height: 100%;
+													.img_animation {
+													}
+												}
+											}
+										}
+									}
+									&.touch {
+										div.main_img_wrapper {
+											img.main_img {
+												-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+												filter: grayscale(0);
+											}
+											.animation_wrapper {
+												display: none;
+											}
+										}
+									}
+								}
 							}
             }
           }
         }
-
       }
     }
   }

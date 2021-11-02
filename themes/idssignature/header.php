@@ -45,6 +45,7 @@
 	<div class="projects_popup_anim_wrapper" style="position: absolute; top: 0; left: 0; height: 100%; width: 100vw; z-index: 101; overflow: hidden; display: none;">
 		<div id="projects_popup_anim">
 			<img src="" alt="">
+			<img src="" alt="">
 		</div>
 	</div>
 

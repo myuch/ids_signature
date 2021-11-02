@@ -60,7 +60,14 @@
                       $images = get_field('images', $post->ID);
                       ?>
                       <div class="project_item" data-images="<?= count($images) ?>"  data-term-name="<?= $terms[$i]->name ?>" data-title="<?= $post->post_title ?>" data-description="<?= get_field('description', $post->ID) ?>">
-                        <img class="main_img" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
+                        <div class="main_img_wrapper">
+                          <img class="main_img" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
+                          <div class="animation_wrapper">
+                            <div class="animation_second_wrapper">
+                              <img class="img_animation" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
+                            </div>
+                          </div>
+                        </div>
                         <div class="img_subwrapper">
 
                         </div>

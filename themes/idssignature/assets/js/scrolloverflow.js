@@ -298,7 +298,7 @@ function IScroll (el, options) {
 
         resizeScrollbars: true,
 
-        mouseWheelSpeed: 20,
+        mouseWheelSpeed: 10,
 
         snapThreshold: 0.334,
 
@@ -2489,7 +2489,7 @@ if ( typeof module != 'undefined' && module.exports ) {
 
                 // two times reporting the same Y position ?
                 // that means we are on the top or on the bottom of the scroller
-
+                //console.log(scroller.y);
                 if (type === 'top'){
                     return scroller.y >= 0 && !fp_utils.getScrollTop(scrollable);
                 } else if (type === 'bottom') {
