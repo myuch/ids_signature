@@ -310,17 +310,25 @@
 
 })(jQuery);
 	last_scroll = 0;
+	last_delta = 0;
+	delta = 0;
+	delta_last_change = 0;
 function scroll_fixed_tab(x,y,this_tab){
-	console.log('scroll_fixed_tab');
+	//console.log('scroll_fixed_tab');
 
-	console.log(this_tab);
+	//console.log(this_tab);
 
 	if (jQuery('#tab5').hasClass('active')) {
-		if ((Date.now() - last_scroll) <= 100) {
-			//fullpage_api.setAutoScrolling(false);
-		} else {
-			//fullpage_api.setAutoScrolling(true);
-		}
+		// if ((Date.now() - last_scroll) <= 100) {
+		// 	fullpage_api.setAutoScrolling(false);
+		// } else {
+		//
+		// }
+		// if (((Date.now() - delta_last_change) >= 100) || last_delta <= delta - 10) {
+		// 	fullpage_api.setAutoScrolling(true);
+		// } else {
+		// 	fullpage_api.setAutoScrolling(false);
+		// }
 		if ($('#tab5 .empty_height').height() == this_tab.scrollerHeight) {
 			jQuery('#tab5 .container').css('top', y*-1);
 			pos_y = y;
@@ -349,3 +357,11 @@ function scroll_fixed_tab(x,y,this_tab){
 		last_scroll = Date.now();
 	}
 }
+
+window.addEventListener("wheel", event => {
+		// last_delta = delta;
+		// delta_last_change = Date.now();
+		// delta = event.deltaY;
+		// console.log( delta + ', ' + last_delta);
+    //console.info(event.deltaY);
+});

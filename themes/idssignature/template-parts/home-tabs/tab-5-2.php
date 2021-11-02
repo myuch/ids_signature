@@ -64,7 +64,9 @@
                           <img class="main_img" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
                           <div class="animation_wrapper">
                             <div class="animation_second_wrapper">
-                              <img class="img_animation" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
+                              <div class="img_animation" style="background:url('<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>'); background-position: center center; background-size: cover;">
+                              </div>
+                              <!-- <img class="img_animation" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt=""> -->
                             </div>
                           </div>
                         </div>
