@@ -34,10 +34,6 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    $('#hamburger-close-white').on('click', function () {
-        $('#galleryModal').hide();
-    });
-
     slick_gallery_init();
 
 });

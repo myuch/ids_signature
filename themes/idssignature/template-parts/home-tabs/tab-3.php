@@ -1,11 +1,13 @@
 <!-- template-parts/home-tabs/tab-3.php -->
 <div id="tab3" class="slide fp-noscroll">
   <div class="slider_bg">
-    <img src="/wp-content/themes/idssignature/assets/images/white_line.svg" alt="">
+    <img class="anim_it_img" src="/wp-content/themes/idssignature/assets/images/white_line2.svg" alt="">
   </div>
     <div class="container">
-      <h2 class="anim_it" data-animation="animate__fadeInLeft" data-delay="0">Our Signature Moves</h2>
-      <p class="anim_it" data-animation="animate__fadeInUp" data-delay="0.3">As part of your design team, IDS Signature specializes in inventive solutions that draw a crowd.</p>
+      <div class="text_wrap">
+        <h2 class="anim_it" data-animation="animate__fadeInLeft" data-delay="0">Our Signature Moves</h2>
+        <p class="anim_it" data-animation="animate__fadeInUp" data-delay="0.3">As part of your design team, IDS Signature specializes in inventive solutions that draw a crowd.</p>
+      </div>
       <div class="slick_arrows">
         <a class="slick_arrow_prev slick_arr" href="#">
           <img class="anim_it" data-animation="animate__fadeInUp" data-delay="0.6" src="/wp-content/themes/idssignature/assets/images/footArrow_Left.svg" alt="">

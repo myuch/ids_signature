@@ -42,6 +42,13 @@
 </head>
 
 <body style="opacity: 0;">
+	<div class="projects_popup_anim_wrapper" style="position: absolute; top: 0; left: 0; height: 100%; width: 100vw; z-index: 101; overflow: hidden; display: none;">
+		<div id="projects_popup_anim">
+			<img src="" alt="">
+			<img src="" alt="">
+		</div>
+	</div>
+
 
 	<!-- Header -->
 	<header class="header">
@@ -205,8 +212,8 @@
 
 	<!-- Gallery Modal -->
 	<div id="galleryModal" class="galleryModal" style="display:none;">
-		<img class="galleryModal-logo-light" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo-white.svg">
-		<svg id="hamburger-close-white" xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" style="display: inline;">
+		<img class="galleryModal-logo-light anim_it" data-animation="animate__fadeIn" data-delay="0" src="<?php echo get_template_directory_uri() ?>/assets/images/new-logo-white.svg">
+		<svg id="hamburger-close-white" class=" anim_it" data-animation="animate__fadeIn" data-delay="0" xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" style="display: inline;">
 			<g>
 				<g>
 					<path d="M2.533.6L13.5 11.568 24.467.601a1 1 0 1 1 1.414 1.413L14.914 12.981l10.954 10.955a1 1 0 1 1-1.414 1.413L13.5 14.395 2.546 25.349a1 1 0 1 1-1.414-1.413L12.086 12.98 1.12 2.014A1 1 0 1 1 2.533.601z"></path>
@@ -230,7 +237,7 @@
 							<img src="<?php echo get_template_directory_uri() ?>/assets/images/slider-1.jpg">
 						</div>
 					</div>
-					<div class="galleryModal_slider_info">
+					<div class="galleryModal_slider_info anim_it" data-animation="animate__fadeInUp" data-delay="0">
 						<span id="galleryModal_arrowPrev" class="galleryModal_arrow">
 							<svg xmlns="http://www.w3.org/2000/svg" width="15" height="52" viewBox="0 0 15 52"><g><g><path fill="none" stroke="#fff" stroke-miterlimit="20" stroke-width="4" d="M2 1.052v0l10 25.84v0L2 50.994v0l10-23.99v0z"/></g></g></svg>
 						</span>
@@ -240,7 +247,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="galleryModal_content">
+				<div class="galleryModal_content anim_it" data-animation="animate__fadeInUp" data-delay="0">
 					<span class="galleryModal-title">
 						Signage & Outdoor Landmarks
 					</span>

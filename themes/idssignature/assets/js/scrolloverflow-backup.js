@@ -304,7 +304,7 @@ function IScroll (el, options) {
 
 // INSERT POINT: OPTIONS
         disablePointer : !utils.hasPointer,
-        disableTouch : utils.hasPointer || !utils.hasTouch, //true,
+        disableTouch : utils.hasPointer || !utils.hasTouch,
         disableMouse : utils.hasPointer || utils.hasTouch,
         startX: 0,
         startY: 0,
@@ -312,8 +312,7 @@ function IScroll (el, options) {
         directionLockThreshold: 5,
         momentum: true,
 
-        // bounce: false,
-        bounce: false,
+        bounce: true,
         bounceTime: 600,
         bounceEasing: '',
 
@@ -321,7 +320,7 @@ function IScroll (el, options) {
         preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|LABEL)$/ },
 
         HWCompositing: true,
-        useTransition: false,
+        useTransition: true,
         useTransform: true,
         bindToWrapper: typeof window.onmousedown === "undefined"
     };
@@ -2490,7 +2489,7 @@ if ( typeof module != 'undefined' && module.exports ) {
 
                 // two times reporting the same Y position ?
                 // that means we are on the top or on the bottom of the scroller
-                //console.log(scroller.y);
+
                 if (type === 'top'){
                     return scroller.y >= 0 && !fp_utils.getScrollTop(scrollable);
                 } else if (type === 'bottom') {

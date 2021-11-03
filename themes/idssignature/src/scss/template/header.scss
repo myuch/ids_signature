@@ -23,12 +23,16 @@
     .logo {
         display: none;
         max-width: 150px;
+        height: 34px;
+        object-fit: contain;
         cursor: pointer;
     }
 
     .logo-light {
         display: block;
         max-width: 150px;
+        height: 34px;
+        object-fit: contain;
         cursor: pointer;
     }
 
@@ -136,6 +140,7 @@
     right: 0;
     z-index: 101;
     padding: 120px 30px 70px;
+    box-shadow: rgba(0, 0, 0, 45%) -1px 0px 20px 0px;
     display: none;
 
     &-close {
@@ -221,14 +226,16 @@
 
         p {
             color: #000;
-            font-size: 20px;
+            font-size: 16px;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
+            line-height: 19px;
         }
 
         a {
             color: #3ba1e4;
-            font-size: 20px;
+            font-size: 16px;
+            line-height: 21px;
             font-weight: 300;
             text-align: center;
             display: block;
@@ -265,7 +272,19 @@
 
 }
 
-
+body.fp-viewing-ids-0 {
+  .contactUs {
+    color: #000;
+    border-color: #000;
+    &:hover {
+      color: #fff;
+      background: #000;
+    }
+  }
+  .hamburger path {
+    fill: #000;
+  }
+}
 /* ================== MEDIA =================== */
 @media (max-width: 1619px) {
 
