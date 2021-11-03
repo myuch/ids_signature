@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="contacts_form anim_it" data-animation="animate__fadeIn" data-delay="0.9">
+            <div class="contacts_form anim_it" data-animation="animate__fadeInUp" data-delay="0.9">
                 <span class="contacts_form-title">Let’s Talk</span>
                 <span class="contacts_form-subtitle">
                     IDS Signature projects start with a conversation

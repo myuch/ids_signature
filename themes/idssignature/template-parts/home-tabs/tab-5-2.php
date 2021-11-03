@@ -60,22 +60,28 @@
                       $images = get_field('images', $post->ID);
                       ?>
                       <div class="project_item" data-images="<?= count($images) ?>"  data-term-name="<?= $terms[$i]->name ?>" data-title="<?= $post->post_title ?>" data-description="<?= get_field('description', $post->ID) ?>">
-                        <div class="main_img_wrapper">
+                        <!-- <div class="main_img_wrapper">
                           <img class="main_img" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
                           <div class="animation_wrapper">
                             <div class="animation_second_wrapper">
                               <div class="img_animation" style="background:url('<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>'); background-position: center center; background-size: cover;">
                               </div>
-                              <!-- <img class="img_animation" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt=""> -->
+                              <img class="img_animation" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>" alt="">
+                              <div class="img_animation">
+
+                              </div>
                             </div>
                           </div>
+                        </div> -->
+                        <div class="figure_wrapper">
+                          <figure style="--fxy: 1.414"><img class="main_img" src="<?= get_field('image', $post->ID)['sizes']['medium_large'] ?>"></figure>
                         </div>
                         <div class="img_subwrapper">
 
                         </div>
-                        <div class="project_title">
+                        <!-- <div class="project_title">
                           <?= $post->post_title ?>
-                        </div>
+                        </div> -->
                         <div class="slider_imgs" style="display:none;">
                           <?php foreach ($images as $img): ?>
                             <div class="galleryModal_slider_item">

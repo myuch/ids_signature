@@ -109,7 +109,7 @@
 			$('.projects_popup_anim_wrapper').show();
 			$('#projects_popup_anim').show();
 			$(this).addClass('opened');
-			$(this).find('.main_img_wrapper').css('opacity', 0);
+			$(this).find('.figure_wrapper').css('opacity', 0);
 
 			an_margin_left = ($('.galleryModal_slider .galleryModal_slider_item').outerWidth(true) - $('.galleryModal_slider .galleryModal_slider_item').outerWidth())/2;
 
@@ -151,7 +151,7 @@
 	    }, 500, "linear", function(){
 	      //$('.galleryModal_slider').css('opacity', 1);
 
-				$('.project_item.opened').find('.main_img_wrapper').css('opacity', 1);
+				$('.project_item.opened').find('.figure_wrapper').css('opacity', 1);
 				$('.project_item.opened').removeClass('opened');
 				$('#projects_popup_anim').hide();
 				$('.projects_popup_anim_wrapper').hide();
@@ -196,7 +196,7 @@
 			licenseKey: '390281F7-78A54E36-A4D1D692-7A439190',
 
 			scrollHorizontally: true,
-			continuousHorizontal: false,
+			continuousHorizontal: true,
 			loopHorizontal: false,
 			scrollHorizontallyKey: 'aWRzc2lnbmF0dXJlLmNvbV9oMWxjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVwZkk=', //see https://goo.gl/xkUmHS
 
@@ -319,8 +319,11 @@ function scroll_fixed_tab(x,y,this_tab){
 	//console.log(this_tab);
 
 	if (jQuery('#tab5').hasClass('active')) {
+		// fullpage_api.setAutoScrolling(false);
+		// console.log( delta + ', ' + last_delta);
+		// delta_change = Math.abs(delta - last_delta);
 		// if ((Date.now() - last_scroll) <= 100) {
-		// 	fullpage_api.setAutoScrolling(false);
+		//
 		// } else {
 		//
 		// }
@@ -338,20 +341,20 @@ function scroll_fixed_tab(x,y,this_tab){
 
 
 			jQuery('.project_item_info').each(function( index ) {
-				var term_item_offset = jQuery(this).closest('.project_term_item').offset().left;
-				var term_item_width = jQuery(this).closest('.project_term_item').width();
-				var container_offset_left = jQuery('#tab5 .container .left_section').offset().left;
-				current_margin = jQuery(this).outerWidth(true) - jQuery(this).width();
-				var set_margin = (term_item_offset - container_offset_left) * -1;
-				if (set_margin >= jQuery(this).attr('data_margin_max')) {
-					//console.log('set is bigger');
-					set_margin = jQuery(this).attr('data_margin_max');
-				}
-				if (set_margin <= 0) {
-					set_margin = 0;
-				}
-				set_margin = Number(set_margin);
-				jQuery(this).css('marginLeft', set_margin);
+				// var term_item_offset = jQuery(this).closest('.project_term_item').offset().left;
+				// var term_item_width = jQuery(this).closest('.project_term_item').width();
+				// var container_offset_left = jQuery('#tab5 .container .left_section').offset().left;
+				// current_margin = jQuery(this).outerWidth(true) - jQuery(this).width();
+				// var set_margin = (term_item_offset - container_offset_left) * -1;
+				// if (set_margin >= jQuery(this).attr('data_margin_max')) {
+				// 	//console.log('set is bigger');
+				// 	set_margin = jQuery(this).attr('data_margin_max');
+				// }
+				// if (set_margin <= 0) {
+				// 	set_margin = 0;
+				// }
+				// set_margin = Number(set_margin);
+				// jQuery(this).css('marginLeft', set_margin);
 			});
 		}
 		last_scroll = Date.now();
@@ -359,9 +362,9 @@ function scroll_fixed_tab(x,y,this_tab){
 }
 
 window.addEventListener("wheel", event => {
-		// last_delta = delta;
-		// delta_last_change = Date.now();
-		// delta = event.deltaY;
-		// console.log( delta + ', ' + last_delta);
+		last_delta = delta;
+		delta_last_change = Date.now();
+		delta = event.deltaY;
+		//console.log( delta + ', ' + last_delta);
     //console.info(event.deltaY);
 });

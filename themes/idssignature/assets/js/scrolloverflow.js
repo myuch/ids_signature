@@ -298,13 +298,13 @@ function IScroll (el, options) {
 
         resizeScrollbars: true,
 
-        mouseWheelSpeed: 10,
+        mouseWheelSpeed: 20,
 
         snapThreshold: 0.334,
 
 // INSERT POINT: OPTIONS
         disablePointer : !utils.hasPointer,
-        disableTouch : true,// utils.hasPointer || !utils.hasTouch,
+        disableTouch : utils.hasPointer || !utils.hasTouch, //true,
         disableMouse : utils.hasPointer || utils.hasTouch,
         startX: 0,
         startY: 0,
@@ -312,6 +312,7 @@ function IScroll (el, options) {
         directionLockThreshold: 5,
         momentum: true,
 
+        // bounce: false,
         bounce: false,
         bounceTime: 600,
         bounceEasing: '',
