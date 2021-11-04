@@ -188,8 +188,7 @@
 			<div class="modalMenu_bottom">
 
 				<div class="modalMenu_firstText">
-					<p>Brought to you by the same creative minds behind </p>
-					<a href="https://idskids.com/" target="_blank">IDS Kids.</a>
+					<p>Brought to you by the same creative minds behind <a style="display: inline;" href="https://idskids.com/" target="_blank">IDS Kids.</a></p>
 				</div>
 
 				<div class="modalMenu_secondText">

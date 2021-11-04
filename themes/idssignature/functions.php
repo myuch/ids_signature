@@ -188,7 +188,7 @@ function idssignature_scripts() {
 
 
 	wp_enqueue_style( 'fullpage-style', 'https://unpkg.com/fullpage.js/dist/fullpage.min.css', array(), _S_VERSION );
-	wp_enqueue_style( 'fullpage-style-ex', 'https://alvarotrigo.com/fullPage/examples/1examples.css', array(), _S_VERSION );
+	//wp_enqueue_style( 'fullpage-style-ex', 'https://alvarotrigo.com/fullPage/examples/1examples.css', array(), _S_VERSION );
 
 	wp_enqueue_style( 'idssignature-style', get_template_directory_uri() . '/dist/css/main.min.css', array(), _S_VERSION );
 

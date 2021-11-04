@@ -235,6 +235,7 @@
 				tab = destination.index+1;
 				hide_animation_on_tab(tab_last);
 				show_animation_on_tab(tab);
+				// fullpage_api.setAutoScrolling(true);
 			},
 			onSlideLeave: function(section, origin, destination, direction){
 				if (destination.index == 0) {
@@ -247,13 +248,12 @@
 					$('.header').addClass('active');
 					$('.header').removeClass('lastSection');
 				}
-
 				tab = destination.index+1;
 				if (tab == 5) {
 					fullpage_api.reBuild();
 				}
 				show_animation_on_tab(tab);
-
+				
 			},
 			afterRender: function(){
 
@@ -317,9 +317,18 @@ function scroll_fixed_tab(x,y,this_tab){
 	//console.log('scroll_fixed_tab');
 
 	//console.log(this_tab);
+	if (jQuery('#tab5').hasClass('active') || jQuery('#tab6').hasClass('active')) {
+		if (((Date.now() - delta_last_change) >= 100) || Math.abs(last_delta) <= Math.abs(delta) - 5) {
+			fullpage_api.setAutoScrolling(true);
+		} else {
+			fullpage_api.setAutoScrolling(false);
+		}
+	} else {
+		fullpage_api.setAutoScrolling(true);
+	}
 
 	if (jQuery('#tab5').hasClass('active')) {
-		// fullpage_api.setAutoScrolling(false);
+		//fullpage_api.setAutoScrolling(false);
 		// console.log( delta + ', ' + last_delta);
 		// delta_change = Math.abs(delta - last_delta);
 		// if ((Date.now() - last_scroll) <= 100) {
@@ -327,11 +336,7 @@ function scroll_fixed_tab(x,y,this_tab){
 		// } else {
 		//
 		// }
-		// if (((Date.now() - delta_last_change) >= 100) || last_delta <= delta - 10) {
-		// 	fullpage_api.setAutoScrolling(true);
-		// } else {
-		// 	fullpage_api.setAutoScrolling(false);
-		// }
+
 		if ($('#tab5 .empty_height').height() == this_tab.scrollerHeight) {
 			jQuery('#tab5 .container').css('top', y*-1);
 			pos_y = y;

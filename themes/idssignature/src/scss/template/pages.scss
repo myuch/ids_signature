@@ -379,7 +379,7 @@ body.fp-viewing-ids-0 {
     .container {
 			display: flex;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: flex-start;
       overflow: visible;
 			flex-wrap: wrap;
 			flex-direction: column;
@@ -453,7 +453,7 @@ body.fp-viewing-ids-0 {
               display: flex;
               justify-content: center;
               align-items: center;
-              margin-right: calc(29px * var(--font-scaler));
+              margin-right: calc(15px * var(--font-scaler));
             }
             .title {
               color: #000000;
