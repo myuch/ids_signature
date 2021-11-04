@@ -1,10 +1,12 @@
 <!-- template-parts/home-tabs/tab-6.php -->
+<?php
+$tab_fields = get_field('tab_6');
+?>
 <div id="tab6" class="slide">
     <div class="container">
 
         <div class="contacts">
-
-            <h2 class="title fz-h2 anim_it" data-animation="animate__fadeInUp" data-delay="0.3">Book an Imagination Consultation</h2>
+            <h2 class="title fz-h2 anim_it" data-animation="animate__fadeInUp" data-delay="0.3"><?= $tab_fields['title'] ?></h2>
 
             <div class="contacts_wrap anim_it" data-animation="animate__fadeInUp" data-delay="0.6">
                 <div class="contacts_item">
@@ -33,8 +35,8 @@
                                 c-0.2,0-0.4,0.1-0.5,0.3c-0.1,0.2-0.2,0.4-0.2,0.6C17.6,10.9,18,11.1,18.5,11.2L18.5,11.2z" />
                         </g>
                     </svg>
-                    <a href="tel:+18888844102">1-888-884-4102</a>
-                    <span>8:00am to 4:30pm MST</span>
+                    <a href="tel:+<?= $tab_fields['phone'] ?>"><?= $tab_fields['phone'] ?></a>
+                    <span><?= $tab_fields['working_hours'] ?></span>
                 </div>
                 <div class="contacts_item">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
@@ -55,7 +57,7 @@
                             c-0.3-0.2-0.5-0.5-0.8-0.7c-0.2-0.2-0.6-0.2-0.8-0.1c-0.3,0.1-0.4,0.4-0.4,0.8C6.3,12.6,6.5,12.7,6.6,12.9z" />
                         </g>
                     </svg>
-                    <a href="mailto:info@helloids.com">info@helloids.com</a>
+                    <a href="mailto:<?= $tab_fields['email'] ?>"><?= $tab_fields['email'] ?></a>
                 </div>
                 <div class="contacts_item nonoanim_it">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
@@ -73,16 +75,15 @@
                         </g>
                     </svg>
                     <span>
-                        #1 6204 29th Street SE </br> Calgary, AB </br> Canada T2C 1W3
+                        <?= $tab_fields['address'] ?>
                     </span>
                 </div>
             </div>
 
             <div class="contacts_form anim_it" data-animation="animate__fadeInUp" data-delay="0.9">
-                <span class="contacts_form-title">Let’s Talk</span>
+                <span class="contacts_form-title"><?= $tab_fields['form_title'] ?></span>
                 <span class="contacts_form-subtitle">
-                    IDS Signature projects start with a conversation
-                    and end with an immersive experience.
+                    <?= $tab_fields['form_subtitle'] ?>
                 </span>
                 <!--[if lte IE 8]>
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
@@ -91,8 +92,8 @@
                 <script>
                     hbspt.forms.create({
                     region: "na1",
-                    portalId: "7692378",
-                    formId: "8c6d1fae-c9ec-4f51-aeb2-3eccfde5a0c5",
+                    portalId: "<?= $tab_fields['hubspot_portalid'] ?>",
+                    formId: "<?= $tab_fields['hubspot_formid'] ?>",
                       onFormReady($form, ctx){
                         if (typeof fullpage_api !== 'undefined') {
                             fullpage_api.reBuild();
@@ -104,10 +105,8 @@
                         $('.hbspt-form .actions').append('<button type="submit" value="" class="' + $attr_class + '" data-reactid="' + $data_reactid + '">' + $data_value + '</button>');
                       },
                       onFormSubmit: function($form) {
-                        //alert('form_submit called');
                       },
                       onFormSubmitted: function($form) {
-                        //alert('form_submitted called');
                       }
                     });
                 </script>
